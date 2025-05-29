@@ -77,5 +77,26 @@
                 ]
             }
         ]
+    },
+    {
+        "word": "ulun",
+        "syllables": "u.lun",
+        "alphabet": "u",
+        "meanings": [
+            {
+                "definitions": [
+                    {
+                        "definition": "saya; aku",
+                        "partOfSpeech": "pr",
+                        "examples": [
+                            {
+                                "bjn": "ulun handak kawa makan",
+                                "id": "saya ingin bisa makan"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 ]

@@ -18,11 +18,12 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <AutoCompleteTextView
             android:id="@+id/editText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Tulis Bahasa Banjar" />
+            android:layout_height="48dp"
+            android:hint="Tulis Bahasa Banjar"
+            android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button

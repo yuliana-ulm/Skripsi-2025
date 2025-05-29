@@ -82,5 +82,26 @@
                 ]
             }
         ]
+    },
+    {
+        "word": "iwak",
+        "syllables": "i.wak",
+        "alphabet": "i",
+        "meanings": [
+            {
+                "definitions": [
+                    {
+                        "definition": "ikan",
+                        "partOfSpeech": "n",
+                        "examples": [
+                            {
+                                "bjn": "iwak haruan",
+                                "id": "ikan gabus"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 ]

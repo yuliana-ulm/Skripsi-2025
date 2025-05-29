@@ -428,5 +428,20 @@
                 ]
             }
         ]
+    },
+    {
+        "word": "pian",
+        "syllables": "pi.an",
+        "alphabet": "p",
+        "meanings": [
+            {
+                "definitions": [
+                    {
+                        "definition": "kamu; Anda",
+                        "partOfSpeech": "pr"
+                    }
+                ]
+            }
+        ]
     }
 ]
