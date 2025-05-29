@@ -1,6 +1,9 @@
 package com.yuliana.bahasabanjar
 
+import android.content.ActivityNotFoundException
+import android.content.Intent
 import android.os.Bundle
+import android.speech.RecognizerIntent
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.*
@@ -11,10 +14,22 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import org.json.JSONArray
 import org.json.JSONObject
+import android.speech.tts.TextToSpeech
+import android.view.View
+import java.util.Locale
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.widget.SwitchCompat
 
 class Beranda : AppCompatActivity() {
 
-    private lateinit var semuaKamus: List<org.json.JSONObject>
+    private lateinit var semuaKamus: List<JSONObject>
+    private lateinit var editText: AutoCompleteTextView
+    private lateinit var buttonbanjarindo: Button
+    private lateinit var btnPlay: ImageButton
+    private val REQ_CODE_SPEECH_INPUT = 100
+    private lateinit var tts: TextToSpeech
+    private var teksHasil: String = ""
+    private lateinit var themeSwitch: SwitchCompat
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,8 +42,9 @@ class Beranda : AppCompatActivity() {
             insets
         }
 
-        val editText = findViewById<AutoCompleteTextView>(R.id.editText)
-        val buttonbanjarindo = findViewById<Button>(R.id.banjarindo)
+        editText = findViewById(R.id.editText)
+        buttonbanjarindo = findViewById(R.id.banjarindo)
+        themeSwitch = findViewById(R.id.themeSwitch)
         val button2 = findViewById<Button>(R.id.button2)
         val textViewHasil = findViewById<TextView>(R.id.textViewHasil)
 
@@ -64,10 +80,13 @@ class Beranda : AppCompatActivity() {
             val selectedWord = suggestionAdapter.getItem(position) ?: return@setOnItemClickListener
             val hasil = cariKataTepat(selectedWord, semuaKamus)
             if (hasil != null) {
-                val teks = formatHasilTerjemahan(hasil)
-                textViewHasil.text = teks
+                teksHasil = formatHasilTerjemahan(hasil)
+                textViewHasil.text = teksHasil
+                btnPlay.visibility = View.VISIBLE
+                tts.speak(teksHasil, TextToSpeech.QUEUE_FLUSH, null, null)
             } else {
                 textViewHasil.text = "[kata tidak ditemukan]"
+                btnPlay.visibility = View.GONE
             }
 
         }
@@ -77,10 +96,13 @@ class Beranda : AppCompatActivity() {
             val inputText = editText.text.toString().lowercase().trim()
             val hasil = cariKataTepat(inputText, semuaKamus)
             if (hasil != null) {
-                val teks = formatHasilTerjemahan(hasil)
-                textViewHasil.text = teks
+                teksHasil = formatHasilTerjemahan(hasil)
+                textViewHasil.text = teksHasil
+                btnPlay.visibility = View.VISIBLE
+                tts.speak(teksHasil, TextToSpeech.QUEUE_FLUSH, null, null)
             } else {
                 textViewHasil.text = "[kata tidak ditemukan]"
+                btnPlay.visibility = View.GONE
             }
 
         }
@@ -88,6 +110,72 @@ class Beranda : AppCompatActivity() {
         button2.setOnClickListener {
             Toast.makeText(this, "Button 2 clicked", Toast.LENGTH_SHORT).show()
         }
+
+        val btnMic = findViewById<ImageView>(R.id.btnMic)
+
+        btnMic.setOnClickListener {
+            val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
+            intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
+            intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "id-ID") // Gunakan bahasa Indonesia
+            intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Ucapkan kata dalam bahasa Banjar...")
+
+            try {
+                startActivityForResult(intent, REQ_CODE_SPEECH_INPUT)
+            } catch (e: ActivityNotFoundException) {
+                Toast.makeText(this, "Fitur voice input tidak tersedia di perangkat ini", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        // Inisialisasi TextToSpeech
+        tts = TextToSpeech(this) { status ->
+            if (status != TextToSpeech.ERROR) {
+                tts.language = Locale("id", "ID") // Bahasa Indonesia
+            }
+        }
+
+        btnPlay = findViewById(R.id.btnPlay)
+        btnPlay.visibility = View.GONE
+        btnPlay.setOnClickListener {
+            teksHasil = textViewHasil.text.toString()
+            tts.speak(teksHasil, TextToSpeech.QUEUE_FLUSH, null, null)
+        }
+
+
+        // tema gelap atau terang
+        val isNightMode = AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES
+        themeSwitch.isChecked = isNightMode
+
+        themeSwitch.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
+        }
+
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == REQ_CODE_SPEECH_INPUT && resultCode == RESULT_OK && data != null) {
+            val result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)
+            if (!result.isNullOrEmpty()) {
+                val spokenText = result[0]
+                val editText = findViewById<AutoCompleteTextView>(R.id.editText)
+                editText.setText(spokenText)
+                editText.setSelection(spokenText.length) // Pindahkan kursor ke akhir
+                buttonbanjarindo.performClick()
+            }
+        }
+    }
+
+    override fun onDestroy() {
+        if (::tts.isInitialized) {
+            tts.stop()
+            tts.shutdown()
+        }
+        super.onDestroy()
     }
 
     private fun formatHasilTerjemahan(entry: JSONObject): String {
