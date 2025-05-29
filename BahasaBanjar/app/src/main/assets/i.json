@@ -1,0 +1,86 @@
+[
+    {
+        "word": "iih",
+        "alphabet": "i",
+        "meanings": [
+            {
+                "definitions": [
+                    {
+                        "definition": "ya, setuju",
+                        "partOfSpeech": "p",
+                        "examples": [
+                            {
+                                "bjn": "iih ayu ja",
+                                "id": "ya silakan"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "derivatives": [
+            {
+                "word": "baiih",
+                "syllables": "ba.i.ih",
+                "definitions": [
+                    {
+                        "definition": "berkata",
+                        "partOfSpeech": "v",
+                        "examples": [
+                            {
+                                "bjn": "inya baiih haja",
+                                "id": "dia berkata saja"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "word": "maiihakan",
+                "syllables": "ma.i.ih.akan",
+                "definitions": [
+                    {
+                        "definition": "menyatakan menyutujui",
+                        "partOfSpeech": "v",
+                        "examples": [
+                            {
+                                "bjn": "jangan maiihakan haja",
+                                "id": "jangan menyatakan menyetujui saja"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "word": "taiihakan",
+                "syllables": "ta.i.ih.akan",
+                "definitions": [
+                    {
+                        "definition": "terlanjut menyetujui",
+                        "partOfSpeech": "v",
+                        "examples": [
+                            {
+                                "bjn": "aku sudah taiihakan pang",
+                                "id": "saya sudah terlanjut menyetujui"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "ibik",
+        "alphabet": "i",
+        "meanings": [
+            {
+                "definitions": [
+                    {
+                        "definition": "kerai perahu",
+                        "partOfSpeech": "n"
+                    }
+                ]
+            }
+        ]
+    }
+]

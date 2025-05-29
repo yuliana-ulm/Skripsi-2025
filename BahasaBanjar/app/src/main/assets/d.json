@@ -1,0 +1,97 @@
+[
+    {
+        "word": "daai",
+        "syllables": "da.ai",
+        "alphabet": "d",
+        "meanings": [
+            {
+                "definitions": [
+                    {
+                        "definition": "habis",
+                        "partOfSpeech": "v",
+                        "examples": [
+                            {
+                                "bjn": "daai dah",
+                                "id": "habis sudah"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "dabar",
+        "syllables": "da.bar",
+        "alphabet": "d",
+        "meanings": [
+            {
+                "definitions": [
+                    {
+                        "definition": "lembar",
+                        "partOfSpeech": "n",
+                        "examples": [
+                            {
+                                "bjn": "kartas sa dabar",
+                                "id": "kertas selembar"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "dabau",
+        "syllables": "da.bau",
+        "alphabet": "d",
+        "meanings": [
+            {
+                "definitions": [
+                    {
+                        "definition": "pukul dengan tangan terbuka",
+                        "partOfSpeech": "v",
+                        "examples": [
+                            {
+                                "bjn": "dabau di balakang",
+                                "id": "pukul dengan tangan terbuka di belakang"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "derivatives": [
+            {
+                "word": "mandabau",
+                "syllables": "man.da.bau",
+                "definitions": [
+                    {
+                        "definition": "memukul dengan tangan",
+                        "partOfSpeech": "v",
+                        "examples": [
+                            {
+                                "bjn": "gancang banar mandabau",
+                                "id": "keras sekali memukul dengan tangan"
+                            }
+                        ]
+                    },
+                    {
+                        "definition": "bunyi benda berat jatuh; berdebam",
+                        "partOfSpeech": "n"
+                    }
+                ]
+            },
+            {
+                "word": "kadabauan",
+                "syllables": "ka.da.bau.an",
+                "definitions": [
+                    {
+                        "definition": "bunyi benda jatuh yang beruntun/banyak",
+                        "partOfSpeech": "n"
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,118 @@
+[
+    {
+        "word": "ca",
+        "alphabet": "c",
+        "meanings": [
+            {
+                "definitions": [
+                    {
+                        "definition": "coba; kalau; andai kata",
+                        "partOfSpeech": "p",
+                        "examples": [
+                            {
+                                "bjn": "ca aku kada ku hakun disuruhnya",
+                                "id": "kalau saya tidak mau disuruhnya"
+                            }
+                        ]
+                    },
+                    {
+                        "definition": "tidak",
+                        "partOfSpeech": "p",
+                        "examples": [
+                            {
+                                "bjn": "ca hakun aku",
+                                "id": "tidak mau saya"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "cabak",
+        "syllables": "ca.bak",
+        "alphabet": "c",
+        "meanings": [
+            {
+                "definitions": [
+                    {
+                        "definition": "burung pungguk",
+                        "partOfSpeech": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "cabang",
+        "syllables": "ca.bang",
+        "alphabet": "c",
+        "meanings": [
+            {
+                "definitions": [
+                    {
+                        "definition": "senjata berupa tongkat besi yang ujungnya bercabang seperti trisula",
+                        "partOfSpeech": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "cabi",
+        "syllables": "ca.bi",
+        "alphabet": "c",
+        "meanings": [
+            {
+                "definitions": [
+                    {
+                        "definition": "sejenis buah untuk dijadikan ramuan jamu",
+                        "partOfSpeech": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "cablung",
+        "syllables": "ca.blung",
+        "alphabet": "c",
+        "meanings": [
+            {
+                "definitions": [
+                    {
+                        "definition": "cemplung",
+                        "partOfSpeech": "v"
+                    }
+                ]
+            },
+            {
+                "definitions": [
+                    {
+                        "definition": "tiruan bunyi barang jatuh ke air",
+                        "partOfSpeech": "n"
+                    }
+                ]
+            }
+        ],
+        "derivatives": [
+            {
+                "word": "mancablung",
+                "syllables": "man.cab.lung",
+                "definitions": [
+                    {
+                        "definition": "mencemplung",
+                        "partOfSpeech": "v",
+                        "examples": [
+                            {
+                                "bjn": "mancablung ka sungai",
+                                "id": "mencemplung ke sungai"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

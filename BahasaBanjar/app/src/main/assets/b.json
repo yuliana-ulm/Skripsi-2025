@@ -1,0 +1,331 @@
+[
+    {
+        "word": "ba",
+        "alphabet": "b",
+        "meanings": [
+            {
+                "definitions": [
+                    {
+                        "definition": "huruf kedua abjad Arab",
+                        "partOfSpeech": "n"
+                    }
+                ]
+            }
+        ],
+        "derivatives": []
+    },
+    {
+        "word": "baah",
+        "syllables": "ba.ah",
+        "alphabet": "b",
+        "meanings": [
+            {
+                "definitions": [
+                    {
+                        "definition": "banjir; bah",
+                        "partOfSpeech": "n"
+                    }
+                ]
+            }
+        ],
+        "derivatives": [
+            {
+                "word": "baah baritu",
+                "definitions": [
+                    {
+                        "definition": "banjir bawaan sungai Barito"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "baal",
+        "syllables": "ba.al",
+        "alphabet": "b",
+        "meanings": [
+            {
+                "definitions": [
+                    {
+                        "definition": "belum kering benar tetapi juga tidak basah",
+                        "partOfSpeech": "a",
+                        "examples": [
+                            {
+                                "bjn": "tatapasan ni masih baal jangan dibangkit",
+                                "id": "jemuran ini masih belum kering benar, jangan diambil"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "derivatives": [
+            {
+                "word": "tabaal",
+                "syllables": "ta.ba.al",
+                "definitions": [
+                    {
+                        "definition": "lebih belum terlalu kering",
+                        "partOfSpeech": "a",
+                        "examples": [
+                            {
+                                "bjn": "iwak nang tabaal biar ja jamur hulu",
+                                "id": "ikan yang lebih belum terlalu kering biar saja jemur dulu"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "baaarian",
+        "syllables": "ba.a.a.ri.an",
+        "alphabet": "b",
+        "meanings": [
+            {
+                "definitions": [
+                    {
+                        "definition": "gotong royong",
+                        "partOfSpeech": "v"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "baat",
+        "syllables": "ba.at",
+        "alphabet": "b",
+        "meanings": [
+            {
+                "definitions": [
+                    {
+                        "definition": "sekongkol",
+                        "partOfSpeech": "n`"
+                    }
+                ]
+            }
+        ],
+        "derivatives": [
+            {
+                "word": "sabaat",
+                "syllables":"sa.ba.at",
+                "definitions": [
+                    {
+                        "definition": "sekongkol",
+                        "partOfSpeech": "n"
+                    }
+                ]
+            },
+            {
+                "word": "manyabaatakan",
+                "syllables": "ma.nya.ba.at.akan",
+                "definitions": [
+                    {
+                        "definition": "menyekutukan",
+                        "partOfSpeech": "v",
+                        "examples": [
+                            {
+                                "bjn": "jangan manyabaatakan Tuhan",
+                                "id": "jangan menyekutukan Tuhan"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "baba",
+        "syllables": "ba.ba",
+        "alphabet": "b",
+        "meanings": [
+            {
+                "definitions": [
+                    {
+                        "definition": "kata seru",
+                        "partOfSpeech": "p",
+                        "examples": [
+                            {
+                                "bjn": "baba surang dibungulinya",
+                                "id": "aduh saya dibodohinya"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "derivatives": []
+    },
+    {
+        "word": "babak",
+        "syllables": "ba.bak",
+        "alphabet": "b",
+        "meanings": [
+            {
+                "definitions": [
+                    {
+                        "definition": "bongkar; rombak",
+                        "partOfSpeech": "v",
+                        "examples": [
+                            {
+                                "bjn": "babak samunyaan",
+                                "id": "rombak semuanya"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "derivatives": [
+            {
+                "word": "babakan",
+                "syllables": "ba.bak.an",
+                "definitions": [
+                    {
+                        "definition": "bongkaran",
+                        "partOfSpeech": "n",
+                        "examples": [
+                            {
+                                "bjn": "inya lagi mamutiki sisa-sisa babakan",
+                                "id": "dia lagi memunguti sisa-sisa bongkaran"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "word": "bababak",
+                "syllables": "ba.ba.bak",
+                "definitions": [
+                    {
+                        "definition": "dalam keadaan terbongkar/terpisah-pisah",
+                        "partOfSpeech": "v",
+                        "examples": [
+                            {
+                                "bjn": "kami datangan rumahnya sudah bababak",
+                                "id": "kami datang rumahnya sudah terbongkar"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "word": "mambabak",
+                "syllables": "mam.ba.bak",
+                "definitions": [
+                    {
+                        "definition": "membongkar (rumah, pakaian)",
+                        "partOfSpeech": "v",
+                        "examples": [
+                            {
+                                "bjn": "tukang ngintu lagi mambabak rumah kami",
+                                "id": "tukang itu sedang merombak rumah kami"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "word": "tababak",
+                "syllables": "ta.ba.bak",
+                "definitions": [
+                    {
+                        "definition": "terbongkar; terlepas",
+                        "partOfSpeech": "v",
+                        "examples": [
+                            {
+                                "bjn": "jahitan bajuku tababak samunyaan",
+                                "id": "jahitan bajuku terlepas semuanya"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "babakut",
+        "syllables": "ba.ba.kut",
+        "alphabet": "b",
+        "meanings": [
+            {
+                "definitions": [
+                    {
+                        "definition": "penyakit kaki gajah",
+                        "partOfSpeech": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "babal",
+        "syllables": "ba.bal",
+        "alphabet": "b",
+        "meanings": [
+            {
+                "definitions": [
+                    {
+                        "definition": "buah nangka yang masih sangat kecil",
+                        "partOfSpeech": "n"
+                    }
+                ]
+            },
+            {
+                "definitions": [
+                    {
+                        "definition": "bebal; bodoh",
+                        "partOfSpeech": "a",
+                        "examples": [
+                            {
+                                "bjn": "anak sidin ngintu babal banar",
+                                "id": "anak beliau itu bebal sekali"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "derivatives": [
+            {
+                "word": "pambabal",
+                "syllables": "pam.ba.bal",
+                "definitions": [
+                    {
+                        "definition": "orang yang sering lupa",
+                        "partOfSpeech": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "word": "babar",
+        "syllables": "ba.bar",
+        "alphabet": "b",
+        "meanings": [
+            {
+                "definitions": [
+                    {
+                        "definition": "kelahiran sebelum nikah",
+                        "partOfSpeech": "n"
+                    }
+                ]
+            }
+        ],
+        "derivatives": [
+            {
+                "word": "kababaran",
+                "syllables": "ka.ba.bar.an",
+                "definitions": [
+                    {
+                        "definition": "kelahiran sebelum nikah",
+                        "partOfSpeech": "n"
+                    }
+                ]
+            }
+        ]
+    }
+]
