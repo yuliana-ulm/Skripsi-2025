@@ -2,6 +2,7 @@ package com.yuliana.bahasabanjar
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -10,6 +11,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+
+data class EntriKamus(
+    val arti: String,
+    val variasi: Map<String, String>? = null
+)
 
 class Beranda : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,28 +39,26 @@ class Beranda : AppCompatActivity() {
         val button2 = findViewById<Button>(R.id.button2)
         val textViewHasil = findViewById<TextView>(R.id.textViewHasil)
 
-        val kamus = KamusLoader.loadKamus(this)
-
         // Button 1 logic
         buttonbanjarindo.setOnClickListener {
             val inputText = editText?.text?.toString()?.lowercase()?.trim() ?: ""
             val kataInput = inputText.split(" ")
 
+            val kamus = KamusLoader.loadKamus(this)
+
+            // DEBUG: Tampilkan semua key dalam kamus
+            Log.d("DEBUG_KAMUS_KEYS", "Isi keys kamus: ${kamus.keys.joinToString()}")
+
             val hasilTerjemahan = kataInput.map { kata ->
-                var hasil = "[tidak ditemukan]"
-                var jarakTerdekat = Int.MAX_VALUE
-
-                for ((banjar, indo) in kamus) {
-                    val jarak = Levenshtein.calculate(kata, banjar)
-
-                    if (jarak < jarakTerdekat) {
-                        jarakTerdekat = jarak
-                        hasil = indo
-                    }
+                val kataBersih = kata.lowercase().trim()
+                Log.d("DEBUG_CARI_KATA", "Mencari arti dari: '$kataBersih'")
+                if (kamus.containsKey(kataBersih)) {
+                    Log.d("DEBUG_HASIL", "Ditemukan: ${kamus[kataBersih]}")
+                } else {
+                    Log.d("DEBUG_HASIL", "Tidak ditemukan untuk kata: '$kataBersih'")
                 }
 
-                // Jika jarak terlalu jauh, anggap tidak valid
-                if (jarakTerdekat <= 2) hasil else "[tidak ditemukan]"
+                kamus[kataBersih] ?: "[tidak ditemukan]"
             }
 
             val kalimatHasil = hasilTerjemahan.joinToString(" ")
@@ -65,33 +71,4 @@ class Beranda : AppCompatActivity() {
             Toast.makeText(this, "Button 2 clicked", Toast.LENGTH_SHORT).show()
         }
     }
-
-    fun loadJSONFromAsset(context: Context, filename: String): String {
-        return context.assets.open(filename).bufferedReader().use { it.readText() }
-    }
-
-    fun cariArtiKata(
-        kata: String,
-        kamus: Map<String, Map<String, Any>>
-    ): String {
-        val kataLower = kata.lowercase()
-
-        // Cek kata dasar langsung
-        if (kamus.containsKey(kataLower)) {
-            val entri = kamus[kataLower]
-            return entri?.get("arti") as? String ?: "[tidak ditemukan]"
-        }
-
-        // Cek kata turunan (imbuhan)
-        for ((akar, data) in kamus) {
-            val variasi = data["variasi"] as? Map<*, *> ?: continue
-            if (variasi.containsKey(kataLower)) {
-                return variasi[kataLower] as? String ?: "[tidak ditemukan]"
-            }
-        }
-
-        return "[tidak ditemukan]"
-    }
-
-
 }

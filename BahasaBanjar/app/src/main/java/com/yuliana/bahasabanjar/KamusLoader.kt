@@ -14,8 +14,23 @@ object KamusLoader {
         val keys = jsonObject.keys()
         while (keys.hasNext()) {
             val key = keys.next()
-            val value = jsonObject.getString(key)
-            kamus[key] = value
+            val entry = jsonObject.getJSONObject(key)
+
+            // Tambahkan arti kata dasar
+            if (entry.has("arti")) {
+                kamus[key.lowercase()] = entry.getString("arti")
+            }
+
+            // Tambahkan variasi kata (jika ada)
+            if (entry.has("variasi")) {
+                val variasiObj = entry.getJSONObject("variasi")
+                val variasiKeys = variasiObj.keys()
+                while (variasiKeys.hasNext()) {
+                    val varKey = variasiKeys.next()
+                    val artiVar = variasiObj.getString(varKey)
+                    kamus[varKey.lowercase()] = artiVar
+                }
+            }
         }
 
         return kamus
