@@ -1,0 +1,55 @@
+{
+  "ulun": {
+    "arti": "saya"
+  },
+  "ikam": {
+    "arti": "kamu"
+  },
+  "handak": {
+    "arti": "ingin"
+  },
+  "pian": {
+    "arti": "Anda"
+  },
+  "makan": {
+    "arti": "memasukkan makanan ke mulut",
+    "variasi": {
+      "memakan": "sedang melakukan kegiatan makan",
+      "dimakan": "objek dikenai makan",
+      "pemakan": "orang atau makhluk yang makan",
+      "makanan": "benda yang dimakan"
+    }
+  },
+  "lihat": {
+    "arti": "melihat atau memandang sesuatu",
+    "variasi": {
+      "melihat": "sedang memandang",
+      "dilihat": "menjadi objek yang dipandang",
+      "penglihatan": "kemampuan untuk melihat"
+    }
+  },
+  "jalan": {
+    "arti": "bergerak dari satu tempat ke tempat lain",
+    "variasi": {
+      "berjalan": "sedang jalan kaki",
+      "perjalanan": "aktivitas bepergian",
+      "jalanan": "tempat atau jalur untuk berjalan"
+    }
+  },
+  "tulis": {
+    "arti": "membuat tulisan",
+    "variasi": {
+      "menulis": "sedang menulis",
+      "ditulis": "sudah atau sedang dituliskan",
+      "penulisan": "proses menulis"
+    }
+  },
+  "ajar": {
+    "arti": "memberikan ilmu atau pelajaran",
+    "variasi": {
+      "mengajar": "sedang memberikan pelajaran",
+      "diajar": "sedang diajarkan",
+      "pengajaran": "proses kegiatan mengajar"
+    }
+  }
+}
