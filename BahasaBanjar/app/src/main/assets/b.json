@@ -327,5 +327,20 @@
                 ]
             }
         ]
+    },
+    {
+        "word": "babas",
+        "syllables": "ba.bas",
+        "alphabet": "b",
+        "meanings": [
+            {
+                "definitions": [
+                    {
+                        "definition": "Bongkar (khusus untuk bangunan)",
+                        "partOfSpeech": "n"
+                    }
+                ]
+            }
+        ]
     }
 ]
