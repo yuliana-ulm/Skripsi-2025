@@ -129,7 +129,7 @@ class Beranda : AppCompatActivity() {
         // Inisialisasi TextToSpeech
         tts = TextToSpeech(this) { status ->
             if (status != TextToSpeech.ERROR) {
-                tts.language = Locale("indonesia", "indonesia") // Bahasa Indonesia
+                tts.language = Locale("id", "ID") // Bahasa Indonesia
             }
         }
 
@@ -228,7 +228,7 @@ class Beranda : AppCompatActivity() {
                     wrapped.put("dasar", turunanWord)
                     wrapped.put("arti", JSONArray().apply {
                         put(JSONObject().apply {
-                            put("definisi_umum", turunan.optJSONArray("definisi_umum"))
+                            put("definitions", turunan.optJSONArray("definitions"))
                         })
                     })
                     return wrapped

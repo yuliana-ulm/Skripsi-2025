@@ -27,18 +27,18 @@ object Levenshtein {
 
         for (entry in kamus) {
             val dasar = entry.optString("dasar", "")
-            val distance = distance(input, dasar)
-            if (distance <= maxDistance) {
-                suggestions.add(dasar to distance)
+            val jarak = distance(input, dasar)
+            if (jarak <= maxDistance) {
+                suggestions.add(dasar to jarak)
             }
 
             val turunan = entry.optJSONArray("turunan") ?: continue
             for (i in 0 until turunan.length()) {
                 val turunan = turunan.getJSONObject(i)
                 val turunandasar = turunan.optString("dasar", "")
-                val turunanDistance = distance(input, turunandasar)
-                if (turunanDistance <= maxDistance) {
-                    suggestions.add(turunandasar to turunanDistance)
+                val turunanjarak = distance(input, turunandasar)
+                if (turunanjarak <= maxDistance) {
+                    suggestions.add(turunandasar to turunanjarak)
                 }
             }
         }
