@@ -1,45 +1,45 @@
 [
     {
-        "word": "taal",
-        "syllables": "ta.al",
-        "alphabet": "t",
-        "meanings": [
+        "dasar": "taal",
+        "sukukata": "ta.al",
+        "abjad": "t",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "kotor",
-                        "partOfSpeech": "a",
-                        "examples": [
+                        "definisi": "kotor",
+                        "kelaskata": "a",
+                        "contoh": [
                             {
-                                "bjn": "bajunya taal",
-                                "id": "bajunya kotor"
+                                "banjar": "bajunya taal",
+                                "indonesia": "bajunya kotor"
                             }
                         ]
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "bau taal",
-                "definitions": [
+                "dasar": "bau taal",
+                "definisi_umum": [
                     {
-                        "definition": "bau pesing",
-                        "partOfSpeech": "a"
+                        "definisi": "bau pesing",
+                        "kelaskata": "a"
                     }
                 ]
             },
             {
-                "word": "bataal",
-                "syllables": "ba.ta.al",
-                "definitions": [
+                "dasar": "bataal",
+                "sukukata": "ba.ta.al",
+                "definisi_umum": [
                     {
-                        "definition": "sangat kotor",
-                        "partOfSpeech": "a",
-                        "examples": [
+                        "definisi": "sangat kotor",
+                        "kelaskata": "a",
+                        "contoh": [
                             {
-                                "bjn": "bajunya bataal",
-                                "id": "bajunya sangat kotor"
+                                "banjar": "bajunya bataal",
+                                "indonesia": "bajunya sangat kotor"
                             }
                         ]
                     }
@@ -48,66 +48,66 @@
         ]
     },
     {
-        "word": "taat",
-        "syllables": "ta.at",
-        "alphabet": "t",
-        "meanings": [
+        "dasar": "taat",
+        "sukukata": "ta.at",
+        "abjad": "t",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "taat; patuh",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "taat; patuh",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "inya taat baibadah",
-                                "id": "dia taat beribadah"
+                                "banjar": "inya taat baibadah",
+                                "indonesia": "dia taat beribadah"
                             }
                         ]
                     }
                 ]
             },
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "kutuk",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "kutuk",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "sidin taat anaknya nang durhaka",
-                                "id": "beliau kutuk anaknya yang durhaka"
+                                "banjar": "sidin taat anaknya nang durhaka",
+                                "indonesia": "beliau kutuk anaknya yang durhaka"
                             }
                         ]
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "kana taat",
-                "definitions": [
+                "dasar": "kana taat",
+                "definisi_umum": [
                     {
-                        "definition": "kena hukum Tuhan",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "kena hukum Tuhan",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "inya kana taat",
-                                "id": "dia kena hukum Tuhan"
+                                "banjar": "inya kana taat",
+                                "indonesia": "dia kena hukum Tuhan"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "manaatakan",
-                "syllables": "ma.na.at.akan",
-                "definitions": [
+                "dasar": "manaatakan",
+                "sukukata": "ma.na.at.akan",
+                "definisi_umum": [
                     {
-                        "definition": "meminta kepada Tuhan agar seseorang kena hukuman karena telah menzaliminya",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "meminta kepada Tuhan agar seseorang kena hukuman karena telah menzaliminya",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "inya manaatakan musuhnya",
-                                "id": "dia meminta kepada Tuhan agar musuhnya kena hukuman"
+                                "banjar": "inya manaatakan musuhnya",
+                                "indonesia": "dia meminta kepada Tuhan agar musuhnya kena hukuman"
                             }
                         ]
                     }

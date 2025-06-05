@@ -1,32 +1,32 @@
 [
     {
-        "word": "ma",
-        "alphabet": "m",
-        "meanings": [
+        "dasar": "ma",
+        "abjad": "m",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "mama; ibu",
-                        "partOfSpeech": "n"
+                        "definisi": "mama; ibu",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "maantul",
-        "syllables": "ma.an.tul",
-        "alphabet": "m",
-        "meanings": [
+        "dasar": "maantul",
+        "sukukata": "ma.an.tul",
+        "abjad": "m",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "mental",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "mental",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "bulanya maantul ka tawing",
-                                "id": "bolanya mental ke dinding"
+                                "banjar": "bulanya maantul ka tawing",
+                                "indonesia": "bolanya mental ke dinding"
                             }
                         ]
                     }
@@ -35,31 +35,31 @@
         ]
     },
     {
-        "word": "maap",
-        "syllables": "ma.ap",
-        "alphabet": "m",
-        "meanings": [
+        "dasar": "maap",
+        "sukukata": "ma.ap",
+        "abjad": "m",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "maaf",
-                        "partOfSpeech": "n"
+                        "definisi": "maaf",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "bamaapan",
-                "syllables": "ba.ma.ap.an",
-                "definitions": [
+                "dasar": "bamaapan",
+                "sukukata": "ba.ma.ap.an",
+                "definisi_umum": [
                     {
-                        "definition": "bermaaf-maafan",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "bermaaf-maafan",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "wayah hari raya bubuhannya bamaapan",
-                                "id": "pada hari lebaran mereka bermaaf-maafan"
+                                "banjar": "wayah hari raya bubuhannya bamaapan",
+                                "indonesia": "pada hari lebaran mereka bermaaf-maafan"
                             }
                         ]
                     }
@@ -68,112 +68,37 @@
         ]
     },
     {
-        "word": "maandung",
-        "syllables": "ma.an.dung",
-        "alphabet": "m",
-        "meanings": [
+        "dasar": "maandung",
+        "sukukata": "ma.an.dung",
+        "abjad": "m",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "bopong",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "bopong",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "barat maandung ading",
-                                "id": "berat sekali membopong adik"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "derivatives": [
-            {
-                "word": "baandung",
-                "syllables": "ba.an.dung",
-                "definitions": [
-                    {
-                        "definition": "berpeluk pada orang lain",
-                        "partOfSpeech": "v",
-                        "examples": [
-                            {
-                                "bjn": "ading katuju banar baandung lawan mama",
-                                "id": "adik senang sekali berpeluk dengan mama"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "maapul",
-        "syllables": "ma.a.pul",
-        "alphabet": "m",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "mengapung",
-                        "partOfSpeech": "v",
-                        "examples": [
-                            {
-                                "bjn": "sabut maapul di sungai",
-                                "id": "serabut kelapa mengapung di sungai"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "maasiat",
-        "syllables": "ma.a.si.at",
-        "alphabet": "m",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "maksiat",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "mabuk",
-        "syllables": "ma.buk",
-        "alphabet": "m",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "asyik",
-                        "partOfSpeech": "a",
-                        "examples": [
-                            {
-                                "bjn": "mabuk banar ading bamainan",
-                                "id": "asyik sekali adik bermain-main"
+                                "banjar": "barat maandung ading",
+                                "indonesia": "berat sekali membopong adik"
                             }
                         ]
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "bamabuk",
-                "syllables": "ba.ma.buk",
-                "definitions": [
+                "dasar": "baandung",
+                "sukukata": "ba.an.dung",
+                "definisi_umum": [
                     {
-                        "definition": "makin asyik",
-                        "partOfSpeech": "adv",
-                        "examples": [
+                        "definisi": "berpeluk pada orang lain",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "bamabuk main catur pulanglah",
-                                "id": "tambah asyik main catur lagi ya"
+                                "banjar": "ading katuju banar baandung lawan mama",
+                                "indonesia": "adik senang sekali berpeluk dengan mama"
                             }
                         ]
                     }
@@ -182,101 +107,176 @@
         ]
     },
     {
-        "word": "macal",
-        "syllables": "ma.cal",
-        "alphabet": "m",
-        "meanings": [
+        "dasar": "maapul",
+        "sukukata": "ma.a.pul",
+        "abjad": "m",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "bandel; nakal; bengal (anak-anak)",
-                        "partOfSpeech": "a",
-                        "examples": [
+                        "definisi": "mengapung",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "kakanak nitu macal banar",
-                                "id": "anak itu nakal sekali"
+                                "banjar": "sabut maapul di sungai",
+                                "indonesia": "serabut kelapa mengapung di sungai"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "maasiat",
+        "sukukata": "ma.a.si.at",
+        "abjad": "m",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "maksiat",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "mabuk",
+        "sukukata": "ma.buk",
+        "abjad": "m",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "asyik",
+                        "kelaskata": "a",
+                        "contoh": [
+                            {
+                                "banjar": "mabuk banar ading bamainan",
+                                "indonesia": "asyik sekali adik bermain-main"
                             }
                         ]
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "bamacal",
-                "syllables": "ba.ma.cal",
-                "definitions": [
+                "dasar": "bamabuk",
+                "sukukata": "ba.ma.buk",
+                "definisi_umum": [
                     {
-                        "definition": "makin bandel",
-                        "partOfSpeech": "adv",
-                        "examples": [
+                        "definisi": "makin asyik",
+                        "kelaskata": "adv",
+                        "contoh": [
                             {
-                                "bjn": "imbah umanya maninggal kakanak nitu bamacal",
-                                "id": "setelah ibunya meninggal dunia anak itu semakin nakal"
+                                "banjar": "bamabuk main catur pulanglah",
+                                "indonesia": "tambah asyik main catur lagi ya"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "macal",
+        "sukukata": "ma.cal",
+        "abjad": "m",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "bandel; nakal; bengal (anak-anak)",
+                        "kelaskata": "a",
+                        "contoh": [
+                            {
+                                "banjar": "kakanak nitu macal banar",
+                                "indonesia": "anak itu nakal sekali"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "turunan": [
+            {
+                "dasar": "bamacal",
+                "sukukata": "ba.ma.cal",
+                "definisi_umum": [
+                    {
+                        "definisi": "makin bandel",
+                        "kelaskata": "adv",
+                        "contoh": [
+                            {
+                                "banjar": "imbah umanya maninggal kakanak nitu bamacal",
+                                "indonesia": "setelah ibunya meninggal dunia anak itu semakin nakal"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "bamacalan",
-                "syllables": "ba.ma.cal.an",
-                "definitions": [
+                "dasar": "bamacalan",
+                "sukukata": "ba.ma.cal.an",
+                "definisi_umum": [
                     {
-                        "definition": "terlalu bandel",
-                        "partOfSpeech": "a",
-                        "examples": [
+                        "definisi": "terlalu bandel",
+                        "kelaskata": "a",
+                        "contoh": [
                             {
-                                "bjn": "ada tapi bamacalan pang",
-                                "id": "tolong jangan terlalu bandel"
+                                "banjar": "ada tapi bamacalan pang",
+                                "indonesia": "tolong jangan terlalu bandel"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "bamacalan",
-                "syllables": "ba.ma.cal.an",
-                "definitions": [
+                "dasar": "bamacalan",
+                "sukukata": "ba.ma.cal.an",
+                "definisi_umum": [
                     {
-                        "definition": "terlalu bandel",
-                        "partOfSpeech": "a",
-                        "examples": [
+                        "definisi": "terlalu bandel",
+                        "kelaskata": "a",
+                        "contoh": [
                             {
-                                "bjn": "ada tapi bamacalan pang",
-                                "id": "tolong jangan terlalu bandel"
+                                "banjar": "ada tapi bamacalan pang",
+                                "indonesia": "tolong jangan terlalu bandel"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "pamacalnya",
-                "syllables": "pa.ma.cal.nya",
-                "definitions": [
+                "dasar": "pamacalnya",
+                "sukukata": "pa.ma.cal.nya",
+                "definisi_umum": [
                     {
-                        "definition": "paling bandel",
-                        "partOfSpeech": "a",
-                        "examples": [
+                        "definisi": "paling bandel",
+                        "kelaskata": "a",
+                        "contoh": [
                             {
-                                "bjn": "di antara dangsanaknya nang lain inya tu pamacalnya",
-                                "id": "di antara saudaranya yang lain dialah yang paling nakal"
+                                "banjar": "di antara dangsanaknya nang lain inya tu pamacalnya",
+                                "indonesia": "di antara saudaranya yang lain dialah yang paling nakal"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "tamacal",
-                "syllables": "ta.ma.cal",
-                "definitions": [
+                "dasar": "tamacal",
+                "sukukata": "ta.ma.cal",
+                "definisi_umum": [
                     {
-                        "definition": "bertambah bandel",
-                        "partOfSpeech": "a",
-                        "examples": [
+                        "definisi": "bertambah bandel",
+                        "kelaskata": "a",
+                        "contoh": [
                             {
-                                "bjn": "inya tamacal pada adingnya",
-                                "id": "dia lebih bandel dari adiknya"
+                                "banjar": "inya tamacal pada adingnya",
+                                "indonesia": "dia lebih bandel dari adiknya"
                             }
                         ]
                     }
@@ -285,78 +285,78 @@
         ]
     },
     {
-        "word": "macam",
-        "syllables": "ma.cam",
-        "alphabet": "m",
-        "meanings": [
+        "dasar": "macam",
+        "sukukata": "ma.cam",
+        "abjad": "m",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "macam",
-                        "partOfSpeech": "n"
+                        "definisi": "macam",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "macam apa",
-                "definitions": [
+                "dasar": "macam apa",
+                "definisi_umum": [
                     {
-                        "definition": "bagaimana",
-                        "partOfSpeech": "n"
+                        "definisi": "bagaimana",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "madakannya",
-        "syllables": "ma.da.kan.nya",
-        "alphabet": "m",
-        "meanings": [
+        "dasar": "madakannya",
+        "sukukata": "ma.da.kan.nya",
+        "abjad": "m",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "untungnya",
-                        "partOfSpeech": "n"
+                        "definisi": "untungnya",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "madam",
-        "syllables": "ma.dam",
-        "alphabet": "m",
-        "meanings": [
+        "dasar": "madam",
+        "sukukata": "ma.dam",
+        "abjad": "m",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "merantau",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "merantau",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "adingnya handak madam ka nagara sabarang",
-                                "id": "adiknya mau merantau ke negeri seberang"
+                                "banjar": "adingnya handak madam ka nagara sabarang",
+                                "indonesia": "adiknya mau merantau ke negeri seberang"
                             }
                         ]
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "bamadaman",
-                "syllables": "ba.ma.da.man",
-                "definitions": [
+                "dasar": "bamadaman",
+                "sukukata": "ba.ma.da.man",
+                "definisi_umum": [
                     {
-                        "definition": "bepergian",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "bepergian",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "sudah lawas inya bamadaman",
-                                "id": "sudah lama dia bepergian"
+                                "banjar": "sudah lawas inya bamadaman",
+                                "indonesia": "sudah lama dia bepergian"
                             }
                         ]
                     }
@@ -365,45 +365,45 @@
         ]
     },
     {
-        "word": "madang",
-        "syllables": "ma.dang",
-        "alphabet": "m",
-        "meanings": [
+        "dasar": "madang",
+        "sukukata": "ma.dang",
+        "abjad": "m",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "nama sejenis kayu yang getahnya gatal",
-                        "partOfSpeech": "n"
+                        "definisi": "nama sejenis kayu yang getahnya gatal",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "madat",
-        "syllables": "ma.dat",
-        "alphabet": "m",
-        "meanings": [
+        "dasar": "madat",
+        "sukukata": "ma.dat",
+        "abjad": "m",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "sedap; asyik",
-                        "partOfSpeech": "a"
+                        "definisi": "sedap; asyik",
+                        "kelaskata": "a"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "madiang",
-        "syllables": "ma.di.ang",
-        "alphabet": "m",
-        "meanings": [
+        "dasar": "madiang",
+        "sukukata": "ma.di.ang",
+        "abjad": "m",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "panggilan untuk wanita tua",
-                        "partOfSpeech": "n"
+                        "definisi": "panggilan untuk wanita tua",
+                        "kelaskata": "n"
                     }
                 ]
             }

@@ -1,76 +1,76 @@
 [
     {
-        "word": "uar",
-        "syllables": "uar",
-        "alphabet": "u",
-        "meanings": [
+        "dasar": "uar",
+        "sukukata": "uar",
+        "abjad": "u",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "sejenis kulit kayu bergetah untuk menyamak kulit atau sebagai pewarna",
-                        "partOfSpeech": "n"
+                        "definisi": "sejenis kulit kayu bergetah untuk menyamak kulit atau sebagai pewarna",
+                        "kelaskata": "n"
                     }
                 ]
             },
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "sebar",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "sebar",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "uar pang batu di muka rumah",
-                                "id": "tolong sebar batu di halaman"
+                                "banjar": "uar pang batu di muka rumah",
+                                "indonesia": "tolong sebar batu di halaman"
                             }
                         ]
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "mauar",
-                "syllables": "ma.u.ar",
-                "definitions": [
+                "dasar": "mauar",
+                "sukukata": "ma.u.ar",
+                "definisi_umum": [
                     {
-                        "definition": "memberi uar",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "memberi uar",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "abah parahatan mauar kulimbit sapi",
-                                "id": "ayah sedang memberi uar pada kulit sapi yang disamak"
+                                "banjar": "abah parahatan mauar kulimbit sapi",
+                                "indonesia": "ayah sedang memberi uar pada kulit sapi yang disamak"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "bauuar",
-                "syllables": "ba.u.u.ar",
-                "definitions": [
+                "dasar": "bauuar",
+                "sukukata": "ba.u.u.ar",
+                "definisi_umum": [
                     {
-                        "definition": "berkoar-koar; ngomong sana ngomong sini",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "berkoar-koar; ngomong sana ngomong sini",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "jangan bauuar mun kada tahu nang sabujurnya",
-                                "id": "jangan berkoar-koar jika tidak tahu yang sebenarnya"
+                                "banjar": "jangan bauuar mun kada tahu nang sabujurnya",
+                                "indonesia": "jangan berkoar-koar jika tidak tahu yang sebenarnya"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "mauarakan",
-                "syllables": "ma.u.ar.akan",
-                "definitions": [
+                "dasar": "mauarakan",
+                "sukukata": "ma.u.ar.akan",
+                "definisi_umum": [
                     {
-                        "definition": "menyebarkan (berita)",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "menyebarkan (berita)",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "sidin mauarakan masalah harta warisan",
-                                "id": "beliau berkoar-koar masalah harta warisan"
+                                "banjar": "sidin mauarakan masalah harta warisan",
+                                "indonesia": "beliau berkoar-koar masalah harta warisan"
                             }
                         ]
                     }
@@ -79,19 +79,19 @@
         ]
     },
     {
-        "word": "ulun",
-        "syllables": "u.lun",
-        "alphabet": "u",
-        "meanings": [
+        "dasar": "ulun",
+        "sukukata": "u.lun",
+        "abjad": "u",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "saya; aku",
-                        "partOfSpeech": "pr",
-                        "examples": [
+                        "definisi": "saya; aku",
+                        "kelaskata": "pr",
+                        "contoh": [
                             {
-                                "bjn": "ulun handak kawa makan",
-                                "id": "saya ingin bisa makan"
+                                "banjar": "ulun handak kawa makan",
+                                "indonesia": "saya ingin bisa makan"
                             }
                         ]
                     }

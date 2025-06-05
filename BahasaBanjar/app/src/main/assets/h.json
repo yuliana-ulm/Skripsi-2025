@@ -1,21 +1,21 @@
 [
     {
-        "word": "ha",
-        "alphabet": "h",
-        "meanings": [
+        "dasar": "ha",
+        "abjad": "h",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "saja",
-                        "partOfSpeech": "adv",
-                        "examples": [
+                        "definisi": "saja",
+                        "kelaskata": "adv",
+                        "contoh": [
                             {
-                                "bjn": "ayu ha",
-                                "id": "boleh saja"
+                                "banjar": "ayu ha",
+                                "indonesia": "boleh saja"
                             },
                             {
-                                "bjn": "gawi ha saurang",
-                                "id": "kerjakan saja sendiri"
+                                "banjar": "gawi ha saurang",
+                                "indonesia": "kerjakan saja sendiri"
                             }
                         ]
                     }

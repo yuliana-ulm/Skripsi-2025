@@ -1,18 +1,18 @@
 [
     {
-        "word": "na",
-        "syllables": "na",
-        "alphabet": "n",
-        "meanings": [
+        "dasar": "na",
+        "sukukata": "na",
+        "abjad": "n",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "kata seru",
-                        "partOfSpeech": "p",
-                        "examples": [
+                        "definisi": "kata seru",
+                        "kelaskata": "p",
+                        "contoh": [
                             {
-                                "bjn": "na katahuan bajalan manyurangan",
-                                "id": "wah, ketahuan berjalan menyendiri"
+                                "banjar": "na katahuan bajalan manyurangan",
+                                "indonesia": "wah, ketahuan berjalan menyendiri"
                             }
                         ]
                     }
@@ -21,61 +21,61 @@
         ]
     },
     {
-        "word": "naan",
-        "syllables": "na.an",
-        "alphabet": "n",
-        "meanings": [
+        "dasar": "naan",
+        "sukukata": "na.an",
+        "abjad": "n",
+        "arti": [
             {
-                "definitions":  [
+                "definisi_umum":  [
                     {
-                        "definition": "hasil panen yang melimpah",
-                        "partOfSpeech": "n"
+                        "definisi": "hasil panen yang melimpah",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "naas",
-        "syllables": "na.as",
-        "alphabet": "n",
-        "meanings": [
+        "dasar": "naas",
+        "sukukata": "na.as",
+        "abjad": "n",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "nahas; sial",
-                        "partOfSpeech": "a"
+                        "definisi": "nahas; sial",
+                        "kelaskata": "a"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "nadar",
-        "syllables": "na.dar",
-        "alphabet": "n",
-        "meanings": [
+        "dasar": "nadar",
+        "sukukata": "na.dar",
+        "abjad": "n",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "nazar",
-                        "partOfSpeech": "n"
+                        "definisi": "nazar",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "banadar",
-                "syllables": "ba.na.dar",
-                "definitions": [
+                "dasar": "banadar",
+                "sukukata": "ba.na.dar",
+                "definisi_umum": [
                     {
-                        "definition": "bernazar",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "bernazar",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "ulun banadar mambaca burdah bila kawa baisi rumah",
-                                "id": "saya bernazar membaca burdah apabila mempunyai rumah"
+                                "banjar": "ulun banadar mambaca burdah bila kawa baisi rumah",
+                                "indonesia": "saya bernazar membaca burdah apabila mempunyai rumah"
                             }
                         ]
                     }
@@ -84,50 +84,50 @@
         ]
     },
     {
-        "word": "naga",
-        "syllables": "na.ga",
-        "alphabet": "n",
-        "meanings": [
+        "dasar": "naga",
+        "sukukata": "na.ga",
+        "abjad": "n",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "naga",
-                        "partOfSpeech": "n"
+                        "definisi": "naga",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "naga mandi",
-                "definitions": [
+                "dasar": "naga mandi",
+                "definisi_umum": [
                     {
-                        "definition": "pelangi",
-                        "partOfSpeech": "n"
+                        "definisi": "pelangi",
+                        "kelaskata": "n"
                     }
                 ]
             },
             {
-                "word": "bau naga",
-                "definitions": [
+                "dasar": "bau naga",
+                "definisi_umum": [
                     {
-                        "definition": "bau tidak enak misal ikan asin yang terlalu kering karena sinar matahari",
-                        "partOfSpeech": "a"
+                        "definisi": "bau tidak enak misal ikan asin yang terlalu kering karena sinar matahari",
+                        "kelaskata": "a"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "nanagaan",
-        "syllables": "na.na.ga.an",
-        "alphabet": "n",
-        "meanings": [
+        "dasar": "nanagaan",
+        "sukukata": "na.na.ga.an",
+        "abjad": "n",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "pelangi",
-                        "partOfSpeech": "n"
+                        "definisi": "pelangi",
+                        "kelaskata": "n"
                     }
                 ]
             }

@@ -22,23 +22,23 @@ object Levenshtein {
         return dp[a.length][b.length]
     }
 
-    fun suggestWords(input: String, kamus: List<JSONObject>, maxDistance: Int = 2): List<String> {
+    fun suggestdasar(input: String, kamus: List<JSONObject>, maxDistance: Int = 2): List<String> {
         val suggestions = mutableListOf<Pair<String, Int>>()
 
         for (entry in kamus) {
-            val word = entry.optString("word", "")
-            val distance = distance(input, word)
+            val dasar = entry.optString("dasar", "")
+            val distance = distance(input, dasar)
             if (distance <= maxDistance) {
-                suggestions.add(word to distance)
+                suggestions.add(dasar to distance)
             }
 
-            val derivatives = entry.optJSONArray("derivatives") ?: continue
-            for (i in 0 until derivatives.length()) {
-                val turunan = derivatives.getJSONObject(i)
-                val derivedWord = turunan.optString("word", "")
-                val derivedDistance = distance(input, derivedWord)
-                if (derivedDistance <= maxDistance) {
-                    suggestions.add(derivedWord to derivedDistance)
+            val turunan = entry.optJSONArray("turunan") ?: continue
+            for (i in 0 until turunan.length()) {
+                val turunan = turunan.getJSONObject(i)
+                val turunandasar = turunan.optString("dasar", "")
+                val turunanDistance = distance(input, turunandasar)
+                if (turunanDistance <= maxDistance) {
+                    suggestions.add(turunandasar to turunanDistance)
                 }
             }
         }

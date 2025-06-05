@@ -1,130 +1,130 @@
 [
     {
-        "word": "saat",
-        "syllables": "sa.at",
-        "alphabet": "s",
-        "meanings": [
+        "dasar": "saat",
+        "sukukata": "sa.at",
+        "abjad": "s",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "binatang malam sejenis tupai yang mengeluarkan bau khas yang menyengat",
-                        "partOfSpeech": "n"
+                        "definisi": "binatang malam sejenis tupai yang mengeluarkan bau khas yang menyengat",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "sabaat",
-        "syllables": "sa.ba.at",
-        "alphabet": "s",
-        "meanings": [
+        "dasar": "sabaat",
+        "sukukata": "sa.ba.at",
+        "abjad": "s",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "sekongkol",
-                        "partOfSpeech": "n"
+                        "definisi": "sekongkol",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "sabak",
-        "syllables": "sa.bak",
-        "alphabet": "s",
-        "meanings": [
+        "dasar": "sabak",
+        "sukukata": "sa.bak",
+        "abjad": "s",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "berserakan; berhamburan",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "berserakan; berhamburan",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "ratik sabak di rumahnya",
-                                "id": "sampah berserakan di rumahnya"
+                                "banjar": "ratik sabak di rumahnya",
+                                "indonesia": "sampah berserakan di rumahnya"
                             }
                         ]
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "basasabak",
-                "syllables": "ba.sa.sa.bak",
-                "definitions": [
+                "dasar": "basasabak",
+                "sukukata": "ba.sa.sa.bak",
+                "definisi_umum": [
                     {
-                        "definition": "berhambur-habur",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "berhambur-habur",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "inya tu katuju basasabak",
-                                "id": "dia itu suka berhambur-hambur"
+                                "banjar": "inya tu katuju basasabak",
+                                "indonesia": "dia itu suka berhambur-hambur"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "manyabak",
-                "syllables": "ma.nya.bak",
-                "definitions": [
+                "dasar": "manyabak",
+                "sukukata": "ma.nya.bak",
+                "definisi_umum": [
                     {
-                        "definition": "berhamburan",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "berhamburan",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "manyabak ratik wadai",
-                                "id": "berhamburan sampah kue"
+                                "banjar": "manyabak ratik wadai",
+                                "indonesia": "berhamburan sampah kue"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "manyabaki",
-                "syllables": "ma.nya.baki",
-                "definitions": [
+                "dasar": "manyabaki",
+                "sukukata": "ma.nya.baki",
+                "definisi_umum": [
                     {
-                        "definition": "menyebabkan berhamburan",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "menyebabkan berhamburan",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "kartas ni manyabaki rumah ja",
-                                "id": "kertas ini menyebabkan rumah berhamburan saja"
+                                "banjar": "kartas ni manyabaki rumah ja",
+                                "indonesia": "kertas ini menyebabkan rumah berhamburan saja"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "panyabaknya",
-                "syllables": "pa.nya.bak.nya",
-                "definitions": [
+                "dasar": "panyabaknya",
+                "sukukata": "pa.nya.bak.nya",
+                "definisi_umum": [
                     {
-                        "definition": "paling berantakan",
-                        "partOfSpeech": "adv",
-                        "examples": [
+                        "definisi": "paling berantakan",
+                        "kelaskata": "adv",
+                        "contoh": [
                             {
-                                "bjn": "rumahnya ni nang panyabaknya",
-                                "id": "rumahnya ini yang paling berantakan"
+                                "banjar": "rumahnya ni nang panyabaknya",
+                                "indonesia": "rumahnya ini yang paling berantakan"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "tasabak",
-                "syllables": "ta.sa.bak",
-                "definitions": [
+                "dasar": "tasabak",
+                "sukukata": "ta.sa.bak",
+                "definisi_umum": [
                     {
-                        "definition": "lebih berantakan",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "lebih berantakan",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "kamarnya pina tasabak pada samalam",
-                                "id": "kamarnya kelihatan lebih berantakan dibanding kemarin"
+                                "banjar": "kamarnya pina tasabak pada samalam",
+                                "indonesia": "kamarnya kelihatan lebih berantakan dibanding kemarin"
                             }
                         ]
                     }
@@ -133,15 +133,15 @@
         ]
     },
     {
-        "word": "saban",
-        "syllables": "sa.ban",
-        "alphabet": "s",
-        "meanings": [
+        "dasar": "saban",
+        "sukukata": "sa.ban",
+        "abjad": "s",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "tiap; setiap",
-                        "partOfSpeech": "num"
+                        "definisi": "tiap; setiap",
+                        "kelaskata": "num"
                     }
                 ]
             }

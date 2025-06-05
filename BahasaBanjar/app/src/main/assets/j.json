@@ -1,17 +1,17 @@
 [
     {
-        "word": "ja",
-        "alphabet": "j",
-        "meanings": [
+        "dasar": "ja",
+        "abjad": "j",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "saja; -kan",
-                        "partOfSpeech": "adv",
-                        "examples": [
+                        "definisi": "saja; -kan",
+                        "kelaskata": "adv",
+                        "contoh": [
                             {
-                                "bjn": "biar ja",
-                                "id": "biarkan saja"
+                                "banjar": "biar ja",
+                                "indonesia": "biarkan saja"
                             }
                         ]
                     }

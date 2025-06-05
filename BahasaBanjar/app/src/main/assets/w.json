@@ -1,30 +1,30 @@
 [
     {
-        "word": "wabah",
-        "syllables": "wa.bah",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "wabah",
+        "sukukata": "wa.bah",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "wabah",
-                        "partOfSpeech": "n"
+                        "definisi": "wabah",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "mawabah",
-                "syllables": "ma.wa.bah",
-                "definitions": [
+                "dasar": "mawabah",
+                "sukukata": "ma.wa.bah",
+                "definisi_umum": [
                     {
-                        "definition": "mewabah",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "mewabah",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "panyakit mawabah di kampung subalah",
-                                "id": "penyakit mewabah di kampung sebelah"
+                                "banjar": "panyakit mawabah di kampung subalah",
+                                "indonesia": "penyakit mewabah di kampung sebelah"
                             }
                         ]
                     }
@@ -33,173 +33,37 @@
         ]
     },
     {
-        "word": "waca",
-        "syllables": "wa.ca",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "waca",
+        "sukukata": "wa.ca",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "baca; bacaan",
-                        "partOfSpeech": "n",
-                        "examples": [
+                        "definisi": "baca; bacaan",
+                        "kelaskata": "n",
+                        "contoh": [
                             {
-                                "bjn": "sudah ikam waca kah buku kamarian",
-                                "id": "sudah kamu baca ya buku kemarin"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "derivatives": [
-            {
-                "word": "mawaca",
-                "syllables": "ma.wa.ca",
-                "definitions": [
-                    {
-                        "definition": "membaca",
-                        "partOfSpeech": "v",
-                        "examples": [
-                            {
-                                "bjn": "sidin mawaca Al-Qur'an",
-                                "id": "beliau membaca Al-Qur'an"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wada",
-        "syllables": "wa.da",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "cela",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ],
-        "derivatives": [
-            {
-                "word": "bawadaan",
-                "syllables": "ba.wa.da.an",
-                "definitions": [
-                    {
-                        "definition": "saling mencela",
-                        "partOfSpeech": "v",
-                        "examples": [
-                            {
-                                "bjn": "pada hal batatangga tapi masih haja katuju bawadaan",
-                                "id": "padahal bertetangga tetapi masih saja senang saling mencela"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "word": "mawada",
-                "syllables": "ma.wa.da",
-                "definitions": [
-                    {
-                        "definition": "mencela",
-                        "partOfSpeech": "v",
-                        "examples": [
-                            {
-                                "bjn": "inya ngintu katuju mawada urang miskin",
-                                "id": "ia itu senang mencela orang miskin"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "word": "pawadaan",
-                "syllables": "pa.wa.da.an",
-                "definitions": [
-                    {
-                        "definition": "suka mencela",
-                        "partOfSpeech": "a",
-                        "examples": [
-                            {
-                                "bjn": "kada mambadai tuha masih haja pawadaan",
-                                "id": "meskipun sudah tua masih saja suka mencela"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wadah",
-        "syllables": "wa.dah",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "wadah; tempat",
-                        "partOfSpeech": "n",
-                        "examples": [
-                            {
-                                "bjn": "ikam badiam di wadah siapa?",
-                                "id": "kamu tinggal di tempat siapa?"
+                                "banjar": "sudah ikam waca kah buku kamarian",
+                                "indonesia": "sudah kamu baca ya buku kemarin"
                             }
                         ]
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "bawadah",
-                "syllables": "ba.wa.dah",
-                "definitions": [
+                "dasar": "mawaca",
+                "sukukata": "ma.wa.ca",
+                "definisi_umum": [
                     {
-                        "definition": "ada wadahnya; punya tempat",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "membaca",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "sudah baik susunannya bawadah pulang jadi wadainya kada lakas rusak",
-                                "id": "sudah bagus susunannya ada wadahnya lagi jadi kuenya tidak cepat rusak"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "word": "mawadahi",
-                "syllables": "ma.wa.dahi",
-                "definitions": [
-                    {
-                        "definition": "memberi tempat",
-                        "partOfSpeech": "v",
-                        "examples": [
-                            {
-                                "bjn": "sidin mawadahi iwak ka kantungan plastik",
-                                "id": "beliau memberi tempat ikan ke kantong plastik"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "word": "pawadahan",
-                "syllables": "pa.wa.dah.an",
-                "definitions": [
-                    {
-                        "definition": "macam-macam wadah/tempat",
-                        "partOfSpeech": "n",
-                        "examples": [
-                            {
-                                "bjn": "inya langkap baisi pawadahan acan, asam, uyah",
-                                "id": "ia lengkap memiliki macam-macam wadah keperluan dapur"
+                                "banjar": "sidin mawaca Al-Qur'an",
+                                "indonesia": "beliau membaca Al-Qur'an"
                             }
                         ]
                     }
@@ -208,63 +72,63 @@
         ]
     },
     {
-        "word": "wadak",
-        "syllables": "wa.dak",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "wada",
+        "sukukata": "wa.da",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "ramuan tradisional yang dioleskan sebagai obat",
-                        "partOfSpeech": "n"
+                        "definisi": "cela",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "bawadak",
-                "syllables": "ba.wa.dak",
-                "definitions": [
+                "dasar": "bawadaan",
+                "sukukata": "ba.wa.da.an",
+                "definisi_umum": [
                     {
-                        "definition": "mengoleskan wadak ke bagian yang sakit",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "saling mencela",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "inya parahatan bawadak panas",
-                                "id": "dia sedang mengoleskan wadak"
+                                "banjar": "pada hal batatangga tapi masih haja katuju bawadaan",
+                                "indonesia": "padahal bertetangga tetapi masih saja senang saling mencela"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "mawadaki",
-                "syllables": "ma.wa.daki",
-                "definitions": [
+                "dasar": "mawada",
+                "sukukata": "ma.wa.da",
+                "definisi_umum": [
                     {
-                        "definition": "mengolesi wadak",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "mencela",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "mama mawadaki batis ading nang bangkak",
-                                "id": "ibu mengolesi wadak pada kaki adik yang bengkak"
+                                "banjar": "inya ngintu katuju mawada urang miskin",
+                                "indonesia": "ia itu senang mencela orang miskin"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "mewadakiakan",
-                "syllables": "me.wa.daki.akan",
-                "definitions": [
+                "dasar": "pawadaan",
+                "sukukata": "pa.wa.da.an",
+                "definisi_umum": [
                     {
-                        "definition": "mengoleskan wadak",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "suka mencela",
+                        "kelaskata": "a",
+                        "contoh": [
                             {
-                                "bjn": "mewadakiakan tangan ading nang diigut samut gatal",
-                                "id": "mengoleskan wadak ke tangan adik yang digigit semut merah"
+                                "banjar": "kada mambadai tuha masih haja pawadaan",
+                                "indonesia": "meskipun sudah tua masih saja suka mencela"
                             }
                         ]
                     }
@@ -273,175 +137,134 @@
         ]
     },
     {
-        "word": "wadai",
-        "syllables": "wa.dai",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "wadah",
+        "sukukata": "wa.dah",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "kue",
-                        "partOfSpeech": "n"
+                        "definisi": "wadah; tempat",
+                        "kelaskata": "n",
+                        "contoh": [
+                            {
+                                "banjar": "ikam badiam di wadah siapa?",
+                                "indonesia": "kamu tinggal di tempat siapa?"
+                            }
+                        ]
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "wadai karing",
-                "definitions": [
+                "dasar": "bawadah",
+                "sukukata": "ba.wa.dah",
+                "definisi_umum": [
                     {
-                        "definition": "kue kering",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            },
-            {
-                "word": "wadai basah",
-                "definitions": [
-                    {
-                        "definition": "kue-kue basah seperti roti pisang, nagasari, dsb.",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            },
-            {
-                "word": "wadai sumapan",
-                "definitions": [
-                    {
-                        "definition": "kue-kue yang dimasak dalam talam yang dikukus",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            },
-            {
-                "word": "bawadai",
-                "syllables": "ba.wa.dai",
-                "definitions": [
-                    {
-                        "definition": "membuat kue",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "ada wadahnya; punya tempat",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "acil lagi asyik mawadai di bulan puasa ngini",
-                                "id": "bibi lagi asyik membuat kue di bulan Ramadan"
+                                "banjar": "sudah baik susunannya bawadah pulang jadi wadainya kada lakas rusak",
+                                "indonesia": "sudah bagus susunannya ada wadahnya lagi jadi kuenya tidak cepat rusak"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "pawadaian",
-                "syllables": "pa.wa.dai.an",
-                "definitions": [
+                "dasar": "mawadahi",
+                "sukukata": "ma.wa.dahi",
+                "definisi_umum": [
                     {
-                        "definition": "pembuat kue",
-                        "partOfSpeech": "n"
+                        "definisi": "memberi tempat",
+                        "kelaskata": "v",
+                        "contoh": [
+                            {
+                                "banjar": "sidin mawadahi iwak ka kantungan plastik",
+                                "indonesia": "beliau memberi tempat ikan ke kantong plastik"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "dasar": "pawadahan",
+                "sukukata": "pa.wa.dah.an",
+                "definisi_umum": [
+                    {
+                        "definisi": "macam-macam wadah/tempat",
+                        "kelaskata": "n",
+                        "contoh": [
+                            {
+                                "banjar": "inya langkap baisi pawadahan acan, asam, uyah",
+                                "indonesia": "ia lengkap memiliki macam-macam wadah keperluan dapur"
+                            }
+                        ]
                     }
                 ]
             }
         ]
     },
     {
-        "word": "wadi",
-        "syllables": "wa.di",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "wadak",
+        "sukukata": "wa.dak",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "proses pengasinan (ikan) dengan cara dibubuhi garam dalam jumlah banyak dan disimpan selama beberapa hari hingga setahun",
-                        "partOfSpeech": "n"
+                        "definisi": "ramuan tradisional yang dioleskan sebagai obat",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "iwak wadi",
-                "definitions": [
+                "dasar": "bawadak",
+                "sukukata": "ba.wa.dak",
+                "definisi_umum": [
                     {
-                        "definition": "ikan yang diasinkan dengan cara wadi",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            },
-            {
-                "word": "uyah wadi",
-                "definitions": [
-                    {
-                        "definition": "garam yang merupakan hasil proses pengeringan dari air ikan yang diwadi dengan cara memanaskannya di atas api dicampur serai dan cabe hijau, biasa digunakan untuk bumbu rujak",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            },
-            {
-                "word": "mawadi",
-                "syllables": "ma.wa.di",
-                "definitions": [
-                    {
-                        "definition": "mengasinkan ikan dengan cara wadi",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "mengoleskan wadak ke bagian yang sakit",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "aku samalam mawadi sapat",
-                                "id": "saya kemarin mengasinkan ikan sepat dengan cara wadi"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wagas",
-        "syllables": "wa.gas",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "sembuh",
-                        "partOfSpeech": "v",
-                        "examples": [
-                            {
-                                "bjn": "sidin sudah wagas",
-                                "id": "beliau sudah sembuh"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wagil",
-        "syllables": "wa.gil",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "suka melakukan hal yang dilarang",
-                        "partOfSpeech": "a",
-                        "examples": [
-                            {
-                                "bjn": "kakanak ngintu wagil banar",
-                                "id": "anak itu suka sekali melakukan hal yang dilarang"
+                                "banjar": "inya parahatan bawadak panas",
+                                "indonesia": "dia sedang mengoleskan wadak"
                             }
                         ]
                     }
                 ]
             },
             {
-                "definitions": [
+                "dasar": "mawadaki",
+                "sukukata": "ma.wa.daki",
+                "definisi_umum": [
                     {
-                        "definition": "agak sering",
-                        "partOfSpeech": "adv",
-                        "examples": [
+                        "definisi": "mengolesi wadak",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "wagil mahulut-hulut nang tuha",
-                                "id": "agak sering mengolok-olok yang tua"
+                                "banjar": "mama mawadaki batis ading nang bangkak",
+                                "indonesia": "ibu mengolesi wadak pada kaki adik yang bengkak"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "dasar": "mewadakiakan",
+                "sukukata": "me.wa.daki.akan",
+                "definisi_umum": [
+                    {
+                        "definisi": "mengoleskan wadak",
+                        "kelaskata": "v",
+                        "contoh": [
+                            {
+                                "banjar": "mewadakiakan tangan ading nang diigut samut gatal",
+                                "indonesia": "mengoleskan wadak ke tangan adik yang digigit semut merah"
                             }
                         ]
                     }
@@ -450,285 +273,119 @@
         ]
     },
     {
-        "word": "waham",
-        "syllables": "wa.ham",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "wadai",
+        "sukukata": "wa.dai",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "salah sangka; keliru",
-                        "partOfSpeech": "a",
-                        "examples": [
-                            {
-                                "bjn": "waham ikam tu",
-                                "id": "salah sangka kamu itu"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wahana",
-        "syllables": "wa.ha.na",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "firasat; pertanda",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wahin",
-        "syllables": "wa.hin",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "bersin",
-                        "partOfSpeech": "v",
-                        "examples": [
-                            {
-                                "bjn": "inya wahin tarus limbah kahujanan",
-                                "id": "ia bersin terus sehabis kehujanan"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wahyu",
-        "syllables": "wah.yu",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "wahyu",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "waja",
-        "syllables": "wa.ja",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "baja",
-                        "partOfSpeech": "n"
+                        "definisi": "kue",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "waja sampai ka puting",
-                "definitions": [
+                "dasar": "wadai karing",
+                "definisi_umum": [
                     {
-                        "definition": "orang yang berpendirian teguh, konsekuen, dan bekerja hingga selesai",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wajar",
-        "syllables": "wa.jar",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "wajar",
-                        "partOfSpeech": "a",
-                        "examples": [
-                            {
-                                "bjn": "wajar haja inya sarik mun ikam fitnah inya",
-                                "id": "wajar saja ia marah kalau kamu fitnah dia"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wajik",
-        "syllables": "wa.jik",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "wajik",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ],
-        "derivatives": [
-            {
-                "word": "wajik anum",
-                "definitions": [
-                    {
-                        "definition": "wajik yang terbuat dari beras ketan dan gula merah yang dimasak encer, biasanya untuk hidangan atau jamuan setelah selesai pembacaan doa arwah",
-                        "partOfSpeech": "n"
+                        "definisi": "kue kering",
+                        "kelaskata": "n"
                     }
                 ]
             },
             {
-                "word": "wajik tuha",
-                "definitions": [
+                "dasar": "wadai basah",
+                "definisi_umum": [
                     {
-                        "definition": "wajik yang terbuat dari beras ketan dan gula merah yang dimasak lebih kental",
-                        "partOfSpeech": "n"
+                        "definisi": "kue-kue basah seperti roti pisang, nagasari, dsb.",
+                        "kelaskata": "n"
                     }
                 ]
-            }
-        ]
-    },
-    {
-        "word": "wajip",
-        "syllables": "wa.jip",
-        "alphabet": "w",
-        "meanings": [
+            },
             {
-                "definitions": [
+                "dasar": "wadai sumapan",
+                "definisi_umum": [
                     {
-                        "definition": "wajib; harus dilakukan",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "kue-kue yang dimasak dalam talam yang dikukus",
+                        "kelaskata": "n"
+                    }
+                ]
+            },
+            {
+                "dasar": "bawadai",
+                "sukukata": "ba.wa.dai",
+                "definisi_umum": [
+                    {
+                        "definisi": "membuat kue",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "kita wajip sumbahyang nang lima waktu",
-                                "id": "kita wajib sembahyang yang lima waktu"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wajir",
-        "syllables": "wa.jir",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "wazir",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wakap",
-        "syllables": "wa.kap",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "wakaf",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ],
-        "derivatives": [
-            {
-                "word": "bawakap",
-                "syllables": "ba.wa.kap",
-                "definitions": [
-                    {
-                        "definition": "berwakaf",
-                        "partOfSpeech": "v",
-                        "examples": [
-                            {
-                                "bjn": "inya bawakap tanah gasan pakuburan",
-                                "id": "ia berwakaf tanah untuk tempat pemakaman"
+                                "banjar": "acil lagi asyik mawadai di bulan puasa ngini",
+                                "indonesia": "bibi lagi asyik membuat kue di bulan Ramadan"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "mawakapakan",
-                "syllables": "ma.wa.kap.akan",
-                "definitions": [
+                "dasar": "pawadaian",
+                "sukukata": "pa.wa.dai.an",
+                "definisi_umum": [
                     {
-                        "definition": "mewakafkan",
-                        "partOfSpeech": "v",
-                        "examples": [
-                            {
-                                "bjn": "sidin mawakapakan duit gasan maulah masigit",
-                                "id": "beliau mewakafkan uang untuk pembangunan masjid"
-                            }
-                        ]
+                        "definisi": "pembuat kue",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "wakar",
-        "syllables": "wa.kar",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "wadi",
+        "sukukata": "wa.di",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "penjaga; satpam",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wakas",
-        "syllables": "wa.kas",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "akhir",
-                        "partOfSpeech": "n"
+                        "definisi": "proses pengasinan (ikan) dengan cara dibubuhi garam dalam jumlah banyak dan disimpan selama beberapa hari hingga setahun",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "pawakasan",
-                "syllables": "pa.wa.kas.an",
-                "definitions": [
+                "dasar": "iwak wadi",
+                "definisi_umum": [
                     {
-                        "definition": "kali terakhir",
-                        "partOfSpeech": "a",
-                        "examples": [
+                        "definisi": "ikan yang diasinkan dengan cara wadi",
+                        "kelaskata": "n"
+                    }
+                ]
+            },
+            {
+                "dasar": "uyah wadi",
+                "definisi_umum": [
+                    {
+                        "definisi": "garam yang merupakan hasil proses pengeringan dari air ikan yang diwadi dengan cara memanaskannya di atas api dicampur serai dan cabe hijau, biasa digunakan untuk bumbu rujak",
+                        "kelaskata": "n"
+                    }
+                ]
+            },
+            {
+                "dasar": "mawadi",
+                "sukukata": "ma.wa.di",
+                "definisi_umum": [
+                    {
+                        "definisi": "mengasinkan ikan dengan cara wadi",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "inya bawakap tanah gasan pakuburan",
-                                "id": "ia berwakaf tanah untuk tempat pemakaman"
+                                "banjar": "aku samalam mawadi sapat",
+                                "indonesia": "saya kemarin mengasinkan ikan sepat dengan cara wadi"
                             }
                         ]
                     }
@@ -737,64 +394,19 @@
         ]
     },
     {
-        "word": "wakil",
-        "syllables": "wa.kil",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "wagas",
+        "sukukata": "wa.gas",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "wakil",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "waktu",
-        "syllables": "wak.tu",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "waktu; ketika",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wallahualam",
-        "syllables": "wal.la.hu.a.lam",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "wallahualam",
-                        "partOfSpeech": "p"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "walar",
-        "syllables": "wa.lar",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "lumayan; mending",
-                        "partOfSpeech": "a",
-                        "examples": [
+                        "definisi": "sembuh",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "walar ngalihnya sual ujian tadi",
-                                "id": "lumayan susahnya soal ujian tadi"
+                                "banjar": "sidin sudah wagas",
+                                "indonesia": "beliau sudah sembuh"
                             }
                         ]
                     }
@@ -803,34 +415,33 @@
         ]
     },
     {
-        "word": "walatih",
-        "syllables": "wa.la.tih",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "wagil",
+        "sukukata": "wa.gil",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "ulatih",
-                        "partOfSpeech": "n"
+                        "definisi": "suka melakukan hal yang dilarang",
+                        "kelaskata": "a",
+                        "contoh": [
+                            {
+                                "banjar": "kakanak ngintu wagil banar",
+                                "indonesia": "anak itu suka sekali melakukan hal yang dilarang"
+                            }
+                        ]
                     }
                 ]
-            }
-        ]
-    },
-    {
-        "word": "walau",
-        "syllables": "wa.lau",
-        "alphabet": "w",
-        "meanings": [
+            },
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "walau; meskipun",
-                        "partOfSpeech": "p",
-                        "examples": [
+                        "definisi": "agak sering",
+                        "kelaskata": "adv",
+                        "contoh": [
                             {
-                                "bjn": "walau inya miskin, tapi inya masih baisi harga diri",
-                                "id": "walau ia miskin, tetapi ia masih punya harga diri"
+                                "banjar": "wagil mahulut-hulut nang tuha",
+                                "indonesia": "agak sering mengolok-olok yang tua"
                             }
                         ]
                     }
@@ -839,53 +450,442 @@
         ]
     },
     {
-        "word": "walhasil",
-        "syllables": "wal.ha.sil",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "waham",
+        "sukukata": "wa.ham",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "pendeknya",
-                        "partOfSpeech": "n"
+                        "definisi": "salah sangka; keliru",
+                        "kelaskata": "a",
+                        "contoh": [
+                            {
+                                "banjar": "waham ikam tu",
+                                "indonesia": "salah sangka kamu itu"
+                            }
+                        ]
                     }
                 ]
             }
         ]
     },
     {
-        "word": "wali",
-        "syllables": "wa.li",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "wahana",
+        "sukukata": "wa.ha.na",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "wali; wakil",
-                        "partOfSpeech": "n"
+                        "definisi": "firasat; pertanda",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "wahin",
+        "sukukata": "wa.hin",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "bersin",
+                        "kelaskata": "v",
+                        "contoh": [
+                            {
+                                "banjar": "inya wahin tarus limbah kahujanan",
+                                "indonesia": "ia bersin terus sehabis kehujanan"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "wahyu",
+        "sukukata": "wah.yu",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "wahyu",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "waja",
+        "sukukata": "wa.ja",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "baja",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ],
+        "turunan": [
+            {
+                "dasar": "waja sampai ka puting",
+                "definisi_umum": [
+                    {
+                        "definisi": "orang yang berpendirian teguh, konsekuen, dan bekerja hingga selesai",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "wajar",
+        "sukukata": "wa.jar",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "wajar",
+                        "kelaskata": "a",
+                        "contoh": [
+                            {
+                                "banjar": "wajar haja inya sarik mun ikam fitnah inya",
+                                "indonesia": "wajar saja ia marah kalau kamu fitnah dia"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "wajik",
+        "sukukata": "wa.jik",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "wajik",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ],
+        "turunan": [
+            {
+                "dasar": "wajik anum",
+                "definisi_umum": [
+                    {
+                        "definisi": "wajik yang terbuat dari beras ketan dan gula merah yang dimasak encer, biasanya untuk hidangan atau jamuan setelah selesai pembacaan doa arwah",
+                        "kelaskata": "n"
+                    }
+                ]
+            },
+            {
+                "dasar": "wajik tuha",
+                "definisi_umum": [
+                    {
+                        "definisi": "wajik yang terbuat dari beras ketan dan gula merah yang dimasak lebih kental",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "wajip",
+        "sukukata": "wa.jip",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "wajib; harus dilakukan",
+                        "kelaskata": "v",
+                        "contoh": [
+                            {
+                                "banjar": "kita wajip sumbahyang nang lima waktu",
+                                "indonesia": "kita wajib sembahyang yang lima waktu"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "wajir",
+        "sukukata": "wa.jir",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "wazir",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "wakap",
+        "sukukata": "wa.kap",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "wakaf",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ],
+        "turunan": [
+            {
+                "dasar": "bawakap",
+                "sukukata": "ba.wa.kap",
+                "definisi_umum": [
+                    {
+                        "definisi": "berwakaf",
+                        "kelaskata": "v",
+                        "contoh": [
+                            {
+                                "banjar": "inya bawakap tanah gasan pakuburan",
+                                "indonesia": "ia berwakaf tanah untuk tempat pemakaman"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "dasar": "mawakapakan",
+                "sukukata": "ma.wa.kap.akan",
+                "definisi_umum": [
+                    {
+                        "definisi": "mewakafkan",
+                        "kelaskata": "v",
+                        "contoh": [
+                            {
+                                "banjar": "sidin mawakapakan duit gasan maulah masigit",
+                                "indonesia": "beliau mewakafkan uang untuk pembangunan masjid"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "wakar",
+        "sukukata": "wa.kar",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "penjaga; satpam",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "wakas",
+        "sukukata": "wa.kas",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "akhir",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ],
+        "turunan": [
+            {
+                "dasar": "pawakasan",
+                "sukukata": "pa.wa.kas.an",
+                "definisi_umum": [
+                    {
+                        "definisi": "kali terakhir",
+                        "kelaskata": "a",
+                        "contoh": [
+                            {
+                                "banjar": "inya bawakap tanah gasan pakuburan",
+                                "indonesia": "ia berwakaf tanah untuk tempat pemakaman"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "wakil",
+        "sukukata": "wa.kil",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "wakil",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "waktu",
+        "sukukata": "wak.tu",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "waktu; ketika",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "wallahualam",
+        "sukukata": "wal.la.hu.a.lam",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "wallahualam",
+                        "kelaskata": "p"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "walar",
+        "sukukata": "wa.lar",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "lumayan; mending",
+                        "kelaskata": "a",
+                        "contoh": [
+                            {
+                                "banjar": "walar ngalihnya sual ujian tadi",
+                                "indonesia": "lumayan susahnya soal ujian tadi"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "walatih",
+        "sukukata": "wa.la.tih",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "ulatih",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "walau",
+        "sukukata": "wa.lau",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "walau; meskipun",
+                        "kelaskata": "p",
+                        "contoh": [
+                            {
+                                "banjar": "walau inya miskin, tapi inya masih baisi harga diri",
+                                "indonesia": "walau ia miskin, tetapi ia masih punya harga diri"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "walhasil",
+        "sukukata": "wal.ha.sil",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "pendeknya",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "wali",
+        "sukukata": "wa.li",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "wali; wakil",
+                        "kelaskata": "n"
                     },
                     {
-                        "definition": "wali Allah, orang yang dekat dengan Tuhan",
-                        "partOfSpeech": "n"
+                        "definisi": "wali Allah, orang yang dekat dengan Tuhan",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "walih",
-        "syllables": "wa.lih",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "walih",
+        "sukukata": "wa.lih",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "pasti",
-                        "partOfSpeech": "a",
-                        "examples": [
+                        "definisi": "pasti",
+                        "kelaskata": "a",
+                        "contoh": [
                             {
-                                "bjn": "undangannya walih isuk",
-                                "id": "undangannya pasti besok"
+                                "banjar": "undangannya walih isuk",
+                                "indonesia": "undangannya pasti besok"
                             }
                         ]
                     }
@@ -894,52 +894,52 @@
         ]
     },
     {
-        "word": "walik",
-        "syllables": "wa.lik",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "walik",
+        "sukukata": "wa.lik",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "ayam berbulu keriting",
-                        "partOfSpeech": "n"
+                        "definisi": "ayam berbulu keriting",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "walu",
-        "syllables": "wa.lu",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "walu",
+        "sukukata": "wa.lu",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "delapan",
-                        "partOfSpeech": "num",
-                        "examples": [
+                        "definisi": "delapan",
+                        "kelaskata": "num",
+                        "contoh": [
                             {
-                                "bjn": "kayunya walu",
-                                "id": "kayunya delapan"
+                                "banjar": "kayunya walu",
+                                "indonesia": "kayunya delapan"
                             }
                         ]
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "walung puluh",
-                "syllables": "wa.lung pu.luh",
-                "definitions": [
+                "dasar": "walung puluh",
+                "sukukata": "wa.lung pu.luh",
+                "definisi_umum": [
                     {
-                        "definition": "delapan pulung",
-                        "partOfSpeech": "num",
-                        "examples": [
+                        "definisi": "delapan pulung",
+                        "kelaskata": "num",
+                        "contoh": [
                             {
-                                "bjn": "jumlahnya walung puluh",
-                                "id": "jumlahnya delapan puluh"
+                                "banjar": "jumlahnya walung puluh",
+                                "indonesia": "jumlahnya delapan puluh"
                             }
                         ]
                     }
@@ -948,55 +948,55 @@
         ]
     },
     {
-        "word": "waluh",
-        "syllables": "wa.luh",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "waluh",
+        "sukukata": "wa.luh",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "labu",
-                        "partOfSpeech": "n"
+                        "definisi": "labu",
+                        "kelaskata": "n"
                     }
                 ]
             },
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "bodoh",
-                        "partOfSpeech": "a"
+                        "definisi": "bodoh",
+                        "kelaskata": "a"
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "mawaluh",
-                "syllables": "ma.wa.luh",
-                "definitions": [
+                "dasar": "mawaluh",
+                "sukukata": "ma.wa.luh",
+                "definisi_umum": [
                     {
-                        "definition": "menanam labu",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "menanam labu",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "sidin mawaluh di halaman di higa rumah",
-                                "id": "beliau menanam labu di halaman sdi samping rumah"
+                                "banjar": "sidin mawaluh di halaman di higa rumah",
+                                "indonesia": "beliau menanam labu di halaman sdi samping rumah"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "mawaluhi",
-                "syllables": "ma.wa.lu.hi",
-                "definitions": [
+                "dasar": "mawaluhi",
+                "sukukata": "ma.wa.lu.hi",
+                "definisi_umum": [
                     {
-                        "definition": "membodohi",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "membodohi",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "inya mawaluhi aku tarus gawiannya",
-                                "id": "ia membodohi aku terus kerjaannya"
+                                "banjar": "inya mawaluhi aku tarus gawiannya",
+                                "indonesia": "ia membodohi aku terus kerjaannya"
                             }
                         ]
                     }
@@ -1005,147 +1005,45 @@
         ]
     },
     {
-        "word": "walut",
-        "syllables": "wa.lut",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "walut",
+        "sukukata": "wa.lut",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "belut",
-                        "partOfSpeech": "n"
+                        "definisi": "belut",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "butir walut",
-                "definitions": [
+                "dasar": "butir walut",
+                "definisi_umum": [
                     {
-                        "definition": "kutil yang dipercayai disebabkan darah belut",
-                        "partOfSpeech": "n"
+                        "definisi": "kutil yang dipercayai disebabkan darah belut",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "wan",
-        "syllables": "wan",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "wan",
+        "sukukata": "wan",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "pada; dengan",
-                        "partOfSpeech": "p",
-                        "examples": [
+                        "definisi": "pada; dengan",
+                        "kelaskata": "p",
+                        "contoh": [
                             {
-                                "bjn": "inya tulak wan adingnya",
-                                "id": "ia berangkat dengan adiknya"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wancuh",
-        "syllables": "wan.cuh",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "sendok nasi dari kayu",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wangal",
-        "syllables": "wa.ngal",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "bengal; bandel; nakal",
-                        "partOfSpeech": "a",
-                        "examples": [
-                            {
-                                "bjn": "dasar wangal kakanak ngini",
-                                "id": "dasar nakal anak ini"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "derivatives": [
-            {
-                "word": "bawangal",
-                "syllables": "ba.wa.ngal",
-                "definitions": [
-                    {
-                        "definition": "tambah bengal",
-                        "partOfSpeech": "v",
-                        "examples": [
-                            {
-                                "bjn": "makin ditagur makin bawangal",
-                                "id": "makin ditegur makin tambah bengal"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "word": "kawangalan",
-                "syllables": "ka.wa.ngal.an",
-                "definitions": [
-                    {
-                        "definition": "terlalu bengal",
-                        "partOfSpeech": "a",
-                        "examples": [
-                            {
-                                "bjn": "ulih kawangalan inya dikaluarakan matan sakulahan",
-                                "id": "karena terlalu bengal ia dikeluarkan dari sekolah"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "word": "pawangalnya",
-                "syllables": "pa.wa.ngal.nya",
-                "definitions": [
-                    {
-                        "definition": "paling bengal",
-                        "partOfSpeech": "a",
-                        "examples": [
-                            {
-                                "bjn": "kakanak ngintu pawangalnya di kalas",
-                                "id": "anak itu paling bengal di kelas"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "word": "tawangal",
-                "syllables": "ta.wa.ngal",
-                "definitions": [
-                    {
-                        "definition": "lebih bengal",
-                        "partOfSpeech": "a",
-                        "examples": [
-                            {
-                                "bjn": "kalakuannya tawangal dari pada dahulu",
-                                "id": "kelakuannya lebih bengal dibanding dulu"
+                                "banjar": "inya tulak wan adingnya",
+                                "indonesia": "ia berangkat dengan adiknya"
                             }
                         ]
                     }
@@ -1154,68 +1052,100 @@
         ]
     },
     {
-        "word": "wangkang",
-        "syllables": "wang.kang",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "wancuh",
+        "sukukata": "wan.cuh",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "perahu besar; kapal layar",
-                        "partOfSpeech": "n"
+                        "definisi": "sendok nasi dari kayu",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "wangsul",
-        "syllables": "wang.sul",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "wangal",
+        "sukukata": "wa.ngal",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "keluar; muncul",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "bengal; bandel; nakal",
+                        "kelaskata": "a",
+                        "contoh": [
                             {
-                                "bjn": "kanapa hanyar haja wangsul",
-                                "id": "kenapa baru saja muncul"
+                                "banjar": "dasar wangal kakanak ngini",
+                                "indonesia": "dasar nakal anak ini"
                             }
                         ]
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "bawangasul",
-                "syllables": "ba.wang.sul",
-                "definitions": [
+                "dasar": "bawangal",
+                "sukukata": "ba.wa.ngal",
+                "definisi_umum": [
                     {
-                        "definition": "memunculkan diri",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "tambah bengal",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "sidin bawangasul di hadapan rapat adat",
-                                "id": "beliau memunculkan diri di depan rapat adat"
+                                "banjar": "makin ditagur makin bawangal",
+                                "indonesia": "makin ditegur makin tambah bengal"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "tawangasul",
-                "syllables": "ta.wang.sul",
-                "definitions": [
+                "dasar": "kawangalan",
+                "sukukata": "ka.wa.ngal.an",
+                "definisi_umum": [
                     {
-                        "definition": "tersembul; terkeluar",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "terlalu bengal",
+                        "kelaskata": "a",
+                        "contoh": [
                             {
-                                "bjn": "awaknya tawangasul",
-                                "id": "badannya terkeluar"
+                                "banjar": "ulih kawangalan inya dikaluarakan matan sakulahan",
+                                "indonesia": "karena terlalu bengal ia dikeluarkan dari sekolah"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "dasar": "pawangalnya",
+                "sukukata": "pa.wa.ngal.nya",
+                "definisi_umum": [
+                    {
+                        "definisi": "paling bengal",
+                        "kelaskata": "a",
+                        "contoh": [
+                            {
+                                "banjar": "kakanak ngintu pawangalnya di kalas",
+                                "indonesia": "anak itu paling bengal di kelas"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "dasar": "tawangal",
+                "sukukata": "ta.wa.ngal",
+                "definisi_umum": [
+                    {
+                        "definisi": "lebih bengal",
+                        "kelaskata": "a",
+                        "contoh": [
+                            {
+                                "banjar": "kalakuannya tawangal dari pada dahulu",
+                                "indonesia": "kelakuannya lebih bengal dibanding dulu"
                             }
                         ]
                     }
@@ -1224,127 +1154,68 @@
         ]
     },
     {
-        "word": "wani",
-        "syllables": "wa.ni",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "wangkang",
+        "sukukata": "wang.kang",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "berani",
-                        "partOfSpeech": "a",
-                        "examples": [
+                        "definisi": "perahu besar; kapal layar",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "wangsul",
+        "sukukata": "wang.sul",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "keluar; muncul",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "inya wani bakalahi",
-                                "id": "ia berani berkelahi"
+                                "banjar": "kanapa hanyar haja wangsul",
+                                "indonesia": "kenapa baru saja muncul"
                             }
                         ]
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "bawani",
-                "syllables": "ba.wa.ni",
-                "definitions": [
+                "dasar": "bawangasul",
+                "sukukata": "ba.wang.sul",
+                "definisi_umum": [
                     {
-                        "definition": "tambah berani; memberanikan diir",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "memunculkan diri",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "limbah katuhukan disakiti inya bawani malawan",
-                                "id": "sehabis keseringan disakiti ia tambah berani melawan"
+                                "banjar": "sidin bawangasul di hadapan rapat adat",
+                                "indonesia": "beliau memunculkan diri di depan rapat adat"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "bawanian",
-                "syllables": "ba.wa.ni.an",
-                "definitions": [
+                "dasar": "tawangasul",
+                "sukukata": "ta.wang.sul",
+                "definisi_umum": [
                     {
-                        "definition": "adu keberanian",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "tersembul; terkeluar",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "kita bawanian naik puhun nyiur",
-                                "id": "kita adu keberanian naik pohon kelapa"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "word": "kawanian",
-                "syllables": "ka.wa.ni.an",
-                "definitions": [
-                    {
-                        "definition": "terlalu berani",
-                        "partOfSpeech": "a",
-                        "examples": [
-                            {
-                                "bjn": "kam tu kawanian maambil rasiku saurangan",
-                                "id": "kamu itu terlalu berani mengambil risiko sendiri"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "word": "mawanii",
-                "syllables": "ma.wa.ni.i",
-                "definitions": [
-                    {
-                        "definition": "menaiki harga; memberanikan diri",
-                        "partOfSpeech": "v",
-                        "examples": [
-                            {
-                                "bjn": "inya mawanii datang ka rumah mintuhanya",
-                                "id": "ia memberanikan diri datang ke rumah mertuanya"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "word": "pawanian",
-                "syllables": "pa.wa.ni.an",
-                "definitions": [
-                    {
-                        "definition": "pemberani",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            },
-            {
-                "word": "pawaninya",
-                "syllables": "pa.wa.ni.nya",
-                "definitions": [
-                    {
-                        "definition": "paling berani",
-                        "partOfSpeech": "a",
-                        "examples": [
-                            {
-                                "bjn": "inya ae nang pawaninya di sakulahan",
-                                "id": "cuma dia yang paling berani di sekolah"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "word": "tawani",
-                "syllables": "ta.wa.ni",
-                "definitions": [
-                    {
-                        "definition": "lebih berani",
-                        "partOfSpeech": "a",
-                        "examples": [
-                            {
-                                "bjn": "adingnya tawani dari pada kakanya",
-                                "id": "adiknya lebih berani dibanding kakaknya"
+                                "banjar": "awaknya tawangasul",
+                                "indonesia": "badannya terkeluar"
                             }
                         ]
                     }
@@ -1353,263 +1224,392 @@
         ]
     },
     {
-        "word": "wantar",
-        "syllables": "wan.tar",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "wani",
+        "sukukata": "wa.ni",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "santer; tersebar (berita)",
-                        "partOfSpeech": "a",
-                        "examples": [
+                        "definisi": "berani",
+                        "kelaskata": "a",
+                        "contoh": [
                             {
-                                "bjn": "wayahini wantar kadangaran kakanakan kana culik",
-                                "id": "saat ini santer terdengan berita anak-anak kena culik"
+                                "banjar": "inya wani bakalahi",
+                                "indonesia": "ia berani berkelahi"
                             }
                         ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wantilan",
-        "syllables": "wan.til.an",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "tempat penggergajian kayu secara tradisional sekaligus tempat penjualannya",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wanyi",
-        "syllables": "wa.nyi",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "lebah madu",
-                        "partOfSpeech": "n"
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "mamuai wanyi",
-                "definitions": [
+                "dasar": "bawani",
+                "sukukata": "ba.wa.ni",
+                "definisi_umum": [
                     {
-                        "definition": "mengambil madu lebah",
-                        "partOfSpeech": "v"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wapak",
-        "syllables": "wa.pak",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "zimat",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wara",
-        "syllables": "wa.ra",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "hanya saja",
-                        "partOfSpeech": "a",
-                        "examples": [
+                        "definisi": "tambah berani; memberanikan diir",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "banyu putih wara nang disurung",
-                                "id": "hanya air putih saja yang disuguhkan"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "warah",
-        "syllables": "wa.rah",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "urah",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "warang",
-        "syllables": "wa.rang",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "besan",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ],
-        "derivatives": [
-            {
-                "word": "bawarang",
-                "syllables": "ba.wa.rang",
-                "definitions": [
-                    {
-                        "definition": "berbesanan",
-                        "partOfSpeech": "v",
-                        "examples": [
-                            {
-                                "bjn": "sidin bawarang lawan urang sugih",
-                                "id": "beliau berbesanan dengan orang kaya"
+                                "banjar": "limbah katuhukan disakiti inya bawani malawan",
+                                "indonesia": "sehabis keseringan disakiti ia tambah berani melawan"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "pawarangan",
-                "syllables": "pa.wa.rang.an",
-                "definitions": [
+                "dasar": "bawanian",
+                "sukukata": "ba.wa.ni.an",
+                "definisi_umum": [
                     {
-                        "definition": "besan",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "warangan",
-        "syllables": "wa.rang.an",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "werangan; sejenis racun tikus",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "waras",
-        "syllables": "wa.ras",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "sembuh",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "adu keberanian",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "kabila ikam waras matan garing",
-                                "id": "kapan kamu sembuh dari sakit"
+                                "banjar": "kita bawanian naik puhun nyiur",
+                                "indonesia": "kita adu keberanian naik pohon kelapa"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "dasar": "kawanian",
+                "sukukata": "ka.wa.ni.an",
+                "definisi_umum": [
+                    {
+                        "definisi": "terlalu berani",
+                        "kelaskata": "a",
+                        "contoh": [
+                            {
+                                "banjar": "kam tu kawanian maambil rasiku saurangan",
+                                "indonesia": "kamu itu terlalu berani mengambil risiko sendiri"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "dasar": "mawanii",
+                "sukukata": "ma.wa.ni.i",
+                "definisi_umum": [
+                    {
+                        "definisi": "menaiki harga; memberanikan diri",
+                        "kelaskata": "v",
+                        "contoh": [
+                            {
+                                "banjar": "inya mawanii datang ka rumah mintuhanya",
+                                "indonesia": "ia memberanikan diri datang ke rumah mertuanya"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "dasar": "pawanian",
+                "sukukata": "pa.wa.ni.an",
+                "definisi_umum": [
+                    {
+                        "definisi": "pemberani",
+                        "kelaskata": "n"
+                    }
+                ]
+            },
+            {
+                "dasar": "pawaninya",
+                "sukukata": "pa.wa.ni.nya",
+                "definisi_umum": [
+                    {
+                        "definisi": "paling berani",
+                        "kelaskata": "a",
+                        "contoh": [
+                            {
+                                "banjar": "inya ae nang pawaninya di sakulahan",
+                                "indonesia": "cuma dia yang paling berani di sekolah"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "dasar": "tawani",
+                "sukukata": "ta.wa.ni",
+                "definisi_umum": [
+                    {
+                        "definisi": "lebih berani",
+                        "kelaskata": "a",
+                        "contoh": [
+                            {
+                                "banjar": "adingnya tawani dari pada kakanya",
+                                "indonesia": "adiknya lebih berani dibanding kakaknya"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "wantar",
+        "sukukata": "wan.tar",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "santer; tersebar (berita)",
+                        "kelaskata": "a",
+                        "contoh": [
+                            {
+                                "banjar": "wayahini wantar kadangaran kakanakan kana culik",
+                                "indonesia": "saat ini santer terdengan berita anak-anak kena culik"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "wantilan",
+        "sukukata": "wan.til.an",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "tempat penggergajian kayu secara tradisional sekaligus tempat penjualannya",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "wanyi",
+        "sukukata": "wa.nyi",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "lebah madu",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ],
+        "turunan": [
+            {
+                "dasar": "mamuai wanyi",
+                "definisi_umum": [
+                    {
+                        "definisi": "mengambil madu lebah",
+                        "kelaskata": "v"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "wapak",
+        "sukukata": "wa.pak",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "zimat",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "wara",
+        "sukukata": "wa.ra",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "hanya saja",
+                        "kelaskata": "a",
+                        "contoh": [
+                            {
+                                "banjar": "banyu putih wara nang disurung",
+                                "indonesia": "hanya air putih saja yang disuguhkan"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "warah",
+        "sukukata": "wa.rah",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "urah",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "warang",
+        "sukukata": "wa.rang",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "besan",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ],
+        "turunan": [
+            {
+                "dasar": "bawarang",
+                "sukukata": "ba.wa.rang",
+                "definisi_umum": [
+                    {
+                        "definisi": "berbesanan",
+                        "kelaskata": "v",
+                        "contoh": [
+                            {
+                                "banjar": "sidin bawarang lawan urang sugih",
+                                "indonesia": "beliau berbesanan dengan orang kaya"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "dasar": "pawarangan",
+                "sukukata": "pa.wa.rang.an",
+                "definisi_umum": [
+                    {
+                        "definisi": "besan",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "warangan",
+        "sukukata": "wa.rang.an",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "werangan; sejenis racun tikus",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "waras",
+        "sukukata": "wa.ras",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "sembuh",
+                        "kelaskata": "v",
+                        "contoh": [
+                            {
+                                "banjar": "kabila ikam waras matan garing",
+                                "indonesia": "kapan kamu sembuh dari sakit"
                             }
                         ]
                     },
                     {
-                        "definition": "baik (perilaku)",
-                        "partOfSpeech": "a",
-                        "examples": [
+                        "definisi": "baik (perilaku)",
+                        "kelaskata": "a",
+                        "contoh": [
                             {
-                                "bjn": "ikam tuh masih waras jadi jangan kaya urang gila",
-                                "id": "kamu itu masih baik jadi jangan seperti orang gila"
+                                "banjar": "ikam tuh masih waras jadi jangan kaya urang gila",
+                                "indonesia": "kamu itu masih baik jadi jangan seperti orang gila"
                             }
                         ]
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "kada waras",
-                "definitions": [
+                "dasar": "kada waras",
+                "definisi_umum": [
                     {
-                        "definition": "tidak baik; nakal",
-                        "partOfSpeech": "a"
+                        "definisi": "tidak baik; nakal",
+                        "kelaskata": "a"
                     },
                     {
-                        "definition": "sinting; gila",
-                        "partOfSpeech": "a"
+                        "definisi": "sinting; gila",
+                        "kelaskata": "a"
                     }
                 ]
             },
             {
-                "word": "mawarasakan",
-                "syllables": "ma.wa.ras.akan",
-                "definitions": [
+                "dasar": "mawarasakan",
+                "sukukata": "ma.wa.ras.akan",
+                "definisi_umum": [
                     {
-                        "definition": "menyembuhkan",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "menyembuhkan",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "inya nang mawarasakan ikam matan kasurupan",
-                                "id": "ia yang menyembuhkan kamu dari kesurupan"
+                                "banjar": "inya nang mawarasakan ikam matan kasurupan",
+                                "indonesia": "ia yang menyembuhkan kamu dari kesurupan"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "tawaras",
-                "syllables": "ta.wa.ras",
-                "definitions": [
+                "dasar": "tawaras",
+                "sukukata": "ta.wa.ras",
+                "definisi_umum": [
                     {
-                        "definition": "lebih baik (kelakuan)",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "lebih baik (kelakuan)",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "kalakuan adingnya tawaras dari pada nang kaka",
-                                "id": "kelakukan adiknya lebih baik dibanding kakak"
+                                "banjar": "kalakuan adingnya tawaras dari pada nang kaka",
+                                "indonesia": "kelakukan adiknya lebih baik dibanding kakak"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "pawarasnya",
-                "syllables": "pa.wa.ras.nya",
-                "definitions": [
+                "dasar": "pawarasnya",
+                "sukukata": "pa.wa.ras.nya",
+                "definisi_umum": [
                     {
-                        "definition": "paling baik",
-                        "partOfSpeech": "a",
-                        "examples": [
+                        "definisi": "paling baik",
+                        "kelaskata": "a",
+                        "contoh": [
                             {
-                                "bjn": "siapa nang pawarasnya di antara bubuhan ikam sabarataan?",
-                                "id": "siapa yang paling baik di antara kalian semua?"
+                                "banjar": "siapa nang pawarasnya di antara bubuhan ikam sabarataan?",
+                                "indonesia": "siapa yang paling baik di antara kalian semua?"
                             }
                         ]
                     }
@@ -1618,19 +1618,19 @@
         ]
     },
     {
-        "word": "warai",
-        "syllables": "wa.rai",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "warai",
+        "sukukata": "wa.rai",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "berubah muka karena malu atau merasa salah",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "berubah muka karena malu atau merasa salah",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "muhanya warai ulih manuduh urang nang kada salah",
-                                "id": "mukanya berubah karena merasa salah karena menuduh orang tidak salah"
+                                "banjar": "muhanya warai ulih manuduh urang nang kada salah",
+                                "indonesia": "mukanya berubah karena merasa salah karena menuduh orang tidak salah"
                             }
                         ]
                     }
@@ -1639,164 +1639,164 @@
         ]
     },
     {
-        "word": "warga",
-        "syllables": "war.ga",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "warga",
+        "sukukata": "war.ga",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "warga",
-                        "partOfSpeech": "n"
+                        "definisi": "warga",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "warih",
-        "syllables": "wa.rih",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "warih",
+        "sukukata": "wa.rih",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "akhir",
-                        "partOfSpeech": "n"
+                        "definisi": "akhir",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "kawarihannya",
-                "syllables": "ka.wa.rih.an.nya",
-                "definitions": [
+                "dasar": "kawarihannya",
+                "sukukata": "ka.wa.rih.an.nya",
+                "definisi_umum": [
                     {
-                        "definition": "pada akhirnya",
-                        "partOfSpeech": "n"
+                        "definisi": "pada akhirnya",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "warik",
-        "syllables": "wa.rik",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "warik",
+        "sukukata": "wa.rik",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "kera",
-                        "partOfSpeech": "n"
+                        "definisi": "kera",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "waring",
-        "syllables": "wa.ring",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "waring",
+        "sukukata": "wa.ring",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "panggilan kepada orang tua dari sanggah",
-                        "partOfSpeech": "n"
+                        "definisi": "panggilan kepada orang tua dari sanggah",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "waringin",
-        "syllables": "wa.ri.ngin",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "waringin",
+        "sukukata": "wa.ri.ngin",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "beringin",
-                        "partOfSpeech": "n"
+                        "definisi": "beringin",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "waris",
-        "syllables": "wa.ris",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "waris",
+        "sukukata": "wa.ris",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "waris",
-                        "partOfSpeech": "n"
+                        "definisi": "waris",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "warna",
-        "syllables": "war.na",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "warna",
+        "sukukata": "war.na",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "warna",
-                        "partOfSpeech": "n"
+                        "definisi": "warna",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "warung",
-        "syllables": "wa.rung",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "warung",
+        "sukukata": "wa.rung",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "warung",
-                        "partOfSpeech": "n"
+                        "definisi": "warung",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "bawarung",
-                "syllables": "ba.wa.rung",
-                "definitions": [
+                "dasar": "bawarung",
+                "sukukata": "ba.wa.rung",
+                "definisi_umum": [
                     {
-                        "definition": "membuka warung",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "membuka warung",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "acil bawarung di pinggir jalan",
-                                "id": "bibi membuka warung di pinggir jalan"
+                                "banjar": "acil bawarung di pinggir jalan",
+                                "indonesia": "bibi membuka warung di pinggir jalan"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "mawarung",
-                "syllables": "ma.wa.rung",
-                "definitions": [
+                "dasar": "mawarung",
+                "sukukata": "ma.wa.rung",
+                "definisi_umum": [
                     {
-                        "definition": "makan minum di warung",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "makan minum di warung",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "inya tuh mawarung haja gawian",
-                                "id": "ia itu senang makan minum di warung saja kerjaannya"
+                                "banjar": "inya tuh mawarung haja gawian",
+                                "indonesia": "ia itu senang makan minum di warung saja kerjaannya"
                             }
                         ]
                     }
@@ -1805,61 +1805,61 @@
         ]
     },
     {
-        "word": "wasangka",
-        "syllables": "wa.sang.ka",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "wasangka",
+        "sukukata": "wa.sang.ka",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "prasangka",
-                        "partOfSpeech": "n"
+                        "definisi": "prasangka",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "wasi",
-        "syllables": "wa.si",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "wasi",
+        "sukukata": "wa.si",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "besi",
-                        "partOfSpeech": "n"
+                        "definisi": "besi",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "wasiat",
-        "syllables": "wa.si.at",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "wasiat",
+        "sukukata": "wa.si.at",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "wasiat",
-                        "partOfSpeech": "n"
+                        "definisi": "wasiat",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "bawasiat",
-                "syllables": "ba.wa.si.at",
-                "definitions": [
+                "dasar": "bawasiat",
+                "sukukata": "ba.wa.si.at",
+                "definisi_umum": [
                     {
-                        "definition": "berwaasiat",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "berwaasiat",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "sidin bawasiat barang sidin dijaga baik-baik",
-                                "id": "beliau berwasiat barang beliau dijaga baik-baik"
+                                "banjar": "sidin bawasiat barang sidin dijaga baik-baik",
+                                "indonesia": "beliau berwasiat barang beliau dijaga baik-baik"
                             }
                         ]
                     }
@@ -1868,19 +1868,19 @@
         ]
     },
     {
-        "word": "wastu",
-        "syllables": "was.tu",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "wastu",
+        "sukukata": "was.tu",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "hanya",
-                        "partOfSpeech": "adv",
-                        "examples": [
+                        "definisi": "hanya",
+                        "kelaskata": "adv",
+                        "contoh": [
                             {
-                                "bjn": "haraganya wastu lima ribu",
-                                "id": "harganya hanya lima ribu"
+                                "banjar": "haraganya wastu lima ribu",
+                                "indonesia": "harganya hanya lima ribu"
                             }
                         ]
                     }
@@ -1889,125 +1889,125 @@
         ]
     },
     {
-        "word": "watas",
-        "syllables": "wa.tas",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "watas",
+        "sukukata": "wa.tas",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "batas",
-                        "partOfSpeech": "n"
+                        "definisi": "batas",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "bawatas",
-                "syllables": "ba.wa.tas",
-                "definitions": [
+                "dasar": "bawatas",
+                "sukukata": "ba.wa.tas",
+                "definisi_umum": [
                     {
-                        "definition": "berbatas",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "berbatas",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "tanahnya bawatas lawan tanahku",
-                                "id": "tanahnya berbatas dengan tanahku"
+                                "banjar": "tanahnya bawatas lawan tanahku",
+                                "indonesia": "tanahnya berbatas dengan tanahku"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "mawatasi",
-                "syllables": "ma.wa.tasi",
-                "definitions": [
+                "dasar": "mawatasi",
+                "sukukata": "ma.wa.tasi",
+                "definisi_umum": [
                     {
-                        "definition": "memberi batas",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "memberi batas",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "sidin mawatasi pahumaan sidin",
-                                "id": "beliau memberi batas sawah beliau"
+                                "banjar": "sidin mawatasi pahumaan sidin",
+                                "indonesia": "beliau memberi batas sawah beliau"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "pawatasan",
-                "syllables": "pa.wa.tas.an",
-                "definitions": [
+                "dasar": "pawatasan",
+                "sukukata": "pa.wa.tas.an",
+                "definisi_umum": [
                     {
-                        "definition": "perbatasan",
-                        "partOfSpeech": "n"
+                        "definisi": "perbatasan",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "watun",
-        "syllables": "wa.tun",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "watun",
+        "sukukata": "wa.tun",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "bagian lantai rumah yang agak meninggi sedikit dari lantai, bisa berada di antara teras dengan lantai rumah, atau antara bagian rumah yang satu dengan bagian rumah yang lain",
-                        "partOfSpeech": "n"
+                        "definisi": "bagian lantai rumah yang agak meninggi sedikit dari lantai, bisa berada di antara teras dengan lantai rumah, atau antara bagian rumah yang satu dengan bagian rumah yang lain",
+                        "kelaskata": "n"
                     }
                 ]
             },
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "lebak dangkal",
-                        "partOfSpeech": "n"
+                        "definisi": "lebak dangkal",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "watun satu",
-                "definitions": [
+                "dasar": "watun satu",
+                "definisi_umum": [
                     {
-                        "definition": "lebak dangkal",
-                        "partOfSpeech": "n"
+                        "definisi": "lebak dangkal",
+                        "kelaskata": "n"
                     }
                 ]
             },
             {
-                "word": "watun dua",
-                "definitions": [
+                "dasar": "watun dua",
+                "definisi_umum": [
                     {
-                        "definition": "lebak tengahan",
-                        "partOfSpeech": "n"
+                        "definisi": "lebak tengahan",
+                        "kelaskata": "n"
                     }
                 ]
             },
             {
-                "word": "watun tiga",
-                "definitions": [
+                "dasar": "watun tiga",
+                "definisi_umum": [
                     {
-                        "definition": "lebak dalam",
-                        "partOfSpeech": "n"
+                        "definisi": "lebak dalam",
+                        "kelaskata": "n"
                     }
                 ]
             },
             {
-                "word": "bawatun",
-                "syllables": "ba.wa.tun",
-                "definitions": [
+                "dasar": "bawatun",
+                "sukukata": "ba.wa.tun",
+                "definisi_umum": [
                     {
-                        "definition": "bertingkat; meniggi sedikit pada bentuk rumah Banjar",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "bertingkat; meniggi sedikit pada bentuk rumah Banjar",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "rumahnya bawatun",
-                                "id": "rumahnya bertingkat"
+                                "banjar": "rumahnya bawatun",
+                                "indonesia": "rumahnya bertingkat"
                             }
                         ]
                     }
@@ -2016,46 +2016,46 @@
         ]
     },
     {
-        "word": "wawa",
-        "syllables": "wa.wa",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "wawa",
+        "sukukata": "wa.wa",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "sejenis kera tanpa ekor berwarna kemerahan",
-                        "partOfSpeech": "n"
+                        "definisi": "sejenis kera tanpa ekor berwarna kemerahan",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "wawah",
-        "syllables": "wa.wah",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "wawah",
+        "sukukata": "wa.wah",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "robek besar",
-                        "partOfSpeech": "a"
+                        "definisi": "robek besar",
+                        "kelaskata": "a"
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "mawawah",
-                "syllables": "ma.wa.wah",
-                "definitions": [
+                "dasar": "mawawah",
+                "sukukata": "ma.wa.wah",
+                "definisi_umum": [
                     {
-                        "definition": "merobek",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "merobek",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "inya mawawah tapih ampunku",
-                                "id": "ia merobek sarung milikku"
+                                "banjar": "inya mawawah tapih ampunku",
+                                "indonesia": "ia merobek sarung milikku"
                             }
                         ]
                     }
@@ -2064,19 +2064,19 @@
         ]
     },
     {
-        "word": "wawan",
-        "syllables": "wa.wan",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "wawan",
+        "sukukata": "wa.wan",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "hilang; sirna tanpa bekas",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "hilang; sirna tanpa bekas",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "ipuk ampunnya wawan",
-                                "id": "dompet miliknya hilang"
+                                "banjar": "ipuk ampunnya wawan",
+                                "indonesia": "dompet miliknya hilang"
                             }
                         ]
                     }
@@ -2085,290 +2085,137 @@
         ]
     },
     {
-        "word": "wawar",
-        "syllables": "wa.war",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "wawar",
+        "sukukata": "wa.war",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "ambil (tanah)",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "ambil (tanah)",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "jangan ikam wawar tanah ampung urang",
-                                "id": "jangan kamu ambil tanah milik orang"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "derivatives": [
-            {
-                "word": "bawawaran",
-                "syllables": "ba.wa.war.an",
-                "definitions": [
-                    {
-                        "definition": "saling mengambil tanah orang lain",
-                        "partOfSpeech": "v",
-                        "examples": [
-                            {
-                                "bjn": "bubuhannya tu sapadangsanakan sama kalakuan katuju bawawaran",
-                                "id": "mereka itu sekeluarga sama kelakuan senang saling mengambil tanah orang lain"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "word": "mawawar",
-                "syllables": "ma.wa.war",
-                "definitions": [
-                    {
-                        "definition": "mengambil tanah (perbatasan)",
-                        "partOfSpeech": "v",
-                        "examples": [
-                            {
-                                "bjn": "inya mawawar pahumaan urang",
-                                "id": "ia mengambil tanah sawah orang"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "word": "wawaran",
-                "syllables": "wa.war.an",
-                "definitions": [
-                    {
-                        "definition": "yang diambil",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wayah",
-        "syllables": "wa.yah",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "zaman; waktu; ketika; musim",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ],
-        "derivatives": [
-            {
-                "word": "wayah bahari",
-                "definitions": [
-                    {
-                        "definition": "zaman bahari",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            },
-            {
-                "word": "wayah ini jua",
-                "definitions": [
-                    {
-                        "definition": "waktu sekarang juga",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            },
-            {
-                "word": "wayah baduit",
-                "definitions": [
-                    {
-                        "definition": "ketika beruang (memiliki uang)",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            },
-            {
-                "word": "kada bawayah",
-                "definitions": [
-                    {
-                        "definition": "tidak bermusim",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wawayah",
-        "syllables": "wa.wa.yah",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "kadang-kadang",
-                        "partOfSpeech": "adv",
-                        "examples": [
-                            {
-                                "bjn": "aku ni wawayah handak bulik kampung",
-                                "id": "aku ini kadang-kadang ingin pulang kampung"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wayang",
-        "syllables": "wa.yang",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "wayang",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ],
-        "derivatives": [
-            {
-                "word": "wayang gung",
-                "definitions": [
-                    {
-                        "definition": "wayang orang",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            },
-            {
-                "word": "bawayang",
-                "syllables": "ba.wa.yang",
-                "definitions": [
-                    {
-                        "definition": "pergelaran wayang",
-                        "partOfSpeech": "v"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wayu",
-        "syllables": "wa.yu",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "busuk (tentang ikan)",
-                        "partOfSpeech": "a",
-                        "examples": [
-                            {
-                                "bjn": "iwak nang ikam bawa ngini sudah wayu",
-                                "id": "ikan yang kamu bawa ini sudah busuk"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wida",
-        "syllables": "wi.da",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "wangi; harum",
-                        "partOfSpeech": "a",
-                        "examples": [
-                            {
-                                "bjn": "awaknya wida",
-                                "id": "badannya wangi"
+                                "banjar": "jangan ikam wawar tanah ampung urang",
+                                "indonesia": "jangan kamu ambil tanah milik orang"
                             }
                         ]
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "kasai wida",
-                "definitions": [
+                "dasar": "bawawaran",
+                "sukukata": "ba.wa.war.an",
+                "definisi_umum": [
                     {
-                        "definition": "bedak wangi/harum",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            },
-            {
-                "word": "bawida",
-                "syllables": "ba.wi.da",
-                "definitions": [
-                    {
-                        "definition": "berharum-haruman bagi calon pengantin",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "saling mengambil tanah orang lain",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "bibiniannya bawida",
-                                "id": "perempuannya berharum-harum"
+                                "banjar": "bubuhannya tu sapadangsanakan sama kalakuan katuju bawawaran",
+                                "indonesia": "mereka itu sekeluarga sama kelakuan senang saling mengambil tanah orang lain"
                             }
                         ]
                     }
                 ]
-            }
-        ]
-    },
-    {
-        "word": "widara",
-        "syllables": "wi.da.ra",
-        "alphabet": "w",
-        "meanings": [
+            },
             {
-                "definitions": [
+                "dasar": "mawawar",
+                "sukukata": "ma.wa.war",
+                "definisi_umum": [
                     {
-                        "definition": "sejenis tanaman yang pahit sekali dipakai sebagai obat",
-                        "partOfSpeech": "n"
+                        "definisi": "mengambil tanah (perbatasan)",
+                        "kelaskata": "v",
+                        "contoh": [
+                            {
+                                "banjar": "inya mawawar pahumaan urang",
+                                "indonesia": "ia mengambil tanah sawah orang"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "dasar": "wawaran",
+                "sukukata": "wa.war.an",
+                "definisi_umum": [
+                    {
+                        "definisi": "yang diambil",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "widai",
-        "syllables": "wi.dai",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "wayah",
+        "sukukata": "wa.yah",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "kere; tirai",
-                        "partOfSpeech": "n"
+                        "definisi": "zaman; waktu; ketika; musim",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "bawidai",
-                "syllables": "ba.wi.dai",
-                "definitions": [
+                "dasar": "wayah bahari",
+                "definisi_umum": [
                     {
-                        "definition": "berkere; bertirai",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "zaman bahari",
+                        "kelaskata": "n"
+                    }
+                ]
+            },
+            {
+                "dasar": "wayah ini jua",
+                "definisi_umum": [
+                    {
+                        "definisi": "waktu sekarang juga",
+                        "kelaskata": "n"
+                    }
+                ]
+            },
+            {
+                "dasar": "wayah baduit",
+                "definisi_umum": [
+                    {
+                        "definisi": "ketika beruang (memiliki uang)",
+                        "kelaskata": "n"
+                    }
+                ]
+            },
+            {
+                "dasar": "kada bawayah",
+                "definisi_umum": [
+                    {
+                        "definisi": "tidak bermusim",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "wawayah",
+        "sukukata": "wa.wa.yah",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "kadang-kadang",
+                        "kelaskata": "adv",
+                        "contoh": [
                             {
-                                "bjn": "lawangnya bawidai",
-                                "id": "pintunya bertirai"
+                                "banjar": "aku ni wawayah handak bulik kampung",
+                                "indonesia": "aku ini kadang-kadang ingin pulang kampung"
                             }
                         ]
                     }
@@ -2377,173 +2224,55 @@
         ]
     },
     {
-        "word": "wihang",
-        "syllables": "wi.hang",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "wayang",
+        "sukukata": "wa.yang",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "rahang",
-                        "partOfSpeech": "n"
+                        "definisi": "wayang",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "basangga wihang",
-                "definitions": [
+                "dasar": "wayang gung",
+                "definisi_umum": [
                     {
-                        "definition": "bertopang dagu",
-                        "partOfSpeech": "v"
+                        "definisi": "wayang orang",
+                        "kelaskata": "n"
+                    }
+                ]
+            },
+            {
+                "dasar": "bawayang",
+                "sukukata": "ba.wa.yang",
+                "definisi_umum": [
+                    {
+                        "definisi": "pergelaran wayang",
+                        "kelaskata": "v"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "wilang",
-        "syllables": "wi.lang",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "wayu",
+        "sukukata": "wa.yu",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "hitung",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "busuk (tentang ikan)",
+                        "kelaskata": "a",
+                        "contoh": [
                             {
-                                "bjn": "ikam wilang barapa banyaknya",
-                                "id": "kamu hitung berapa banyaknya"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        "derivatives": [
-            {
-                "word": "bawilang",
-                "syllables": "ba.wi.lang",
-                "definitions": [
-                    {
-                        "definition": "berhitung",
-                        "partOfSpeech": "v",
-                        "examples": [
-                            {
-                                "bjn": "inya katuju bawilang amal kabajikannya",
-                                "id": "ia senang berhitung amal kebajikannya"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "word": "bawilangan",
-                "syllables": "ba.wi.lang.an",
-                "definitions": [
-                    {
-                        "definition": "beramalan",
-                        "partOfSpeech": "v",
-                        "examples": [
-                            {
-                                "bjn": "sidin bawilangan nang baik-baik",
-                                "id": "beliau beramalan yang baik-baik"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "word": "kawilang",
-                "syllables": "ka.wi.lang",
-                "definitions": [
-                    {
-                        "definition": "berbilang; demi",
-                        "partOfSpeech": "v",
-                        "examples": [
-                            {
-                                "bjn": "tahun kawilang tahun",
-                                "id": "tahun berbilang tahun"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "word": "mawilang",
-                "syllables": "ma.wi.lang",
-                "definitions": [
-                    {
-                        "definition": "menghitung",
-                        "partOfSpeech": "v",
-                        "examples": [
-                            {
-                                "bjn": "inya mawilang harga ampunnya",
-                                "id": "ia menghitung harga miliknya"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "word": "tawilang",
-                "syllables": "ta.wi.lang",
-                "definitions": [
-                    {
-                        "definition": "terhitung",
-                        "partOfSpeech": "v",
-                        "examples": [
-                            {
-                                "bjn": "jumlah karugian nang tawilang kira-kira sapuluh juta",
-                                "id": "jumlah kerugian yang terhitung kira-kira sepuluh juta"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "word": "wilang",
-                "syllables": "wi.lang.an",
-                "definitions": [
-                    {
-                        "definition": "hitungan",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wilanja",
-        "syllables": "wi.lan.ja",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "belanja",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wirai",
-        "syllables": "wi.rai",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "berubah muka karena malu atau merasa salah",
-                        "partOfSpeech": "v",
-                        "examples": [
-                            {
-                                "bjn": "muhanya wirai ulih manuduh urang nang kada salah",
-                                "id": "mukanya berubah karena merasa salah karena menuduh orang tidak salah"
+                                "banjar": "iwak nang ikam bawa ngini sudah wayu",
+                                "indonesia": "ikan yang kamu bawa ini sudah busuk"
                             }
                         ]
                     }
@@ -2552,151 +2281,422 @@
         ]
     },
     {
-        "word": "wiru",
-        "syllables": "wi.ru",
-        "alphabet": "w",
-        "meanings": [
+        "dasar": "wida",
+        "sukukata": "wi.da",
+        "abjad": "w",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "wiru",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ],
-        "derivatives": [
-            {
-                "word": "bawiru",
-                "syllables": "ba.wi.ru",
-                "definitions": [
-                    {
-                        "definition": "berwiru",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "wangi; harum",
+                        "kelaskata": "a",
+                        "contoh": [
                             {
-                                "bjn": "tapihnya bawiru",
-                                "id": "kain panjangnya berwiru"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "word": "mawiru",
-                "syllables": "ma.wi.ru",
-                "definitions": [
-                    {
-                        "definition": "mewiru",
-                        "partOfSpeech": "v",
-                        "examples": [
-                            {
-                                "bjn": "mawiru kalambu",
-                                "id": "mewiru kelambu"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wisa",
-        "syllables": "wi.sa",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "bisa; racun",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ],
-        "derivatives": [
-            {
-                "word": "bawisa",
-                "syllables": "ba.wi.sa",
-                "definitions": [
-                    {
-                        "definition": "berbisa; beracun",
-                        "partOfSpeech": "v",
-                        "examples": [
-                            {
-                                "bjn": "ular ngintu bawisa",
-                                "id": "ular itu berbisa"
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "wiwir",
-        "syllables": "wi.wir",
-        "alphabet": "w",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "urai; buka",
-                        "partOfSpeech": "v",
-                        "examples": [
-                            {
-                                "bjn": "sudah inya wiwir masalah kaluarganya",
-                                "id": "sudah ia buka masalah keluarganya"
+                                "banjar": "awaknya wida",
+                                "indonesia": "badannya wangi"
                             }
                         ]
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "bawiwir",
-                "syllables": "ba.wi.wir",
-                "definitions": [
+                "dasar": "kasai wida",
+                "definisi_umum": [
                     {
-                        "definition": "telah terbuka",
-                        "partOfSpeech": "adv",
-                        "examples": [
+                        "definisi": "bedak wangi/harum",
+                        "kelaskata": "n"
+                    }
+                ]
+            },
+            {
+                "dasar": "bawida",
+                "sukukata": "ba.wi.da",
+                "definisi_umum": [
+                    {
+                        "definisi": "berharum-haruman bagi calon pengantin",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "rahasia bawiwir",
-                                "id": "rahasianya telah terbuka"
+                                "banjar": "bibiniannya bawida",
+                                "indonesia": "perempuannya berharum-harum"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "widara",
+        "sukukata": "wi.da.ra",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "sejenis tanaman yang pahit sekali dipakai sebagai obat",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "widai",
+        "sukukata": "wi.dai",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "kere; tirai",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ],
+        "turunan": [
+            {
+                "dasar": "bawidai",
+                "sukukata": "ba.wi.dai",
+                "definisi_umum": [
+                    {
+                        "definisi": "berkere; bertirai",
+                        "kelaskata": "v",
+                        "contoh": [
+                            {
+                                "banjar": "lawangnya bawidai",
+                                "indonesia": "pintunya bertirai"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "wihang",
+        "sukukata": "wi.hang",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "rahang",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ],
+        "turunan": [
+            {
+                "dasar": "basangga wihang",
+                "definisi_umum": [
+                    {
+                        "definisi": "bertopang dagu",
+                        "kelaskata": "v"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "wilang",
+        "sukukata": "wi.lang",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "hitung",
+                        "kelaskata": "v",
+                        "contoh": [
+                            {
+                                "banjar": "ikam wilang barapa banyaknya",
+                                "indonesia": "kamu hitung berapa banyaknya"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "turunan": [
+            {
+                "dasar": "bawilang",
+                "sukukata": "ba.wi.lang",
+                "definisi_umum": [
+                    {
+                        "definisi": "berhitung",
+                        "kelaskata": "v",
+                        "contoh": [
+                            {
+                                "banjar": "inya katuju bawilang amal kabajikannya",
+                                "indonesia": "ia senang berhitung amal kebajikannya"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "mawiwir",
-                "syllables": "ma.wi.wir",
-                "definitions": [
+                "dasar": "bawilangan",
+                "sukukata": "ba.wi.lang.an",
+                "definisi_umum": [
                     {
-                        "definition": "membuka; mengurai sesuatu",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "beramalan",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "inya katuju mawiwir kasalahan urang lain",
-                                "id": "ia senang membuka kesalahan orang lain"
+                                "banjar": "sidin bawilangan nang baik-baik",
+                                "indonesia": "beliau beramalan yang baik-baik"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "tawiwir",
-                "syllables": "ta.wi.wir",
-                "definitions": [
+                "dasar": "kawilang",
+                "sukukata": "ka.wi.lang",
+                "definisi_umum": [
                     {
-                        "definition": "terurai; terbuka",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "berbilang; demi",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "parmasalahannya sudah tawiwir",
-                                "id": "permasalahannya sudah terbuka"
+                                "banjar": "tahun kawilang tahun",
+                                "indonesia": "tahun berbilang tahun"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "dasar": "mawilang",
+                "sukukata": "ma.wi.lang",
+                "definisi_umum": [
+                    {
+                        "definisi": "menghitung",
+                        "kelaskata": "v",
+                        "contoh": [
+                            {
+                                "banjar": "inya mawilang harga ampunnya",
+                                "indonesia": "ia menghitung harga miliknya"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "dasar": "tawilang",
+                "sukukata": "ta.wi.lang",
+                "definisi_umum": [
+                    {
+                        "definisi": "terhitung",
+                        "kelaskata": "v",
+                        "contoh": [
+                            {
+                                "banjar": "jumlah karugian nang tawilang kira-kira sapuluh juta",
+                                "indonesia": "jumlah kerugian yang terhitung kira-kira sepuluh juta"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "dasar": "wilang",
+                "sukukata": "wi.lang.an",
+                "definisi_umum": [
+                    {
+                        "definisi": "hitungan",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "wilanja",
+        "sukukata": "wi.lan.ja",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "belanja",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "wirai",
+        "sukukata": "wi.rai",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "berubah muka karena malu atau merasa salah",
+                        "kelaskata": "v",
+                        "contoh": [
+                            {
+                                "banjar": "muhanya wirai ulih manuduh urang nang kada salah",
+                                "indonesia": "mukanya berubah karena merasa salah karena menuduh orang tidak salah"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "wiru",
+        "sukukata": "wi.ru",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "wiru",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ],
+        "turunan": [
+            {
+                "dasar": "bawiru",
+                "sukukata": "ba.wi.ru",
+                "definisi_umum": [
+                    {
+                        "definisi": "berwiru",
+                        "kelaskata": "v",
+                        "contoh": [
+                            {
+                                "banjar": "tapihnya bawiru",
+                                "indonesia": "kain panjangnya berwiru"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "dasar": "mawiru",
+                "sukukata": "ma.wi.ru",
+                "definisi_umum": [
+                    {
+                        "definisi": "mewiru",
+                        "kelaskata": "v",
+                        "contoh": [
+                            {
+                                "banjar": "mawiru kalambu",
+                                "indonesia": "mewiru kelambu"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "wisa",
+        "sukukata": "wi.sa",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "bisa; racun",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ],
+        "turunan": [
+            {
+                "dasar": "bawisa",
+                "sukukata": "ba.wi.sa",
+                "definisi_umum": [
+                    {
+                        "definisi": "berbisa; beracun",
+                        "kelaskata": "v",
+                        "contoh": [
+                            {
+                                "banjar": "ular ngintu bawisa",
+                                "indonesia": "ular itu berbisa"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "wiwir",
+        "sukukata": "wi.wir",
+        "abjad": "w",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "urai; buka",
+                        "kelaskata": "v",
+                        "contoh": [
+                            {
+                                "banjar": "sudah inya wiwir masalah kaluarganya",
+                                "indonesia": "sudah ia buka masalah keluarganya"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "turunan": [
+            {
+                "dasar": "bawiwir",
+                "sukukata": "ba.wi.wir",
+                "definisi_umum": [
+                    {
+                        "definisi": "telah terbuka",
+                        "kelaskata": "adv",
+                        "contoh": [
+                            {
+                                "banjar": "rahasia bawiwir",
+                                "indonesia": "rahasianya telah terbuka"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "dasar": "mawiwir",
+                "sukukata": "ma.wi.wir",
+                "definisi_umum": [
+                    {
+                        "definisi": "membuka; mengurai sesuatu",
+                        "kelaskata": "v",
+                        "contoh": [
+                            {
+                                "banjar": "inya katuju mawiwir kasalahan urang lain",
+                                "indonesia": "ia senang membuka kesalahan orang lain"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "dasar": "tawiwir",
+                "sukukata": "ta.wi.wir",
+                "definisi_umum": [
+                    {
+                        "definisi": "terurai; terbuka",
+                        "kelaskata": "v",
+                        "contoh": [
+                            {
+                                "banjar": "parmasalahannya sudah tawiwir",
+                                "indonesia": "permasalahannya sudah terbuka"
                             }
                         ]
                     }

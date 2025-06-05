@@ -1,27 +1,27 @@
 [
     {
-        "word": "ca",
-        "alphabet": "c",
-        "meanings": [
+        "dasar": "ca",
+        "abjad": "c",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "coba; kalau; andai kata",
-                        "partOfSpeech": "p",
-                        "examples": [
+                        "definisi": "coba; kalau; andai kata",
+                        "kelaskata": "p",
+                        "contoh": [
                             {
-                                "bjn": "ca aku kada ku hakun disuruhnya",
-                                "id": "kalau saya tidak mau disuruhnya"
+                                "banjar": "ca aku kada ku hakun disuruhnya",
+                                "indonesia": "kalau saya tidak mau disuruhnya"
                             }
                         ]
                     },
                     {
-                        "definition": "tidak",
-                        "partOfSpeech": "p",
-                        "examples": [
+                        "definisi": "tidak",
+                        "kelaskata": "p",
+                        "contoh": [
                             {
-                                "bjn": "ca hakun aku",
-                                "id": "tidak mau saya"
+                                "banjar": "ca hakun aku",
+                                "indonesia": "tidak mau saya"
                             }
                         ]
                     }
@@ -30,84 +30,84 @@
         ]
     },
     {
-        "word": "cabak",
-        "syllables": "ca.bak",
-        "alphabet": "c",
-        "meanings": [
+        "dasar": "cabak",
+        "sukukata": "ca.bak",
+        "abjad": "c",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "burung pungguk",
-                        "partOfSpeech": "n"
+                        "definisi": "burung pungguk",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "cabang",
-        "syllables": "ca.bang",
-        "alphabet": "c",
-        "meanings": [
+        "dasar": "cabang",
+        "sukukata": "ca.bang",
+        "abjad": "c",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "senjata berupa tongkat besi yang ujungnya bercabang seperti trisula",
-                        "partOfSpeech": "n"
+                        "definisi": "senjata berupa tongkat besi yang ujungnya bercabang seperti trisula",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "cabi",
-        "syllables": "ca.bi",
-        "alphabet": "c",
-        "meanings": [
+        "dasar": "cabi",
+        "sukukata": "ca.bi",
+        "abjad": "c",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "sejenis buah untuk dijadikan ramuan jamu",
-                        "partOfSpeech": "n"
+                        "definisi": "sejenis buah untuk dijadikan ramuan jamu",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "cablung",
-        "syllables": "ca.blung",
-        "alphabet": "c",
-        "meanings": [
+        "dasar": "cablung",
+        "sukukata": "ca.blung",
+        "abjad": "c",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "cemplung",
-                        "partOfSpeech": "v"
+                        "definisi": "cemplung",
+                        "kelaskata": "v"
                     }
                 ]
             },
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "tiruan bunyi barang jatuh ke air",
-                        "partOfSpeech": "n"
+                        "definisi": "tiruan bunyi barang jatuh ke air",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "mancablung",
-                "syllables": "man.cab.lung",
-                "definitions": [
+                "dasar": "mancablung",
+                "sukukata": "man.cab.lung",
+                "definisi_umum": [
                     {
-                        "definition": "mencemplung",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "mencemplung",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "mancablung ka sungai",
-                                "id": "mencemplung ke sungai"
+                                "banjar": "mancablung ka sungai",
+                                "indonesia": "mencemplung ke sungai"
                             }
                         ]
                     }

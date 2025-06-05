@@ -63,7 +63,7 @@ class Beranda : AppCompatActivity() {
             override fun afterTextChanged(s: Editable?) {
                 val input = s.toString().lowercase().trim()
                 if (input.length >= 2) {
-                    val saran = Levenshtein.suggestWords(input, semuaKamus)
+                    val saran = Levenshtein.suggestdasar(input, semuaKamus)
                     suggestionAdapter.clear()
                     suggestionAdapter.addAll(saran)
                     suggestionAdapter.notifyDataSetChanged()
@@ -129,7 +129,7 @@ class Beranda : AppCompatActivity() {
         // Inisialisasi TextToSpeech
         tts = TextToSpeech(this) { status ->
             if (status != TextToSpeech.ERROR) {
-                tts.language = Locale("id", "ID") // Bahasa Indonesia
+                tts.language = Locale("indonesia", "indonesia") // Bahasa Indonesia
             }
         }
 
@@ -179,28 +179,28 @@ class Beranda : AppCompatActivity() {
     }
 
     private fun formatHasilTerjemahan(entry: JSONObject): String {
-        val word = entry.optString("word", "[?]").replaceFirstChar { it.uppercase() }
-        val meanings = entry.optJSONArray("meanings") ?: return "$word: [arti tidak ditemukan]"
+        val word = entry.optString("dasar", "[?]").replaceFirstChar { it.uppercase() }
+        val meanings = entry.optJSONArray("arti") ?: return "$word: [arti tidak ditemukan]"
 
         val hasil = StringBuilder()
         hasil.append("$word:\n")
 
         for (i in 0 until meanings.length()) {
             val meaning = meanings.optJSONObject(i)
-            val definitions = meaning?.optJSONArray("definitions") ?: continue
+            val definitions = meaning?.optJSONArray("definisi_umum") ?: continue
 
             for (j in 0 until definitions.length()) {
                 val def = definitions.optJSONObject(j)
-                val arti = def?.optString("definition") ?: continue
-                val jenis = def.optString("partOfSpeech", "")
+                val arti = def?.optString("definisi") ?: continue
+                val jenis = def.optString("kelaskata", "")
                 hasil.append("- ($jenis) $arti\n")
 
-                val examples = def.optJSONArray("examples")
+                val examples = def.optJSONArray("contoh")
                 if (examples != null && examples.length() > 0) {
                     for (k in 0 until examples.length()) {
                         val ex = examples.optJSONObject(k)
-                        val bjn = ex.optString("bjn", "")
-                        val id = ex.optString("id", "")
+                        val bjn = ex.optString("banjar", "")
+                        val id = ex.optString("indonesia", "")
                         if (bjn.isNotEmpty() && id.isNotEmpty()) {
                             hasil.append("   Contoh: $bjn\n")
                             hasil.append("           $id\n")
@@ -215,20 +215,20 @@ class Beranda : AppCompatActivity() {
 
     private fun cariKataTepat(input: String, kamus: List<JSONObject>): JSONObject? {
         for (entry in kamus) {
-            val kataUtama = entry.optString("word", "").lowercase()
+            val kataUtama = entry.optString("dasar", "").lowercase()
             if (kataUtama == input) return entry
 
-            val derivatives = entry.optJSONArray("derivatives") ?: continue
+            val derivatives = entry.optJSONArray("turunan") ?: continue
             for (i in 0 until derivatives.length()) {
                 val turunan = derivatives.getJSONObject(i)
-                val turunanWord = turunan.optString("word", "").lowercase()
+                val turunanWord = turunan.optString("dasar", "").lowercase()
                 if (turunanWord == input) {
                     // Bungkus turunan menjadi struktur seperti entri utama
                     val wrapped = JSONObject()
-                    wrapped.put("word", turunanWord)
-                    wrapped.put("meanings", JSONArray().apply {
+                    wrapped.put("dasar", turunanWord)
+                    wrapped.put("arti", JSONArray().apply {
                         put(JSONObject().apply {
-                            put("definitions", turunan.optJSONArray("definitions"))
+                            put("definisi_umum", turunan.optJSONArray("definisi_umum"))
                         })
                     })
                     return wrapped

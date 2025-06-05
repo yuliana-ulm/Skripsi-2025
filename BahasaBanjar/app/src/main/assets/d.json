@@ -1,18 +1,18 @@
 [
     {
-        "word": "daai",
-        "syllables": "da.ai",
-        "alphabet": "d",
-        "meanings": [
+        "dasar": "daai",
+        "sukukata": "da.ai",
+        "abjad": "d",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "habis",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "habis",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "daai dah",
-                                "id": "habis sudah"
+                                "banjar": "daai dah",
+                                "indonesia": "habis sudah"
                             }
                         ]
                     }
@@ -21,19 +21,19 @@
         ]
     },
     {
-        "word": "dabar",
-        "syllables": "da.bar",
-        "alphabet": "d",
-        "meanings": [
+        "dasar": "dabar",
+        "sukukata": "da.bar",
+        "abjad": "d",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "lembar",
-                        "partOfSpeech": "n",
-                        "examples": [
+                        "definisi": "lembar",
+                        "kelaskata": "n",
+                        "contoh": [
                             {
-                                "bjn": "kartas sa dabar",
-                                "id": "kertas selembar"
+                                "banjar": "kartas sa dabar",
+                                "indonesia": "kertas selembar"
                             }
                         ]
                     }
@@ -42,53 +42,53 @@
         ]
     },
     {
-        "word": "dabau",
-        "syllables": "da.bau",
-        "alphabet": "d",
-        "meanings": [
+        "dasar": "dabau",
+        "sukukata": "da.bau",
+        "abjad": "d",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "pukul dengan tangan terbuka",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "pukul dengan tangan terbuka",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "dabau di balakang",
-                                "id": "pukul dengan tangan terbuka di belakang"
+                                "banjar": "dabau di balakang",
+                                "indonesia": "pukul dengan tangan terbuka di belakang"
                             }
                         ]
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "mandabau",
-                "syllables": "man.da.bau",
-                "definitions": [
+                "dasar": "mandabau",
+                "sukukata": "man.da.bau",
+                "definisi_umum": [
                     {
-                        "definition": "memukul dengan tangan",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "memukul dengan tangan",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "gancang banar mandabau",
-                                "id": "keras sekali memukul dengan tangan"
+                                "banjar": "gancang banar mandabau",
+                                "indonesia": "keras sekali memukul dengan tangan"
                             }
                         ]
                     },
                     {
-                        "definition": "bunyi benda berat jatuh; berdebam",
-                        "partOfSpeech": "n"
+                        "definisi": "bunyi benda berat jatuh; berdebam",
+                        "kelaskata": "n"
                     }
                 ]
             },
             {
-                "word": "kadabauan",
-                "syllables": "ka.da.bau.an",
-                "definitions": [
+                "dasar": "kadabauan",
+                "sukukata": "ka.da.bau.an",
+                "definisi_umum": [
                     {
-                        "definition": "bunyi benda jatuh yang beruntun/banyak",
-                        "partOfSpeech": "n"
+                        "definisi": "bunyi benda jatuh yang beruntun/banyak",
+                        "kelaskata": "n"
                     }
                 ]
             }

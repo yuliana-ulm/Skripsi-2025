@@ -1,17 +1,17 @@
 [
     {
-        "word": "ka",
-        "alphabet": "k",
-        "meanings": [
+        "dasar": "ka",
+        "abjad": "k",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "kak; singkatan dari kakak",
-                        "partOfSpeech": "n",
-                        "examples": [
+                        "definisi": "kak; singkatan dari kakak",
+                        "kelaskata": "n",
+                        "contoh": [
                             {
-                                "bjn": "ka mana ka?",
-                                "id": "ke mana kak?"
+                                "banjar": "ka mana ka?",
+                                "indonesia": "ke mana kak?"
                             }
                         ]
                     }

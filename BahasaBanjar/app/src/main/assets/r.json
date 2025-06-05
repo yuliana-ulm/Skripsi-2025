@@ -1,30 +1,30 @@
 [
     {
-        "word": "raba",
-        "syllables": "ra.ba",
-        "alphabet": "r",
-        "meanings": [
+        "dasar": "raba",
+        "sukukata": "ra.ba",
+        "abjad": "r",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "ranting kayu dalam air yang sering menjadi sarang ikan",
-                        "partOfSpeech": "n"
+                        "definisi": "ranting kayu dalam air yang sering menjadi sarang ikan",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "baraba",
-                "syllables": "ba.ra.ba",
-                "definitions": [
+                "dasar": "baraba",
+                "sukukata": "ba.ra.ba",
+                "definisi_umum": [
                     {
-                        "definition": "banyak ranting kayunya dalam air",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "banyak ranting kayunya dalam air",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "banyu ni baraba jadi kada kawa diluntai",
-                                "id": "sungai ini banyak ranting kayunya sehingga tidak bisa dijala"
+                                "banjar": "banyu ni baraba jadi kada kawa diluntai",
+                                "indonesia": "sungai ini banyak ranting kayunya sehingga tidak bisa dijala"
                             }
                         ]
                     }

@@ -1,36 +1,36 @@
 [
     {
-        "word": "gaak",
-        "syllables": "ga.ak",
-        "alphabet": "g",
-        "meanings": [
+        "dasar": "gaak",
+        "sukukata": "ga.ak",
+        "abjad": "g",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "lahap",
-                        "partOfSpeech": "a",
-                        "examples": [
+                        "definisi": "lahap",
+                        "kelaskata": "a",
+                        "contoh": [
                             {
-                                "bjn": "ading makannya gaak banar",
-                                "id": "adik makan nasi lahap sekali"
+                                "banjar": "ading makannya gaak banar",
+                                "indonesia": "adik makan nasi lahap sekali"
                             }
                         ]
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "bagaak",
-                "syllables": "ba.ga.ak",
-                "definitions": [
+                "dasar": "bagaak",
+                "sukukata": "ba.ga.ak",
+                "definisi_umum": [
                     {
-                        "definition": "tambah lahap",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "tambah lahap",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "bagaak makannya imbah sambal acan",
-                                "id": "tambah lahap makannya setelah dengan sambal terasi"
+                                "banjar": "bagaak makannya imbah sambal acan",
+                                "indonesia": "tambah lahap makannya setelah dengan sambal terasi"
                             }
                         ]
                     }
@@ -39,19 +39,19 @@
         ]
     },
     {
-        "word": "gaap",
-        "syllables": "ga.ap",
-        "alphabet": "g",
-        "meanings": [
+        "dasar": "gaap",
+        "sukukata": "ga.ap",
+        "abjad": "g",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "lahap",
-                        "partOfSpeech": "a",
-                        "examples": [
+                        "definisi": "lahap",
+                        "kelaskata": "a",
+                        "contoh": [
                             {
-                                "bjn": "gaap ikam ni makan",
-                                "id": "kamu ini makan lahap sekali"
+                                "banjar": "gaap ikam ni makan",
+                                "indonesia": "kamu ini makan lahap sekali"
                             }
                         ]
                     }

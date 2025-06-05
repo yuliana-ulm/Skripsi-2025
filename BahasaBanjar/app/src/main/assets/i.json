@@ -1,67 +1,67 @@
 [
     {
-        "word": "iih",
-        "alphabet": "i",
-        "meanings": [
+        "dasar": "iih",
+        "abjad": "i",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "ya, setuju",
-                        "partOfSpeech": "p",
-                        "examples": [
+                        "definisi": "ya, setuju",
+                        "kelaskata": "p",
+                        "contoh": [
                             {
-                                "bjn": "iih ayu ja",
-                                "id": "ya silakan"
+                                "banjar": "iih ayu ja",
+                                "indonesia": "ya silakan"
                             }
                         ]
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "baiih",
-                "syllables": "ba.i.ih",
-                "definitions": [
+                "dasar": "baiih",
+                "sukukata": "ba.i.ih",
+                "definisi_umum": [
                     {
-                        "definition": "berkata",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "berkata",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "inya baiih haja",
-                                "id": "dia berkata saja"
+                                "banjar": "inya baiih haja",
+                                "indonesia": "dia berkata saja"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "maiihakan",
-                "syllables": "ma.i.ih.akan",
-                "definitions": [
+                "dasar": "maiihakan",
+                "sukukata": "ma.i.ih.akan",
+                "definisi_umum": [
                     {
-                        "definition": "menyatakan menyutujui",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "menyatakan menyutujui",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "jangan maiihakan haja",
-                                "id": "jangan menyatakan menyetujui saja"
+                                "banjar": "jangan maiihakan haja",
+                                "indonesia": "jangan menyatakan menyetujui saja"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "taiihakan",
-                "syllables": "ta.i.ih.akan",
-                "definitions": [
+                "dasar": "taiihakan",
+                "sukukata": "ta.i.ih.akan",
+                "definisi_umum": [
                     {
-                        "definition": "terlanjut menyetujui",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "terlanjut menyetujui",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "aku sudah taiihakan pang",
-                                "id": "saya sudah terlanjut menyetujui"
+                                "banjar": "aku sudah taiihakan pang",
+                                "indonesia": "saya sudah terlanjut menyetujui"
                             }
                         ]
                     }
@@ -70,33 +70,33 @@
         ]
     },
     {
-        "word": "ibik",
-        "alphabet": "i",
-        "meanings": [
+        "dasar": "ibik",
+        "abjad": "i",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "kerai perahu",
-                        "partOfSpeech": "n"
+                        "definisi": "kerai perahu",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "iwak",
-        "syllables": "i.wak",
-        "alphabet": "i",
-        "meanings": [
+        "dasar": "iwak",
+        "sukukata": "i.wak",
+        "abjad": "i",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "ikan",
-                        "partOfSpeech": "n",
-                        "examples": [
+                        "definisi": "ikan",
+                        "kelaskata": "n",
+                        "contoh": [
                             {
-                                "bjn": "iwak haruan",
-                                "id": "ikan gabus"
+                                "banjar": "iwak haruan",
+                                "indonesia": "ikan gabus"
                             }
                         ]
                     }

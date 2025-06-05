@@ -1,76 +1,76 @@
 [
     {
-        "word": "ba",
-        "alphabet": "b",
-        "meanings": [
+        "dasar": "ba",
+        "abjad": "b",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "huruf kedua abjad Arab",
-                        "partOfSpeech": "n"
+                        "definisi": "huruf kedua abjad Arab",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ],
-        "derivatives": []
+        "turunan": []
     },
     {
-        "word": "baah",
-        "syllables": "ba.ah",
-        "alphabet": "b",
-        "meanings": [
+        "dasar": "baah",
+        "sukukata": "ba.ah",
+        "abjad": "b",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "banjir; bah",
-                        "partOfSpeech": "n"
+                        "definisi": "banjir; bah",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "baah baritu",
-                "definitions": [
+                "dasar": "baah baritu",
+                "definisi_umum": [
                     {
-                        "definition": "banjir bawaan sungai Barito"
+                        "definisi": "banjir bawaan sungai Barito"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "baal",
-        "syllables": "ba.al",
-        "alphabet": "b",
-        "meanings": [
+        "dasar": "baal",
+        "sukukata": "ba.al",
+        "abjad": "b",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "belum kering benar tetapi juga tidak basah",
-                        "partOfSpeech": "a",
-                        "examples": [
+                        "definisi": "belum kering benar tetapi juga tidak basah",
+                        "kelaskata": "a",
+                        "contoh": [
                             {
-                                "bjn": "tatapasan ni masih baal jangan dibangkit",
-                                "id": "jemuran ini masih belum kering benar, jangan diambil"
+                                "banjar": "tatapasan ni masih baal jangan dibangkit",
+                                "indonesia": "jemuran ini masih belum kering benar, jangan diambil"
                             }
                         ]
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "tabaal",
-                "syllables": "ta.ba.al",
-                "definitions": [
+                "dasar": "tabaal",
+                "sukukata": "ta.ba.al",
+                "definisi_umum": [
                     {
-                        "definition": "lebih belum terlalu kering",
-                        "partOfSpeech": "a",
-                        "examples": [
+                        "definisi": "lebih belum terlalu kering",
+                        "kelaskata": "a",
+                        "contoh": [
                             {
-                                "bjn": "iwak nang tabaal biar ja jamur hulu",
-                                "id": "ikan yang lebih belum terlalu kering biar saja jemur dulu"
+                                "banjar": "iwak nang tabaal biar ja jamur hulu",
+                                "indonesia": "ikan yang lebih belum terlalu kering biar saja jemur dulu"
                             }
                         ]
                     }
@@ -79,56 +79,56 @@
         ]
     },
     {
-        "word": "baaarian",
-        "syllables": "ba.a.a.ri.an",
-        "alphabet": "b",
-        "meanings": [
+        "dasar": "baaarian",
+        "sukukata": "ba.a.a.ri.an",
+        "abjad": "b",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "gotong royong",
-                        "partOfSpeech": "v"
+                        "definisi": "gotong royong",
+                        "kelaskata": "v"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "baat",
-        "syllables": "ba.at",
-        "alphabet": "b",
-        "meanings": [
+        "dasar": "baat",
+        "sukukata": "ba.at",
+        "abjad": "b",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "sekongkol",
-                        "partOfSpeech": "n`"
+                        "definisi": "sekongkol",
+                        "kelaskata": "n`"
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "sabaat",
-                "syllables":"sa.ba.at",
-                "definitions": [
+                "dasar": "sabaat",
+                "sukukata":"sa.ba.at",
+                "definisi_umum": [
                     {
-                        "definition": "sekongkol",
-                        "partOfSpeech": "n"
+                        "definisi": "sekongkol",
+                        "kelaskata": "n"
                     }
                 ]
             },
             {
-                "word": "manyabaatakan",
-                "syllables": "ma.nya.ba.at.akan",
-                "definitions": [
+                "dasar": "manyabaatakan",
+                "sukukata": "ma.nya.ba.at.akan",
+                "definisi_umum": [
                     {
-                        "definition": "menyekutukan",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "menyekutukan",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "jangan manyabaatakan Tuhan",
-                                "id": "jangan menyekutukan Tuhan"
+                                "banjar": "jangan manyabaatakan Tuhan",
+                                "indonesia": "jangan menyekutukan Tuhan"
                             }
                         ]
                     }
@@ -137,207 +137,207 @@
         ]
     },
     {
-        "word": "baba",
-        "syllables": "ba.ba",
-        "alphabet": "b",
-        "meanings": [
+        "dasar": "baba",
+        "sukukata": "ba.ba",
+        "abjad": "b",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "kata seru",
-                        "partOfSpeech": "p",
-                        "examples": [
+                        "definisi": "kata seru",
+                        "kelaskata": "p",
+                        "contoh": [
                             {
-                                "bjn": "baba surang dibungulinya",
-                                "id": "aduh saya dibodohinya"
+                                "banjar": "baba surang dibungulinya",
+                                "indonesia": "aduh saya dibodohinya"
                             }
                         ]
                     }
                 ]
             }
         ],
-        "derivatives": []
+        "turunan": []
     },
     {
-        "word": "babak",
-        "syllables": "ba.bak",
-        "alphabet": "b",
-        "meanings": [
+        "dasar": "babak",
+        "sukukata": "ba.bak",
+        "abjad": "b",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "bongkar; rombak",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "bongkar; rombak",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "babak samunyaan",
-                                "id": "rombak semuanya"
+                                "banjar": "babak samunyaan",
+                                "indonesia": "rombak semuanya"
                             }
                         ]
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "babakan",
-                "syllables": "ba.bak.an",
-                "definitions": [
+                "dasar": "babakan",
+                "sukukata": "ba.bak.an",
+                "definisi_umum": [
                     {
-                        "definition": "bongkaran",
-                        "partOfSpeech": "n",
-                        "examples": [
+                        "definisi": "bongkaran",
+                        "kelaskata": "n",
+                        "contoh": [
                             {
-                                "bjn": "inya lagi mamutiki sisa-sisa babakan",
-                                "id": "dia lagi memunguti sisa-sisa bongkaran"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "word": "bababak",
-                "syllables": "ba.ba.bak",
-                "definitions": [
-                    {
-                        "definition": "dalam keadaan terbongkar/terpisah-pisah",
-                        "partOfSpeech": "v",
-                        "examples": [
-                            {
-                                "bjn": "kami datangan rumahnya sudah bababak",
-                                "id": "kami datang rumahnya sudah terbongkar"
+                                "banjar": "inya lagi mamutiki sisa-sisa babakan",
+                                "indonesia": "dia lagi memunguti sisa-sisa bongkaran"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "mambabak",
-                "syllables": "mam.ba.bak",
-                "definitions": [
+                "dasar": "bababak",
+                "sukukata": "ba.ba.bak",
+                "definisi_umum": [
                     {
-                        "definition": "membongkar (rumah, pakaian)",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "dalam keadaan terbongkar/terpisah-pisah",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "tukang ngintu lagi mambabak rumah kami",
-                                "id": "tukang itu sedang merombak rumah kami"
+                                "banjar": "kami datangan rumahnya sudah bababak",
+                                "indonesia": "kami datang rumahnya sudah terbongkar"
                             }
                         ]
                     }
                 ]
             },
             {
-                "word": "tababak",
-                "syllables": "ta.ba.bak",
-                "definitions": [
+                "dasar": "mambabak",
+                "sukukata": "mam.ba.bak",
+                "definisi_umum": [
                     {
-                        "definition": "terbongkar; terlepas",
-                        "partOfSpeech": "v",
-                        "examples": [
+                        "definisi": "membongkar (rumah, pakaian)",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "jahitan bajuku tababak samunyaan",
-                                "id": "jahitan bajuku terlepas semuanya"
+                                "banjar": "tukang ngintu lagi mambabak rumah kami",
+                                "indonesia": "tukang itu sedang merombak rumah kami"
                             }
                         ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "babakut",
-        "syllables": "ba.ba.kut",
-        "alphabet": "b",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "penyakit kaki gajah",
-                        "partOfSpeech": "n"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "word": "babal",
-        "syllables": "ba.bal",
-        "alphabet": "b",
-        "meanings": [
-            {
-                "definitions": [
-                    {
-                        "definition": "buah nangka yang masih sangat kecil",
-                        "partOfSpeech": "n"
                     }
                 ]
             },
             {
-                "definitions": [
+                "dasar": "tababak",
+                "sukukata": "ta.ba.bak",
+                "definisi_umum": [
                     {
-                        "definition": "bebal; bodoh",
-                        "partOfSpeech": "a",
-                        "examples": [
+                        "definisi": "terbongkar; terlepas",
+                        "kelaskata": "v",
+                        "contoh": [
                             {
-                                "bjn": "anak sidin ngintu babal banar",
-                                "id": "anak beliau itu bebal sekali"
+                                "banjar": "jahitan bajuku tababak samunyaan",
+                                "indonesia": "jahitan bajuku terlepas semuanya"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "babakut",
+        "sukukata": "ba.ba.kut",
+        "abjad": "b",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "penyakit kaki gajah",
+                        "kelaskata": "n"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "dasar": "babal",
+        "sukukata": "ba.bal",
+        "abjad": "b",
+        "arti": [
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "buah nangka yang masih sangat kecil",
+                        "kelaskata": "n"
+                    }
+                ]
+            },
+            {
+                "definisi_umum": [
+                    {
+                        "definisi": "bebal; bodoh",
+                        "kelaskata": "a",
+                        "contoh": [
+                            {
+                                "banjar": "anak sidin ngintu babal banar",
+                                "indonesia": "anak beliau itu bebal sekali"
                             }
                         ]
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "pambabal",
-                "syllables": "pam.ba.bal",
-                "definitions": [
+                "dasar": "pambabal",
+                "sukukata": "pam.ba.bal",
+                "definisi_umum": [
                     {
-                        "definition": "orang yang sering lupa",
-                        "partOfSpeech": "n"
+                        "definisi": "orang yang sering lupa",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "babar",
-        "syllables": "ba.bar",
-        "alphabet": "b",
-        "meanings": [
+        "dasar": "babar",
+        "sukukata": "ba.bar",
+        "abjad": "b",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "kelahiran sebelum nikah",
-                        "partOfSpeech": "n"
+                        "definisi": "kelahiran sebelum nikah",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ],
-        "derivatives": [
+        "turunan": [
             {
-                "word": "kababaran",
-                "syllables": "ka.ba.bar.an",
-                "definitions": [
+                "dasar": "kababaran",
+                "sukukata": "ka.ba.bar.an",
+                "definisi_umum": [
                     {
-                        "definition": "kelahiran sebelum nikah",
-                        "partOfSpeech": "n"
+                        "definisi": "kelahiran sebelum nikah",
+                        "kelaskata": "n"
                     }
                 ]
             }
         ]
     },
     {
-        "word": "babas",
-        "syllables": "ba.bas",
-        "alphabet": "b",
-        "meanings": [
+        "dasar": "babas",
+        "sukukata": "ba.bas",
+        "abjad": "b",
+        "arti": [
             {
-                "definitions": [
+                "definisi_umum": [
                     {
-                        "definition": "Bongkar (khusus untuk bangunan)",
-                        "partOfSpeech": "n"
+                        "definisi": "Bongkar (khusus untuk bangunan)",
+                        "kelaskata": "n"
                     }
                 ]
             }
