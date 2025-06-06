@@ -26,4 +26,44 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <ImageButton
+        android:id="@+id/Kata"
+        android:layout_width="105dp"
+        android:layout_height="49dp"
+        app:srcCompat="@android:drawable/alert_dark_frame"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="168dp" />
+
+    <ImageButton
+        android:id="@+id/Turunan"
+        android:layout_width="105dp"
+        android:layout_height="49dp"
+        app:srcCompat="@android:drawable/alert_dark_frame"
+        tools:layout_editor_absoluteX="197dp"
+        tools:layout_editor_absoluteY="171dp" />
+
+    <ImageButton
+        android:id="@+id/Suara"
+        android:layout_width="105dp"
+        android:layout_height="49dp"
+        app:srcCompat="@android:drawable/alert_dark_frame"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="255dp" />
+
+    <ImageButton
+        android:id="@+id/Gambar"
+        android:layout_width="105dp"
+        android:layout_height="49dp"
+        app:srcCompat="@android:drawable/alert_dark_frame"
+        tools:layout_editor_absoluteX="197dp"
+        tools:layout_editor_absoluteY="250dp" />
+
+    <ImageButton
+        android:id="@+id/Pengguna"
+        android:layout_width="105dp"
+        android:layout_height="49dp"
+        app:srcCompat="@android:drawable/alert_dark_frame"
+        tools:layout_editor_absoluteX="132dp"
+        tools:layout_editor_absoluteY="344dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
