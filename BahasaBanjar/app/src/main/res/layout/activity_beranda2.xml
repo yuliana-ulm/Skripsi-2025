@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Beranda2"
+    tools:context=".user.Beranda2"
     android:padding="16dp">
 
     <!-- Switch Tema (pojok kiri atas) -->

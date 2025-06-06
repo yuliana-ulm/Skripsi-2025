@@ -1,4 +1,4 @@
-package com.yuliana.bahasabanjar
+package com.yuliana.bahasabanjar.model
 
 import org.json.JSONObject
 

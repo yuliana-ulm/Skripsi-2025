@@ -1,4 +1,4 @@
-package com.yuliana.bahasabanjar
+package com.yuliana.bahasabanjar.user
 
 import android.content.ActivityNotFoundException
 import android.content.Intent
@@ -7,7 +7,6 @@ import android.speech.RecognizerIntent
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.*
-import com.google.android.material.textfield.TextInputLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -19,6 +18,9 @@ import android.view.View
 import java.util.Locale
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.SwitchCompat
+import com.yuliana.bahasabanjar.model.KamusLoader
+import com.yuliana.bahasabanjar.model.Levenshtein
+import com.yuliana.bahasabanjar.R
 
 class Beranda : AppCompatActivity() {
 
@@ -30,7 +32,8 @@ class Beranda : AppCompatActivity() {
     private lateinit var tts: TextToSpeech
     private var teksHasil: String = ""
     private lateinit var themeSwitch: SwitchCompat
-    private lateinit var gambar: ImageButton
+    private lateinit var textViewHasil: TextView
+    private lateinit var button2: Button
     private lateinit var layoutGambarTeks: LinearLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,8 +50,8 @@ class Beranda : AppCompatActivity() {
         editText = findViewById(R.id.editText)
         buttonbanjarindo = findViewById(R.id.banjarindo)
         themeSwitch = findViewById(R.id.themeSwitch)
-        val button2 = findViewById<Button>(R.id.buttonAdmin)
-        val textViewHasil = findViewById<TextView>(R.id.textViewHasil)
+        button2 = findViewById(R.id.buttonAdmin)
+        textViewHasil = findViewById(R.id.textViewHasil)
 
         // Load kamus hanya sekali
         semuaKamus = KamusLoader.loadAllEntries(this)

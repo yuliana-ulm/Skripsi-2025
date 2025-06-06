@@ -15,34 +15,34 @@
         android:theme="@style/Theme.BahasaBanjar"
         tools:targetApi="31">
         <activity
+            android:name=".data.List_Kamus"
+            android:exported="false" />
+        <activity
             android:name=".Splashscreen"
             android:exported="false" />
         <activity
             android:name=".Login"
             android:exported="false" />
         <activity
-            android:name=".Gambar"
+            android:name=".data.Gambar"
             android:exported="false" />
         <activity
-            android:name=".Pengguna"
+            android:name=".data.Pengguna"
             android:exported="false" />
         <activity
-            android:name=".Suara"
+            android:name=".data.Suara"
             android:exported="false" />
         <activity
-            android:name=".Turunan"
+            android:name=".data.Turunan"
             android:exported="false" />
         <activity
-            android:name=".Kata"
+            android:name=".data.Kata"
             android:exported="false" />
         <activity
-            android:name=".Beranda2"
+            android:name=".user.Beranda2"
             android:exported="false" />
         <activity
-            android:name=".Admin"
-            android:exported="false" />
-        <activity
-            android:name=".Beranda"
+            android:name=".admin.Admin"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,6 +50,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".user.Beranda"
+            android:exported="false" />
     </application>
 
 </manifest>
