@@ -30,6 +30,8 @@ class Beranda : AppCompatActivity() {
     private lateinit var tts: TextToSpeech
     private var teksHasil: String = ""
     private lateinit var themeSwitch: SwitchCompat
+    private lateinit var gambar: ImageButton
+    private lateinit var layoutGambarTeks: LinearLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,7 +47,7 @@ class Beranda : AppCompatActivity() {
         editText = findViewById(R.id.editText)
         buttonbanjarindo = findViewById(R.id.banjarindo)
         themeSwitch = findViewById(R.id.themeSwitch)
-        val button2 = findViewById<Button>(R.id.button2)
+        val button2 = findViewById<Button>(R.id.buttonAdmin)
         val textViewHasil = findViewById<TextView>(R.id.textViewHasil)
 
         // Load kamus hanya sekali
@@ -140,7 +142,6 @@ class Beranda : AppCompatActivity() {
             tts.speak(teksHasil, TextToSpeech.QUEUE_FLUSH, null, null)
         }
 
-
         // tema gelap atau terang
         val isNightMode = AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES
         themeSwitch.isChecked = isNightMode
@@ -152,6 +153,10 @@ class Beranda : AppCompatActivity() {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
             }
         }
+
+        // untuk menampilkan referensi gambar
+        layoutGambarTeks = findViewById(R.id.layoutGambarTeks)
+        layoutGambarTeks.visibility = View.GONE
 
     }
 

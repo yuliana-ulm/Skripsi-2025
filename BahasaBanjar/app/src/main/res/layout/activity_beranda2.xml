@@ -6,7 +6,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Beranda"
+    tools:context=".Beranda2"
     android:padding="16dp">
 
     <!-- Switch Tema (pojok kiri atas) -->
@@ -32,7 +32,7 @@
         android:id="@+id/buttonToggleBahasa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Banjar -> Indonesia"
+        android:text="Indonesia -> Banjar"
         app:layout_constraintTop_toBottomOf="@id/themeSwitch"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,10 +83,10 @@
 
     <!-- Tombol Terjemahkan -->
     <Button
-        android:id="@+id/banjarindo"
+        android:id="@+id/indobanjar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Terjemah ke Bahasa Indonesia"
+        android:text="Terjemah ke Bahasa Banjar"
         app:layout_constraintTop_toBottomOf="@id/textInputLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,7 +101,7 @@
         android:contentDescription="Putar suara"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:visibility="visible"
-        app:layout_constraintTop_toBottomOf="@id/banjarindo"
+        app:layout_constraintTop_toBottomOf="@id/indobanjar"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginTop="8dp"
         android:layout_marginLeft="7dp"/>

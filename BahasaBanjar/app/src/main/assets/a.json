@@ -7,12 +7,12 @@
             {
                 "definisi_umum": [
                     {
-                        "definisi": "terbiasa; kebiasaan;",
+                        "definisi": "terbiasa; pembawaan; kebiasaan;",
                         "kelaskata": "kata sifat",
                         "contoh": [
                             {
-                                "banjar": "sudah abadan makan bakicap",
-                                "indonesia": "sudah terbiasa makan dengan kecap"
+                                "banjar": "jangan bajajumput bat urang, jadi abadan kina",
+                                "indonesia": "jangan mengambil kepunyaan orang, jadi terbiasa nanti"
                             }
                         ]
                     }
@@ -27,7 +27,7 @@
             {
                 "definisi_umum": [
                     {
-                        "definisi": "ayah",
+                        "definisi": "ayah; bapak",
                         "kelaskata": "kata benda"
                     },
                     {
@@ -63,7 +63,7 @@
             {
                 "definisi_umum": [
                     {
-                        "definisi": "tahan",
+                        "definisi": "tahan; konci; piting",
                         "kelaskata": "kata sifat",
                         "contoh": [
                             {
@@ -93,6 +93,20 @@
                                 "indonesia": "mengunci (bidak) kuda"
                             }
                         ]
+                    }
+                ]
+            },
+            {
+                "dasar": "diabat",
+                "sukukata": "di.a.bat",
+                "definisi_umum": [
+                    {
+                        "definisi": "ditahan",
+                        "kelaskata": "kata kerja"
+                    },
+                    {
+                        "definisi": "dikunci (catur) hingga lawan tidak bisa bergerak",
+                        "kelaskata": "kata kerja"
                     }
                 ]
             }
