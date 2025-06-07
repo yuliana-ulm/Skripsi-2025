@@ -1,57 +1,68 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:cardElevation="4dp"
-    app:cardCornerRadius="8dp"
-    tools:context=".data.List_Kamus">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginHorizontal="4dp"
+    android:elevation="4dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="12dp">
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical">
 
-        <TextView
-            android:id="@+id/txtKataDasar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Kata Dasar: contoh"
-            android:textStyle="bold"
-            android:textSize="16sp"/>
-
-        <TextView
-            android:id="@+id/txtDefinisi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Definisi: contoh arti"/>
+        <ImageView
+            android:id="@+id/imageKata"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background" />
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="8dp"
-            android:gravity="end">
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="8dp">
+
+            <TextView
+                android:id="@+id/textKata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kata"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textSukuKata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Su-ku-ka-ta"
+                android:textColor="#666" />
 
             <Button
                 android:id="@+id/btnEdit"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Edit"
-                android:textSize="12sp"/>
+                android:layout_weight="1"
+                android:text="Edit" />
 
             <Button
                 android:id="@+id/btnHapus"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Hapus"
-                android:textSize="12sp"
-                android:layout_marginStart="8dp"
-                android:textColor="@android:color/holo_red_dark"/>
+                android:layout_weight="1"
+                android:text="Hapus" />
         </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/buttonPlaySound"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_lock_silent_mode_off"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Putar suara"
+            android:padding="8dp" />
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
