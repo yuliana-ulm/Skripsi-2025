@@ -6,6 +6,57 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="15dp"
     tools:context=".data.Suara">
 
+    <!-- Tombol Kembali -->
+    <ImageButton
+        android:id="@+id/btnKembali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:contentDescription="Kembali"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Input Pencarian -->
+    <EditText
+        android:id="@+id/inputCari"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Cari kata..."
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:background="@drawable/bg_search_box"
+        android:padding="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/btnKembali"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- RecyclerView daftar rekaman suara -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRekamanSuara"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/inputCari"
+        app:layout_constraintBottom_toTopOf="@+id/btnTambah"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="8dp"/>
+
+    <!-- Tombol Tambah Rekaman -->
+    <Button
+        android:id="@+id/btnTambah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tambah Rekaman"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

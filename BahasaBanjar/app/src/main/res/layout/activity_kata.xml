@@ -59,7 +59,7 @@
         app:layout_constraintTop_toBottomOf="@id/inputCari"
         app:layout_constraintBottom_toTopOf="@id/btnTambah"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:listitem="@layout/item_kamus_admin" />
+        app:layout_constraintEnd_toEndOf="parent"/>
+<!--        tools:listitem="@layout/item_kamus_admin" -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

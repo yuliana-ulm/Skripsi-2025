@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "647625175893",
+    "project_id": "kamusbahasabanjar1",
+    "storage_bucket": "kamusbahasabanjar1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647625175893:android:e1e90c66a879b7f79275dc",
+        "android_client_info": {
+          "package_name": "com.yuliana.bahasabanjar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCP5_mzRO2WN1nnxPyr8incgWXOXuo78VU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647625175893:android:6075c747f455e7f19275dc",
+        "android_client_info": {
+          "package_name": "com.yuliana.kamusbahasa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCP5_mzRO2WN1nnxPyr8incgWXOXuo78VU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
