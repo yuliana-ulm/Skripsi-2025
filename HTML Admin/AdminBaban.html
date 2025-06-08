@@ -9,201 +9,215 @@
     .card { border: 2px solid #ffc107; }
     .btn-custom { background-color: #28a745; color: white; }
     .btn-custom:hover { background-color: #218838; }
+
+    /* Logo pojok kanan atas */
+    .logo-top-right {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      width: 80px; /* sesuaikan ukuran logo */
+      height: auto;
+      z-index: 1000; /* agar selalu di atas konten lain */
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
 
-<div class="container">
-  <h2 class="mb-4 text-success">🌿 Form Input Kamus Bahasa Banjar ↔ Indonesia</h2>
+  <!-- Logo -->
+  <img src="logo_kamus.png" alt="Logo Kamus Banjar" class="logo-top-right" />
 
-  <div class="mb-3">
-    <label class="form-label">Jenis Kamus</label>
-    <select id="jenisKamus" class="form-select" required>
-      <option value="kamus_indonesia_banjar">Indonesia → Banjar</option>
-      <option value="kamus_banjar_indonesia">Banjar → Indonesia</option>
-    </select>
+  <div class="container">
+    <h2 class="mb-4 text-success">🌿 Form Input Kamus Bahasa By Yuliana</h2>
+
+    <div class="mb-3">
+      <label class="form-label">Jenis Kamus</label>
+      <select id="jenisKamus" class="form-select" required>
+        <option value="kamus_indonesia_banjar">Indonesia → Banjar</option>
+        <option value="kamus_banjar_indonesia">Banjar → Indonesia</option>
+      </select>
+    </div>
+
+    <form id="formKamus" enctype="multipart/form-data">
+      <div class="card p-3 mb-3">
+        <h5>Kata Utama</h5>
+        <div class="mb-2">
+          <label>Kata</label>
+          <input type="text" class="form-control" id="kata" required>
+        </div>
+        <div class="mb-2">
+          <label>Suku Kata</label>
+          <input type="text" class="form-control" id="sukukata">
+        </div>
+        <div class="mb-2">
+          <label>Gambar (jpg/png)</label>
+          <input type="file" class="form-control" id="gambar" accept=".jpg,.jpeg,.png">
+        </div>
+      </div>
+
+      <div class="card p-3 mb-3">
+        <h5>Definisi Umum</h5>
+        <div id="definisiContainer"></div>
+        <button type="button" class="btn btn-warning btn-sm mt-2" onclick="tambahDefinisi()">+ Tambah Definisi</button>
+      </div>
+
+      <div class="card p-3 mb-3">
+        <h5>Turunan Kata</h5>
+        <div id="turunanContainer"></div>
+        <button type="button" class="btn btn-warning btn-sm mt-2" onclick="tambahTurunan()">+ Tambah Turunan</button>
+      </div>
+
+      <button type="submit" class="btn btn-custom">Simpan ke Firebase</button>
+    </form>
+
+    <div class="mt-3" id="status"></div>
   </div>
 
-  <form id="formKamus" enctype="multipart/form-data">
-    <div class="card p-3 mb-3">
-      <h5>Kata Utama</h5>
-      <div class="mb-2">
-        <label>Kata</label>
-        <input type="text" class="form-control" id="kata" required>
-      </div>
-      <div class="mb-2">
-        <label>Suku Kata</label>
-        <input type="text" class="form-control" id="sukukata">
-      </div>
-      <div class="mb-2">
-        <label>Gambar (jpg/png)</label>
-        <input type="file" class="form-control" id="gambar" accept=".jpg,.jpeg,.png">
-      </div>
-    </div>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
 
-    <div class="card p-3 mb-3">
-      <h5>Definisi Umum</h5>
-      <div id="definisiContainer"></div>
-      <button type="button" class="btn btn-warning btn-sm mt-2" onclick="tambahDefinisi()">+ Tambah Definisi</button>
-    </div>
-
-    <div class="card p-3 mb-3">
-      <h5>Turunan Kata</h5>
-      <div id="turunanContainer"></div>
-      <button type="button" class="btn btn-warning btn-sm mt-2" onclick="tambahTurunan()">+ Tambah Turunan</button>
-    </div>
-
-    <button type="submit" class="btn btn-custom">Simpan ke Firebase</button>
-  </form>
-
-  <div class="mt-3" id="status"></div>
-</div>
-
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
-
-<script>
-  const firebaseConfig = {
-    apiKey: "AIzaSyBvYn9DnN1jUrVHJqoEYUWwBKce3sksUyc",
-    authDomain: "kamusbahasabanjar1.firebaseapp.com",
-    projectId: "kamusbahasabanjar1",
-    storageBucket: "kamusbahasabanjar1.appspot.com",
-    messagingSenderId: "647625175893",
-    appId: "1:647625175893:web:bc56088338616b639275dc",
-  };
-
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.firestore();
-  const storage = firebase.storage();
-
-  const definisiContainer = document.getElementById("definisiContainer");
-  const turunanContainer = document.getElementById("turunanContainer");
-  const statusDiv = document.getElementById("status");
-
-  function tambahDefinisi() {
-    const i = definisiContainer.children.length;
-    const div = document.createElement("div");
-    div.innerHTML = `
-      <div class="border p-2 mb-2">
-        <label>Definisi <input class="form-control" type="text" name="definisi_${i}"></label><br>
-        <label>Kelas Kata <input class="form-control" type="text" name="kelaskata_${i}"></label><br>
-        <label>Suara (mp3) <input class="form-control" type="file" name="suara_${i}" accept=".mp3"></label><br>
-        <label>Contoh Banjar <input class="form-control" type="text" name="contoh_banjar_${i}"></label><br>
-        <label>Contoh Indonesia <input class="form-control" type="text" name="contoh_indonesia_${i}"></label>
-      </div>
-    `;
-    definisiContainer.appendChild(div);
-  }
-
-  function tambahTurunan() {
-    const i = turunanContainer.children.length;
-    const div = document.createElement("div");
-    div.innerHTML = `
-      <div class="border p-2 mb-2">
-        <label>Kata <input class="form-control" type="text" name="turunan_kata_${i}"></label><br>
-        <label>Suku Kata <input class="form-control" type="text" name="turunan_sukukata_${i}"></label><br>
-        <label>Gambar <input class="form-control" type="file" name="turunan_gambar_${i}" accept=".jpg,.jpeg,.png"></label><br>
-        <label>Definisi <input class="form-control" type="text" name="turunan_definisi_${i}"></label><br>
-        <label>Kelas Kata <input class="form-control" type="text" name="turunan_kelaskata_${i}"></label><br>
-        <label>Suara <input class="form-control" type="file" name="turunan_suara_${i}" accept=".mp3"></label><br>
-        <label>Contoh Banjar <input class="form-control" type="text" name="turunan_contoh_banjar_${i}"></label><br>
-        <label>Contoh Indonesia <input class="form-control" type="text" name="turunan_contoh_indonesia_${i}"></label>
-      </div>
-    `;
-    turunanContainer.appendChild(div);
-  }
-
-  async function uploadFile(inputFile, path) {
-    if (!inputFile || inputFile.length === 0) return "";
-    const file = inputFile[0];
-    const ref = storage.ref(`${path}/${file.name}`);
-    try {
-      await ref.put(file);
-      const url = await ref.getDownloadURL();
-      statusDiv.innerHTML += `<div class="text-success">✅ Berhasil upload <b>${file.name}</b></div>`;
-      return url;
-    } catch (err) {
-      statusDiv.innerHTML += `<div class="text-danger">❌ Gagal upload <b>${file.name}</b>: ${err.message}</div>`;
-      return "";
-    }
-  }
-
-  document.getElementById("formKamus").addEventListener("submit", async function(e) {
-    e.preventDefault();
-    statusDiv.innerHTML = "Mengunggah data...";
-    this.querySelector('button[type="submit"]').disabled = true;
-
-    const jenisKamus = document.getElementById("jenisKamus").value;
-    const kataUtama = this.kata.value.trim();
-
-    const gambarUrl = await uploadFile(this.gambar.files, `gambar/${kataUtama}`);
-
-    const definisiList = [];
-    for (let i = 0; i < definisiContainer.children.length; i++) {
-      const def = this[`definisi_${i}`].value;
-      const suaraInput = this[`suara_${i}`]?.files;
-      const suaraUrl = await uploadFile(suaraInput, `suara/${kataUtama}_definisi_${i}`);
-
-      definisiList.push({
-        definisi: def || "",
-        kelaskata: this[`kelaskata_${i}`].value || "",
-        suara: suaraUrl,
-        contoh: [{
-          banjar: this[`contoh_banjar_${i}`].value || "",
-          indonesia: this[`contoh_indonesia_${i}`].value || ""
-        }]
-      });
-    }
-
-    const turunanList = [];
-    for (let i = 0; i < turunanContainer.children.length; i++) {
-      const kata = this[`turunan_kata_${i}`].value;
-      if (!kata) continue;
-
-      const gambarTurunan = await uploadFile(this[`turunan_gambar_${i}`]?.files, `gambar/${kataUtama}_turunan_${i}`);
-      const suaraTurunan = await uploadFile(this[`turunan_suara_${i}`]?.files, `suara/${kataUtama}_turunan_${i}`);
-
-      turunanList.push({
-        kata,
-        sukukata: this[`turunan_sukukata_${i}`].value || "",
-        gambar: gambarTurunan,
-        definisi_umum: [{
-          definisi: this[`turunan_definisi_${i}`].value || "",
-          kelaskata: this[`turunan_kelaskata_${i}`].value || "",
-          suara: suaraTurunan,
-          contoh: [{
-            banjar: this[`turunan_contoh_banjar_${i}`].value || "",
-            indonesia: this[`turunan_contoh_indonesia_${i}`].value || ""
-          }]
-        }]
-      });
-    }
-
-    const data = {
-      kata: kataUtama,
-      sukukata: this.sukukata.value || "",
-      gambar: gambarUrl,
-      definisi_umum: definisiList,
-      turunan: turunanList
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBvYn9DnN1jUrVHJqoEYUWwBKce3sksUyc",
+      authDomain: "kamusbahasabanjar1.firebaseapp.com",
+      projectId: "kamusbahasabanjar1",
+      storageBucket: "kamusbahasabanjar1.appspot.com",
+      messagingSenderId: "647625175893",
+      appId: "1:647625175893:web:bc56088338616b639275dc",
     };
 
-    try {
-      await db.collection(jenisKamus).doc(kataUtama).set(data);
-      statusDiv.innerHTML += `<div class="alert alert-success mt-3">✅ Data <b>${kataUtama}</b> berhasil disimpan!</div>`;
-      this.reset();
-      definisiContainer.innerHTML = "";
-      turunanContainer.innerHTML = "";
-      tambahDefinisi();
-    } catch (err) {
-      statusDiv.innerHTML = `<div class="alert alert-danger mt-3">❌ Gagal menyimpan data: ${err.message}</div>`;
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    const storage = firebase.storage();
+
+    const definisiContainer = document.getElementById("definisiContainer");
+    const turunanContainer = document.getElementById("turunanContainer");
+    const statusDiv = document.getElementById("status");
+
+    function tambahDefinisi() {
+      const i = definisiContainer.children.length;
+      const div = document.createElement("div");
+      div.innerHTML = `
+        <div class="border p-2 mb-2">
+          <label>Definisi <input class="form-control" type="text" name="definisi_${i}"></label><br>
+          <label>Kelas Kata <input class="form-control" type="text" name="kelaskata_${i}"></label><br>
+          <label>Suara (mp3) <input class="form-control" type="file" name="suara_${i}" accept=".mp3"></label><br>
+          <label>Contoh Banjar <input class="form-control" type="text" name="contoh_banjar_${i}"></label><br>
+          <label>Contoh Indonesia <input class="form-control" type="text" name="contoh_indonesia_${i}"></label>
+        </div>
+      `;
+      definisiContainer.appendChild(div);
     }
 
-    this.querySelector('button[type="submit"]').disabled = false;
-  });
+    function tambahTurunan() {
+      const i = turunanContainer.children.length;
+      const div = document.createElement("div");
+      div.innerHTML = `
+        <div class="border p-2 mb-2">
+          <label>Kata <input class="form-control" type="text" name="turunan_kata_${i}"></label><br>
+          <label>Suku Kata <input class="form-control" type="text" name="turunan_sukukata_${i}"></label><br>
+          <label>Gambar <input class="form-control" type="file" name="turunan_gambar_${i}" accept=".jpg,.jpeg,.png"></label><br>
+          <label>Definisi <input class="form-control" type="text" name="turunan_definisi_${i}"></label><br>
+          <label>Kelas Kata <input class="form-control" type="text" name="turunan_kelaskata_${i}"></label><br>
+          <label>Suara <input class="form-control" type="file" name="turunan_suara_${i}" accept=".mp3"></label><br>
+          <label>Contoh Banjar <input class="form-control" type="text" name="turunan_contoh_banjar_${i}"></label><br>
+          <label>Contoh Indonesia <input class="form-control" type="text" name="turunan_contoh_indonesia_${i}"></label>
+        </div>
+      `;
+      turunanContainer.appendChild(div);
+    }
 
-  tambahDefinisi(); // default 1 definisi
-</script>
+    async function uploadFile(inputFile, path) {
+      if (!inputFile || inputFile.length === 0) return "";
+      const file = inputFile[0];
+      const ref = storage.ref(`${path}/${file.name}`);
+      try {
+        await ref.put(file);
+        const url = await ref.getDownloadURL();
+        statusDiv.innerHTML += `<div class="text-success">✅ Berhasil upload <b>${file.name}</b></div>`;
+        return url;
+      } catch (err) {
+        statusDiv.innerHTML += `<div class="text-danger">❌ Gagal upload <b>${file.name}</b>: ${err.message}</div>`;
+        return "";
+      }
+    }
+
+    document.getElementById("formKamus").addEventListener("submit", async function(e) {
+      e.preventDefault();
+      statusDiv.innerHTML = "Mengunggah data...";
+      this.querySelector('button[type="submit"]').disabled = true;
+
+      const jenisKamus = document.getElementById("jenisKamus").value;
+      const kataUtama = this.kata.value.trim();
+
+      const gambarUrl = await uploadFile(this.gambar.files, `gambar/${kataUtama}`);
+
+      const definisiList = [];
+      for (let i = 0; i < definisiContainer.children.length; i++) {
+        const def = this[`definisi_${i}`].value;
+        const suaraInput = this[`suara_${i}`]?.files;
+        const suaraUrl = await uploadFile(suaraInput, `suara/${kataUtama}_definisi_${i}`);
+
+        definisiList.push({
+          definisi: def || "",
+          kelaskata: this[`kelaskata_${i}`].value || "",
+          suara: suaraUrl,
+          contoh: [{
+            banjar: this[`contoh_banjar_${i}`].value || "",
+            indonesia: this[`contoh_indonesia_${i}`].value || ""
+          }]
+        });
+      }
+
+      const turunanList = [];
+      for (let i = 0; i < turunanContainer.children.length; i++) {
+        const kata = this[`turunan_kata_${i}`].value;
+        if (!kata) continue;
+
+        const gambarTurunan = await uploadFile(this[`turunan_gambar_${i}`]?.files, `gambar/${kataUtama}_turunan_${i}`);
+        const suaraTurunan = await uploadFile(this[`turunan_suara_${i}`]?.files, `suara/${kataUtama}_turunan_${i}`);
+
+        turunanList.push({
+          kata,
+          sukukata: this[`turunan_sukukata_${i}`].value || "",
+          gambar: gambarTurunan,
+          definisi_umum: [{
+            definisi: this[`turunan_definisi_${i}`].value || "",
+            kelaskata: this[`turunan_kelaskata_${i}`].value || "",
+            suara: suaraTurunan,
+            contoh: [{
+              banjar: this[`turunan_contoh_banjar_${i}`].value || "",
+              indonesia: this[`turunan_contoh_indonesia_${i}`].value || ""
+            }]
+          }]
+        });
+      }
+
+      const data = {
+        kata: kataUtama,
+        sukukata: this.sukukata.value || "",
+        gambar: gambarUrl,
+        definisi_umum: definisiList,
+        turunan: turunanList
+      };
+
+      try {
+        await db.collection(jenisKamus).doc(kataUtama).set(data);
+        statusDiv.innerHTML += `<div class="alert alert-success mt-3">✅ Data <b>${kataUtama}</b> berhasil disimpan!</div>`;
+        this.reset();
+        definisiContainer.innerHTML = "";
+        turunanContainer.innerHTML = "";
+        tambahDefinisi();
+      } catch (err) {
+        statusDiv.innerHTML = `<div class="alert alert-danger mt-3">❌ Gagal menyimpan data: ${err.message}</div>`;
+      }
+
+      this.querySelector('button[type="submit"]').disabled = false;
+    });
+
+    tambahDefinisi(); // default 1 definisi
+  </script>
 
 </body>
 </html>
