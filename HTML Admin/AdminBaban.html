@@ -136,7 +136,6 @@
 
     const jenisKamus = document.getElementById("jenisKamus").value;
     const kataUtama = this.kata.value.trim();
-    const storageRef = storage.ref();
 
     const gambarUrl = await uploadFile(this.gambar.files, `gambar/${kataUtama}`);
 
@@ -160,7 +159,7 @@
     const turunanList = [];
     for (let i = 0; i < turunanContainer.children.length; i++) {
       const kata = this[`turunan_kata_${i}`].value;
-      if (!kata) continue; // Skip jika kosong
+      if (!kata) continue;
 
       const gambarTurunan = await uploadFile(this[`turunan_gambar_${i}`]?.files, `gambar/${kataUtama}_turunan_${i}`);
       const suaraTurunan = await uploadFile(this[`turunan_suara_${i}`]?.files, `suara/${kataUtama}_turunan_${i}`);
@@ -203,7 +202,7 @@
     this.querySelector('button[type="submit"]').disabled = false;
   });
 
-  tambahDefinisi(); // hanya satu definisi default
+  tambahDefinisi(); // default 1 definisi
 </script>
 
 </body>
