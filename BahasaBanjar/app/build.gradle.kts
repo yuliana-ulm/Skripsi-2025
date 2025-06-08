@@ -59,6 +59,7 @@ dependencies {
     implementation(libs.androidx.media3.common.ktx)
     implementation(libs.firebase.crashlytics.buildtools)
     implementation(libs.firebase.firestore.ktx)
+    implementation(libs.firebase.inappmessaging)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

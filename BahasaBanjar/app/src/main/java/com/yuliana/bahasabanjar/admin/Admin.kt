@@ -12,11 +12,8 @@ import androidx.appcompat.widget.SwitchCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.yuliana.bahasabanjar.R
-import com.yuliana.bahasabanjar.data.Gambar
-import com.yuliana.bahasabanjar.data.Kata
-import com.yuliana.bahasabanjar.data.Pengguna
-import com.yuliana.bahasabanjar.data.Suara
-import com.yuliana.bahasabanjar.data.Turunan
+import com.yuliana.bahasabanjar.admin.Gambar
+
 
 class Admin : AppCompatActivity() {
 

@@ -8,10 +8,15 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.yuliana.bahasabanjar.admin.SimpanKamusLocal
+import com.yuliana.bahasabanjar.admin.Admin
 import com.yuliana.bahasabanjar.user.Beranda
+import com.yuliana.bahasabanjar.user.Beranda2
 
 class Splashscreen : AppCompatActivity() {
+
+    // Misalnya data login dari SharedPreferences, atau bisa juga variabel sementara
+    private var username: String = "aku" // Ganti ini sesuai data login pengguna
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -22,10 +27,20 @@ class Splashscreen : AppCompatActivity() {
             insets
         }
 
-        // Tunda selama 3 detik sebelum masuk ke MainActivity
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, SimpanKamusLocal::class.java)
-            startActivity(intent)
+            if (username == "aku") {
+                // Jika login sebagai admin
+                val intent = Intent(this, Admin::class.java)
+                startActivity(intent)
+            } else if (username == "kamu") {
+                // Jika login sebagai pengguna biasa
+                val intent = Intent(this, Beranda::class.java)
+                startActivity(intent)
+            } else {
+                // Jika login sebagai pengguna biasa
+                val intent = Intent(this, Beranda2::class.java)
+                startActivity(intent)
+        }
             finish() // agar splash screen tidak bisa dikembalikan
         }, 3000) // 3000 ms = 3 detik
     }

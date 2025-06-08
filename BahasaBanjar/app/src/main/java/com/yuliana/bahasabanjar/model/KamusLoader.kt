@@ -10,7 +10,7 @@ import org.json.JSONObject
 
 object KamusLoader {
 
-    fun loadAllEntriesAsDataClass(context: Context): List<KamusEntry> {
+    fun <KamusEntry> loadAllEntriesAsDataClass(context: Context): List<KamusEntry> {
         val result = mutableListOf<KamusEntry>()
 
         try {
@@ -25,7 +25,7 @@ object KamusLoader {
                         val jsonArray = JSONArray(jsonText)
                         for (i in 0 until jsonArray.length()) {
                             val jsonObject = jsonArray.getJSONObject(i)
-                            val entry = parseJsonToKamusEntry(jsonObject)
+                            val entry = parseJsonToKamusEntry<Any>(jsonObject)
                             result.add(entry)
                         }
                     } catch (e: Exception) {
@@ -86,7 +86,7 @@ object KamusLoader {
         }
     }
 
-    fun parseJsonToKamusEntry(json: JSONObject): KamusEntry {
+    fun <KamusEntry> parseJsonToKamusEntry(json: JSONObject): KamusEntry {
         fun parseContoh(array: JSONArray): List<Contoh> {
             val list = mutableListOf<Contoh>()
             for (i in 0 until array.length()) {
@@ -133,18 +133,8 @@ object KamusLoader {
             return list
         }
 
-        return KamusEntry(
-            kata = json.optString("kata"),
-            sukukata = json.optString("sukukata"),
-            gambar = json.optString("gambar"),
-            abjad = json.optString("abjad"),
-            definisi_umum = parseDefinisi(json.optJSONArray("definisi_umum") ?: JSONArray()),
-            turunan = parseTurunan(json.optJSONArray("turunan") ?: JSONArray())
-        )
-    }
-
     fun uploadSemuaKamusKeFirestore(context: Context) {
-        val entries = loadAllEntriesAsDataClass(context)
+        val entries = loadAllEntriesAsDataClass<Any?>(context)
         val firestore = FirebaseFirestore.getInstance()
 
         for (entry in entries) {

@@ -15,13 +15,10 @@
         android:theme="@style/Theme.BahasaBanjar"
         tools:targetApi="31">
         <activity
-            android:name=".admin.ViewTurunan"
+            android:name=".mencoba.FormTambahActivity"
             android:exported="false" />
         <activity
-            android:name=".admin.SimpanKamusLocal"
-            android:exported="false" />
-        <activity
-            android:name=".data.List_Kamus"
+            android:name=".mencoba.AdminActivity"
             android:exported="false" />
         <activity
             android:name=".Splashscreen"
@@ -36,19 +33,19 @@
             android:name=".Login"
             android:exported="false" />
         <activity
-            android:name=".data.Gambar"
+            android:name=".admin.Gambar"
             android:exported="false" />
         <activity
-            android:name=".data.Pengguna"
+            android:name=".admin.Pengguna"
             android:exported="false" />
         <activity
-            android:name=".data.Suara"
+            android:name=".admin.Suara"
             android:exported="false" />
         <activity
-            android:name=".data.Turunan"
+            android:name=".admin.Turunan"
             android:exported="false" />
         <activity
-            android:name=".data.Kata"
+            android:name=".admin.Kata"
             android:exported="false" />
         <activity
             android:name=".user.Beranda2"

@@ -1,4 +1,4 @@
-package com.yuliana.bahasabanjar.data
+package com.yuliana.bahasabanjar.admin
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
@@ -7,7 +7,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.yuliana.bahasabanjar.R
 
-class Turunan : AppCompatActivity() {
+class Turunan: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

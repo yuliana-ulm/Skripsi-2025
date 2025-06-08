@@ -1,0 +1,93 @@
+[
+  {
+    "kata": "yahudi",
+    "sukukata": "ya.hu.di",
+    "gambar": "yahudi.jpg",
+    "definisi_umum": [
+      {
+        "definisi": "Yahudi",
+        "kelaskata": "nomina",
+        "contoh": [ 
+        ],
+        "suara": "yahudi.mp3"
+      }
+    ],
+    "turunan": [
+      {
+        "kata": "mayahudi",
+        "sukukata": "ma.ya.hu.di",
+        "gambar": "mayahudi.jpg",
+        "definisi_umum": [
+          {
+            "definisi": "begitu; begitulah; maka",
+            "kelaskata": "pronoun",
+            "contoh": [
+              {
+                "banjar": "limbah malihat duit satuyuk yaitu inya kada ingat burit kupala lagi",
+                "indonesia": "sesudah melihat uang setumpuk begitu dia lupa segala-galanya"
+              }
+            ],
+            "suara": "mayahudi.mp3"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "kata": "rumah",
+    "sukukata": "ru-mah",
+    "gambar": "rumah.jpg",
+    "definisi_umum": [
+      {
+        "definisi": "begitu; begitulah; maka",
+        "kelaskata": "pronoun",
+        "contoh": [
+          {
+            "banjar": "limbah malihat duit satuyuk yaitu inya kada ingat burit kupala lagi",
+            "indonesia": "sesudah melihat uang setumpuk begitu dia lupa segala-galanya"
+          }
+        ],
+        "suara": "mayahudi.mp3"
+      }
+    ],
+    "turunan": []
+  },
+  {
+    "kata": "",
+    "sukukata": "",
+    "gambar": "",
+    "definisi_umum": [
+      {
+        "definisi": "",
+        "kelaskata": "",
+        "contoh": [
+          {
+            "banjar": "",
+            "indonesia": ""
+          }
+        ],
+        "suara": ""
+      }
+    ],
+    "turunan": [
+      {
+        "kata": "",
+        "sukukata": "",
+        "gambar": "",
+        "definisi_umum": [
+          {
+            "definisi": "",
+            "kelaskata": "",
+            "contoh": [
+              {
+                "banjar": "",
+                "indonesia": ""
+              }
+            ],
+            "suara": ""
+          }
+        ]
+      }
+    ]
+  }
+]
