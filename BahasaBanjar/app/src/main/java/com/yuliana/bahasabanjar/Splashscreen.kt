@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.yuliana.bahasabanjar.admin.SimpanKamusLocal
 import com.yuliana.bahasabanjar.user.Beranda
 
 class Splashscreen : AppCompatActivity() {
@@ -23,7 +24,7 @@ class Splashscreen : AppCompatActivity() {
 
         // Tunda selama 3 detik sebelum masuk ke MainActivity
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, Beranda::class.java)
+            val intent = Intent(this, SimpanKamusLocal::class.java)
             startActivity(intent)
             finish() // agar splash screen tidak bisa dikembalikan
         }, 3000) // 3000 ms = 3 detik

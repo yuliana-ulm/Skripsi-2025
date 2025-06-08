@@ -15,6 +15,12 @@
         android:theme="@style/Theme.BahasaBanjar"
         tools:targetApi="31">
         <activity
+            android:name=".admin.ViewTurunan"
+            android:exported="false" />
+        <activity
+            android:name=".admin.SimpanKamusLocal"
+            android:exported="false" />
+        <activity
             android:name=".data.List_Kamus"
             android:exported="false" />
         <activity
@@ -22,6 +28,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
