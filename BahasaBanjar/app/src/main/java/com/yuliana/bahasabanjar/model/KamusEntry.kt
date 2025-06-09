@@ -1,6 +1,6 @@
 package com.yuliana.bahasabanjar.model
 
-data class KamusEntryy(
+data class KamusEntry(
     var kata: String = "",
     var sukukata: String = "",
     var gambar: String = "",
@@ -27,6 +27,3 @@ data class Turunan(
     var gambar: String = "",
     var definisi_umum: List<Definisi> = emptyList()
 )
-class KamusEntry {
-
-}

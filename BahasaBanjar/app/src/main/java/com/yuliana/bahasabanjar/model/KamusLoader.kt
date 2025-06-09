@@ -10,7 +10,7 @@ import org.json.JSONObject
 
 object KamusLoader {
 
-    fun <KamusEntry> loadAllEntriesAsDataClass(context: Context): List<KamusEntry> {
+    inline fun <reified KamusEntry> loadAllEntriesAsDataClass(context: Context): List<KamusEntry> {
         val result = mutableListOf<KamusEntry>()
 
         try {
@@ -25,7 +25,7 @@ object KamusLoader {
                         val jsonArray = JSONArray(jsonText)
                         for (i in 0 until jsonArray.length()) {
                             val jsonObject = jsonArray.getJSONObject(i)
-                            val entry = parseJsonToKamusEntry<Any>(jsonObject)
+                            val entry = parseJsonToKamusEntry<KamusEntry>(jsonObject)
                             result.add(entry)
                         }
                     } catch (e: Exception) {
@@ -86,55 +86,53 @@ object KamusLoader {
         }
     }
 
-    fun <KamusEntry> parseJsonToKamusEntry(json: JSONObject): KamusEntry {
-        fun parseContoh(array: JSONArray): List<Contoh> {
-            val list = mutableListOf<Contoh>()
-            for (i in 0 until array.length()) {
+    inline fun <reified KamusEntry> parseJsonToKamusEntry(json: JSONObject): KamusEntry {
+        val contohParser: (JSONArray) -> List<Contoh> = { array ->
+            List(array.length()) { i ->
                 val obj = array.getJSONObject(i)
-                list.add(
-                    Contoh(
-                        banjar = obj.optString("banjar"),
-                        indonesia = obj.optString("indonesia")
-                    )
-                )
+                Contoh(obj.optString("banjar"), obj.optString("indonesia"))
             }
-            return list
         }
 
-        fun parseDefinisi(array: JSONArray): List<Definisi> {
-            val list = mutableListOf<Definisi>()
-            for (i in 0 until array.length()) {
+        val definisiParser: (JSONArray) -> List<Definisi> = { array ->
+            List(array.length()) { i ->
                 val obj = array.getJSONObject(i)
-                list.add(
-                    Definisi(
-                        definisi = obj.optString("definisi"),
-                        kelaskata = obj.optString("kelaskata"),
-                        suara = obj.optString("suara"),
-                        contoh = parseContoh(obj.optJSONArray("contoh") ?: JSONArray())
-                    )
+                Definisi(
+                    obj.optString("definisi"),
+                    obj.optString("kelaskata"),
+                    obj.optString("suara"),
+                    contohParser(obj.optJSONArray("contoh") ?: JSONArray())
                 )
             }
-            return list
         }
 
-        fun parseTurunan(array: JSONArray): List<Turunan> {
-            val list = mutableListOf<Turunan>()
-            for (i in 0 until array.length()) {
+        val turunanParser: (JSONArray) -> List<Turunan> = { array ->
+            List(array.length()) { i ->
                 val obj = array.getJSONObject(i)
-                list.add(
-                    Turunan(
-                        kata = obj.optString("kata"),
-                        sukukata = obj.optString("sukukata"),
-                        gambar = obj.optString("gambar"),
-                        definisi_umum = parseDefinisi(obj.optJSONArray("definisi_umum") ?: JSONArray())
-                    )
+                Turunan(
+                    obj.optString("kata"),
+                    obj.optString("sukukata"),
+                    obj.optString("gambar"),
+                    definisiParser(obj.optJSONArray("definisi_umum") ?: JSONArray())
                 )
             }
-            return list
         }
+
+        val entry = KamusEntry(
+            kata = json.optString("kata"),
+            sukukata = json.optString("sukukata"),
+            gambar = json.optString("gambar"),
+            abjad = json.optString("abjad"),
+            definisi_umum = definisiParser(json.optJSONArray("definisi_umum") ?: JSONArray()),
+            turunan = turunanParser(json.optJSONArray("turunan") ?: JSONArray())
+        )
+
+        @Suppress("UNCHECKED_CAST")
+        return entry as KamusEntry
+    }
 
     fun uploadSemuaKamusKeFirestore(context: Context) {
-        val entries = loadAllEntriesAsDataClass<Any?>(context)
+        val entries = loadAllEntriesAsDataClass<KamusEntry>(context)
         val firestore = FirebaseFirestore.getInstance()
 
         for (entry in entries) {
