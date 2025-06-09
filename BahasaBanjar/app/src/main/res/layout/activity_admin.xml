@@ -1,85 +1,93 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rvKamus"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".admin.Admin"
-    android:padding="16dp">
+    android:padding="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android" />
 
-    <!-- Switch Tema (pojok kiri atas) -->
-    <androidx.appcompat.widget.SwitchCompat
-        android:id="@+id/themeSwitch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
-    <!-- Tombol Admin (pojok kanan atas) -->
-    <Button
-        android:id="@+id/buttonAdmin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Admin"
-        android:layout_marginEnd="5dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<androidx.constraintlayout.widget.ConstraintLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:id="@+id/main"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".admin.Admin"-->
+<!--    android:padding="16dp">-->
 
-    <!-- Baris 1: Kata & Turunan -->
-    <ImageButton
-        android:id="@+id/Kata"
-        android:layout_width="120dp"
-        android:layout_height="80dp"
-        app:srcCompat="@android:drawable/alert_dark_frame"
-        app:layout_constraintTop_toBottomOf="@+id/themeSwitch"
-        app:layout_constraintEnd_toStartOf="@+id/Turunan"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="8dp" />
+<!--    &lt;!&ndash; Switch Tema (pojok kiri atas) &ndash;&gt;-->
+<!--    <androidx.appcompat.widget.SwitchCompat-->
+<!--        android:id="@+id/themeSwitch"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
 
-    <ImageButton
-        android:id="@+id/Turunan"
-        android:layout_width="120dp"
-        android:layout_height="80dp"
-        app:srcCompat="@android:drawable/alert_dark_frame"
-        app:layout_constraintTop_toTopOf="@+id/Kata"
-        app:layout_constraintStart_toEndOf="@+id/Kata"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="8dp" />
+<!--    &lt;!&ndash; Tombol Admin (pojok kanan atas) &ndash;&gt;-->
+<!--    <Button-->
+<!--        android:id="@+id/buttonAdmin"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Admin"-->
+<!--        android:layout_marginEnd="5dp"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent" />-->
 
-    <!-- Baris 2: Suara & Gambar -->
-    <ImageButton
-        android:id="@+id/Suara"
-        android:layout_width="120dp"
-        android:layout_height="80dp"
-        app:srcCompat="@android:drawable/alert_dark_frame"
-        app:layout_constraintTop_toBottomOf="@+id/Kata"
-        app:layout_constraintEnd_toStartOf="@+id/Gambar"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="8dp" />
+<!--    &lt;!&ndash; Baris 1: Kata & Turunan &ndash;&gt;-->
+<!--    <ImageButton-->
+<!--        android:id="@+id/Kata"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="80dp"-->
+<!--        app:srcCompat="@android:drawable/alert_dark_frame"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/themeSwitch"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/Turunan"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:layout_marginTop="64dp"-->
+<!--        android:layout_marginEnd="8dp" />-->
 
-    <ImageButton
-        android:id="@+id/Gambar"
-        android:layout_width="120dp"
-        android:layout_height="80dp"
-        app:srcCompat="@android:drawable/alert_dark_frame"
-        app:layout_constraintTop_toTopOf="@+id/Suara"
-        app:layout_constraintStart_toEndOf="@+id/Suara"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="8dp" />
+<!--    <ImageButton-->
+<!--        android:id="@+id/Turunan"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="80dp"-->
+<!--        app:srcCompat="@android:drawable/alert_dark_frame"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/Kata"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/Kata"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:layout_marginStart="8dp" />-->
 
-    <!-- Baris 3: Pengguna (di tengah) -->
-    <ImageButton
-        android:id="@+id/Pengguna"
-        android:layout_width="120dp"
-        android:layout_height="80dp"
-        app:srcCompat="@android:drawable/alert_dark_frame"
-        app:layout_constraintTop_toBottomOf="@+id/Suara"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp" />
+<!--    &lt;!&ndash; Baris 2: Suara & Gambar &ndash;&gt;-->
+<!--    <ImageButton-->
+<!--        android:id="@+id/Suara"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="80dp"-->
+<!--        app:srcCompat="@android:drawable/alert_dark_frame"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/Kata"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/Gambar"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        android:layout_marginEnd="8dp" />-->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<!--    <ImageButton-->
+<!--        android:id="@+id/Gambar"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="80dp"-->
+<!--        app:srcCompat="@android:drawable/alert_dark_frame"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/Suara"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/Suara"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:layout_marginStart="8dp" />-->
+
+<!--    &lt;!&ndash; Baris 3: Pengguna (di tengah) &ndash;&gt;-->
+<!--    <ImageButton-->
+<!--        android:id="@+id/Pengguna"-->
+<!--        android:layout_width="120dp"-->
+<!--        android:layout_height="80dp"-->
+<!--        app:srcCompat="@android:drawable/alert_dark_frame"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/Suara"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        android:layout_marginTop="32dp" />-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->

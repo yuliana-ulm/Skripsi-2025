@@ -8,7 +8,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.yuliana.bahasabanjar.admin.Admin
 import com.yuliana.bahasabanjar.user.Beranda
 import com.yuliana.bahasabanjar.user.Beranda2
 

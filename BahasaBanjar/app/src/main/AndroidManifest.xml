@@ -21,12 +21,6 @@
         android:theme="@style/Theme.BahasaBanjar"
         tools:targetApi="31">
         <activity
-            android:name=".mencoba.FormTambahActivity"
-            android:exported="false" />
-        <activity
-            android:name=".mencoba.AdminActivity"
-            android:exported="false" />
-        <activity
             android:name=".Splashscreen"
             android:exported="true">
             <intent-filter>
@@ -57,7 +51,7 @@
             android:name=".user.Beranda2"
             android:exported="false" />
         <activity
-            android:name=".admin.Admin"
+            android:name=".Admin"
             android:exported="false" />
         <activity
             android:name=".user.Beranda"
