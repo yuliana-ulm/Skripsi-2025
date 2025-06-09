@@ -32,7 +32,7 @@
   <img src="logo_kamus.png" alt="Logo Kamus Banjar" class="logo-top-right" />
 
   <div class="container">
-    <h2 class="mb-4 text-success">📚 Daftar Entri Kamus Bahasa Banjar</h2>
+    <h2 class="mb-4 text-success">📚 Daftar Entri Kamus Baban By Yuliana</h2>
 
     <div class="mb-3">
       <label>Pilih Jenis Kamus</label>
@@ -41,6 +41,12 @@
         <option value="kamus_banjar_indonesia">Banjar → Indonesia</option>
       </select>
     </div>
+
+    <div class="mb-3">
+      <label for="cariKata">Cari Kata Dasar</label>
+      <input type="text" id="cariKata" class="form-control" placeholder="Masukkan kata..." oninput="loadData()">
+    </div>
+
 
     <div id="listKamus"></div>
   </div>
@@ -63,6 +69,7 @@
 
     async function loadData() {
       const jenisKamus = document.getElementById("jenisKamus").value;
+      const keyword = document.getElementById("cariKata").value.toLowerCase().trim();
       const listDiv = document.getElementById("listKamus");
       listDiv.innerHTML = `<p>🔄 Memuat data dari koleksi <b>${jenisKamus}</b>...</p>`;
 
@@ -74,40 +81,53 @@
         }
 
         let html = "";
+        let jumlahDitampilkan = 0;
+
         snapshot.forEach(doc => {
           const data = doc.data();
-          html += `
-            <div class="entry-card">
-              <div class="d-flex align-items-start">
-                ${data.gambar ? `<img src="${data.gambar}" class="gambar-kata me-3">` : ""}
-                <div>
-                  <h5>${data.kata}</h5>
-                  <p><strong>Suku Kata:</strong> ${data.sukukata || "-"}</p>
-                  ${data.definisi_umum?.map((d, idx) => `
-                    <div>
-                      <p><strong>Definisi ${idx+1}:</strong> ${d.definisi}</p>
-                      <p><strong>Kelas Kata:</strong> ${d.kelaskata || "-"}</p>
-                      ${d.contoh?.length > 0 ? `
-                        <p><strong>Contoh:</strong><br>
-                          🗣️ Banjar: ${d.contoh[0].banjar}<br>
-                          🇮🇩 Indonesia: ${d.contoh[0].indonesia}
-                        </p>
-                      ` : ""}
-                      ${d.suara ? `<audio controls src="${d.suara}"></audio>` : ""}
-                    </div>
-                  `).join("")}
+          const kataDasar = (data.kata || "").toLowerCase();
+          if (!keyword || kataDasar.includes(keyword)) {
+            jumlahDitampilkan++;
+            html += `
+              <div class="entry-card">
+                <div class="d-flex align-items-start">
+                  ${data.gambar ? `<img src="${data.gambar}" class="gambar-kata me-3">` : ""}
+                  <div>
+                    <h5>${data.kata}</h5>
+                    <p><strong>Suku Kata:</strong> ${data.sukukata || "-"}</p>
+                    ${data.definisi_umum?.map((d, idx) => `
+                      <div>
+                        <p><strong>Definisi ${idx + 1}:</strong> ${d.definisi}</p>
+                        <p><strong>Kelas Kata:</strong> ${d.kelaskata || "-"}</p>
+                        ${d.contoh?.length > 0 ? `
+                          <p><strong>Contoh:</strong><br>
+                            🗣️ Banjar: ${d.contoh[0].banjar}<br>
+                            🇮🇩 Indonesia: ${d.contoh[0].indonesia}
+                          </p>
+                        ` : ""}
+                        ${d.suara ? `<audio controls src="${d.suara}"></audio>` : ""}
+                      </div>
+                    `).join("")}
+                  </div>
                 </div>
               </div>
-            </div>
-          `;
+            `;
+          }
         });
 
-        listDiv.innerHTML = html;
+        listDiv.innerHTML = jumlahDitampilkan > 0 ? html : `
+        <div class='alert alert-info'>
+          🔍 Tidak ditemukan entri yang cocok.<br>
+          <button class="btn btn-warning mt-2" onclick="window.location.href='adminbaban.html?kata=${encodeURIComponent(keyword)}'">
+            ➕ Tambahkan Kata ke Kamus
+          </button>
+
+        </div>`;
+
       } catch (err) {
         listDiv.innerHTML = `<div class="alert alert-danger">❌ Gagal mengambil data: ${err.message}</div>`;
       }
     }
-
     loadData();
   </script>
 </body>

@@ -78,6 +78,21 @@
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
 
   <script>
+  // Ambil parameter dari URL
+  const params = new URLSearchParams(window.location.search);
+  const kataDariPencarian = params.get("kata");
+
+  // Isi otomatis ke input jika tersedia
+  if (kataDariPencarian) {
+    const inputKata = document.getElementById("kata");
+    if (inputKata) {
+      inputKata.value = kataDariPencarian;
+      inputKata.focus(); 
+    }
+  }
+  </script>
+
+  <script>
     const firebaseConfig = {
       apiKey: "AIzaSyBvYn9DnN1jUrVHJqoEYUWwBKce3sksUyc",
       authDomain: "kamusbahasabanjar1.firebaseapp.com",
@@ -217,6 +232,50 @@
     });
 
     tambahDefinisi(); // default 1 definisi
+    document.getElementById("kata").addEventListener("blur", async function () {
+    const jenisKamus = document.getElementById("jenisKamus").value;
+    const kata = this.value.trim();
+    if (!kata) return;
+
+    statusDiv.innerHTML = `<span class="text-info">🔍 Mencari data <b>${kata}</b>...</span>`;
+    try {
+      const doc = await db.collection(jenisKamus).doc(kata).get();
+      if (doc.exists) {
+        const data = doc.data();
+        document.getElementById("sukukata").value = data.sukukata || "";
+
+        definisiContainer.innerHTML = "";
+        (data.definisi_umum || []).forEach((item, i) => {
+          tambahDefinisi();
+          document.querySelector(`[name=definisi_${i}]`).value = item.definisi || "";
+          document.querySelector(`[name=kelaskata_${i}]`).value = item.kelaskata || "";
+          document.querySelector(`[name=contoh_banjar_${i}]`).value = item.contoh?.[0]?.banjar || "";
+          document.querySelector(`[name=contoh_indonesia_${i}]`).value = item.contoh?.[0]?.indonesia || "";
+        });
+
+        turunanContainer.innerHTML = "";
+        (data.turunan || []).forEach((tur, i) => {
+          tambahTurunan();
+          document.querySelector(`[name=turunan_kata_${i}]`).value = tur.kata || "";
+          document.querySelector(`[name=turunan_sukukata_${i}]`).value = tur.sukukata || "";
+          document.querySelector(`[name=turunan_definisi_${i}]`).value = tur.definisi_umum?.[0]?.definisi || "";
+          document.querySelector(`[name=turunan_kelaskata_${i}]`).value = tur.definisi_umum?.[0]?.kelaskata || "";
+          document.querySelector(`[name=turunan_contoh_banjar_${i}]`).value = tur.definisi_umum?.[0]?.contoh?.[0]?.banjar || "";
+          document.querySelector(`[name=turunan_contoh_indonesia_${i}]`).value = tur.definisi_umum?.[0]?.contoh?.[0]?.indonesia || "";
+        });
+
+        statusDiv.innerHTML = `<span class="text-success">✅ Data <b>${kata}</b> ditemukan dan dimuat ke form!</span>`;
+      } else {
+        statusDiv.innerHTML = `<span class="text-warning">ℹ️ Kata <b>${kata}</b> belum ada, silakan isi data baru.</span>`;
+        definisiContainer.innerHTML = "";
+        turunanContainer.innerHTML = "";
+        tambahDefinisi();
+      }
+    } catch (err) {
+      statusDiv.innerHTML = `<div class="text-danger">❌ Gagal mengambil data: ${err.message}</div>`;
+    }
+  });
+
   </script>
 
 </body>
