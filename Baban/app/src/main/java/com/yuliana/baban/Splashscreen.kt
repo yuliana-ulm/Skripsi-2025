@@ -1,6 +1,9 @@
 package com.yuliana.baban
 
+import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +19,12 @@ class Splashscreen : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        // Delay 3 detik lalu pindah ke Dashboard :V gitu ges
+        Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(this, Dashboard_BanjarIndo::class.java)
+            startActivity(intent)
+            finish()
+        }, 3000)
     }
 }

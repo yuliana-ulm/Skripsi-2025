@@ -6,7 +6,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class KamusAdapter(private val data: List<Kamus>) : RecyclerView.Adapter<KamusAdapter.ViewHolder>() {
+class KamusAdapter(
+    private val data: List<Kamus>
+) : RecyclerView.Adapter<KamusAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val teksKata: TextView = view.findViewById(R.id.textKata)
