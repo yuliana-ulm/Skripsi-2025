@@ -14,7 +14,7 @@ import com.yuliana.bahasabanjar.user.Beranda2
 class Splashscreen : AppCompatActivity() {
 
     // Misalnya data login dari SharedPreferences, atau bisa juga variabel sementara
-    private var username: String = "aku" // Ganti ini sesuai data login pengguna
+    private var username: String = "kamu" 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
