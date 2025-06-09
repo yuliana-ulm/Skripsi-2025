@@ -36,95 +36,100 @@ class Admin : AppCompatActivity() {
         ambilDataKamus()
     }
 
-    private fun ambilDataKamus() {FirebaseFirestore.getInstance().collection("kamus_banjar_indonesia")
-        .document("abadan") // atau gunakan .get() dan loop jika ambil semua
-        .get()
-        .addOnSuccessListener { doc ->
+    private fun ambilDataKamus() {
+        FirebaseFirestore.getInstance()
+            .collection("kamus_banjar_indonesia")
+            .get()
+            .addOnSuccessListener { result ->
+                for (doc in result) {
+                    val kata = doc.getString("kata") ?: ""
+                    val sukukata = doc.getString("sukukata") ?: ""
+                    val gambar = doc.getString("gambar") ?: ""
 
-            val kata = doc.getString("kata") ?: ""
-            val sukukata = doc.getString("sukukata") ?: ""
-            val gambar = doc.getString("gambar") ?: ""
+                    val definisiUmumRaw = doc.get("definisi_umum") as? List<*>
+                    val definisiUmumList = mutableListOf<Definisi>()
+                    definisiUmumRaw?.forEach { def ->
+                        if (def is Map<*, *>) {
+                            val definisi = def["definisi"] as? String ?: ""
+                            val kelaskata = def["kelaskata"] as? String ?: ""
+                            val suara = def["suara"] as? String ?: ""
 
-            val definisiUmumRaw = doc.get("definisi_umum") as? List<*>
-            val definisiUmumList = mutableListOf<Definisi>()
-            definisiUmumRaw?.forEach { def ->
-                if (def is Map<*, *>) {
-                    val definisi = def["definisi"] as? String ?: ""
-                    val kelaskata = def["kelaskata"] as? String ?: ""
-                    val suara = def["suara"] as? String ?: ""
+                            val contohRaw = def["contoh"] as? List<*>
+                            val contohList = contohRaw?.mapNotNull { con ->
+                                if (con is Map<*, *>) {
+                                    Contoh(
+                                        banjar = con["banjar"] as? String ?: "",
+                                        indonesia = con["indonesia"] as? String ?: ""
+                                    )
+                                } else null
+                            } ?: emptyList()
 
-                    val contohRaw = def["contoh"] as? List<*>
-                    val contohList = contohRaw?.mapNotNull { con ->
-                        if (con is Map<*, *>) {
-                            Contoh(
-                                banjar = con["banjar"] as? String ?: "",
-                                indonesia = con["indonesia"] as? String ?: ""
-                            )
-                        } else null
-                    } ?: emptyList()
+                            definisiUmumList.add(Definisi(definisi, kelaskata, suara, contohList))
+                        }
+                    }
 
-                    definisiUmumList.add(Definisi(definisi, kelaskata, suara, contohList))
-                }
-            }
+                    val turunanList = mutableListOf<Turunan>()
+                    val turunanRaw = doc.get("turunan")
+                    if (turunanRaw is List<*>) {
+                        for (item in turunanRaw) {
+                            if (item is Map<*, *>) {
+                                val kataTurunan = item["kata"] as? String ?: ""
+                                val sukukataTurunan = item["sukukata"] as? String ?: ""
+                                val gambarTurunan = item["gambar"] as? String ?: ""
 
-            val turunanList = mutableListOf<Turunan>()
-            val turunanRaw = doc.get("turunan")
-            if (turunanRaw is List<*>) {
-                for (item in turunanRaw) {
-                    if (item is Map<*, *>) {
-                        val kataTurunan = item["kata"] as? String ?: ""
-                        val sukukataTurunan = item["sukukata"] as? String ?: ""
-                        val gambarTurunan = item["gambar"] as? String ?: ""
+                                val definisiTurunanRaw = item["definisi_umum"] as? List<*>
+                                val definisiTurunanList = mutableListOf<Definisi>()
+                                definisiTurunanRaw?.forEach { def ->
+                                    if (def is Map<*, *>) {
+                                        val definisi = def["definisi"] as? String ?: ""
+                                        val kelaskata = def["kelaskata"] as? String ?: ""
+                                        val suara = def["suara"] as? String ?: ""
 
-                        val definisiTurunanRaw = item["definisi_umum"] as? List<*>
-                        val definisiTurunanList = mutableListOf<Definisi>()
-                        definisiTurunanRaw?.forEach { def ->
-                            if (def is Map<*, *>) {
-                                val definisi = def["definisi"] as? String ?: ""
-                                val kelaskata = def["kelaskata"] as? String ?: ""
-                                val suara = def["suara"] as? String ?: ""
-                                val contohRaw = def["contoh"] as? List<*>
-                                val contohList = contohRaw?.mapNotNull { con ->
-                                    if (con is Map<*, *>) {
-                                        Contoh(
-                                            banjar = con["banjar"] as? String ?: "",
-                                            indonesia = con["indonesia"] as? String ?: ""
+                                        val contohRaw = def["contoh"] as? List<*>
+                                        val contohList = contohRaw?.mapNotNull { con ->
+                                            if (con is Map<*, *>) {
+                                                Contoh(
+                                                    banjar = con["banjar"] as? String ?: "",
+                                                    indonesia = con["indonesia"] as? String ?: ""
+                                                )
+                                            } else null
+                                        } ?: emptyList()
+
+                                        definisiTurunanList.add(
+                                            Definisi(
+                                                definisi,
+                                                kelaskata,
+                                                suara,
+                                                contohList
+                                            )
                                         )
-                                    } else null
-                                } ?: emptyList()
+                                    }
+                                }
 
-                                definisiTurunanList.add(Definisi(definisi, kelaskata, suara, contohList))
+                                turunanList.add(
+                                    Turunan(
+                                        kata = kataTurunan,
+                                        sukukata = sukukataTurunan,
+                                        gambar = gambarTurunan,
+                                        definisi_umum = definisiTurunanList
+                                    )
+                                )
                             }
                         }
-
-                        turunanList.add(
-                            Turunan(
-                                kata = kataTurunan,
-                                sukukata = sukukataTurunan,
-                                gambar = gambarTurunan,
-                                definisi_umum = definisiTurunanList
-                            )
-                        )
                     }
+
+                    // Logging per dokumen
+                    Log.d("FirebaseKamus", "Kata: $kata")
+                    Log.d("FirebaseKamus", "Definisi umum: ${definisiUmumList.size} item")
+                    Log.d("FirebaseKamus", "Jumlah turunan: ${turunanList.size} kata")
                 }
             }
-
-            // Sekarang kamu punya data lengkap:
-            // - kata, sukukata, gambar
-            // - definisiUmumList
-            // - turunanList
-
-            Log.d("FirebaseKamus", "Data utama: $kata")
-            Log.d("FirebaseKamus", "Definisi umum: ${definisiUmumList.size} item")
-            Log.d("FirebaseKamus", "Jumlah turunan: ${turunanList.size} kata")
-
-        }
-        .addOnFailureListener { e ->
-            Log.e("FirebaseKamus", "Gagal ambil data", e)
-        }
-
+            .addOnFailureListener { e ->
+                Log.e("FirebaseKamus", "Gagal ambil data", e)
+            }
     }
 }
+
 
 
 //package com.yuliana.bahasabanjar.admin

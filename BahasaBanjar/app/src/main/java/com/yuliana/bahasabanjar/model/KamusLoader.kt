@@ -139,7 +139,7 @@ object KamusLoader {
             val abjad = entry.kata.firstOrNull()?.lowercaseChar()?.toString() ?: ""
             val finalEntry = entry.copy(abjad = abjad)
 
-            firestore.collection("Kamus")
+            firestore.collection("kamus_banjar_indonesia")
                 .document(finalEntry.kata)
                 .set(finalEntry)
                 .addOnSuccessListener {
