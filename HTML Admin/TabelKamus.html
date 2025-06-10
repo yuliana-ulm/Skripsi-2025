@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabel Kamus Baban by Yuliana</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <style>
+    body {
+      background-color: #fdfdfd;
+      padding-top: 220px; 
+    }
+
+    .header-sticky {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #ffffff;
+      border-bottom: 2px solid #a7d7c5;
+      z-index: 1000;
+      padding: 10px 20px 0 20px;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .logo-kanan {
+      width: 70px;
+    }
+
+    .btn-back {
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+    .btn-back img {
+      width: 40px;
+    }
+
+    .tombol-aksi {
+      margin-right: 10px;
+      white-space: nowrap;
+    }
+
+    table img {
+      max-width: 60px;
+      border-radius: 5px;
+    }
+
+    audio {
+      width: 120px;
+    }
+
+    .table-wrapper {
+      overflow-y: auto;
+      max-height: calc(100vh - 230px); 
+    }
+
+    .judul-halaman {
+      font-family: cursive;
+      font-size: 1.6rem;
+      color: #198754;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    @media (max-width: 576px) {
+      .judul-halaman {
+        font-size: 1.3rem;
+      }
+      audio {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+    <!-- header ngefrezee -->
+  <div class="header-sticky">
+    <div class="header-content">
+      <a href="listkamus.html" class="btn btn-warning btn-sm back-button">⬅ Kembali</a>
+      <h3 class="judul-halaman mb-4 text-success">📄 Kamus Baban by Yuliana</h3>
+      <img src="logo_kamus.png" alt="Logo Kamus" class="logo-kanan" />
+    </div>
+
+    <div class="container">
+      <div class="row mb-3 mt-2">
+        <div class="col-md-4 col-sm-12 mb-2">
+          <label>Pilih Jenis Kamus</label>
+          <select id="jenisKamus" class="form-select" onchange="loadTabel()">
+            <option value="kamus_banjar_indonesia">Banjar → Indonesia</option>
+            <option value="kamus_indonesia_banjar">Indonesia → Banjar</option>
+          </select>
+        </div>
+        <div class="col-md-4 col-sm-12 mb-2">
+          <label>Cari Kata</label>
+          <input type="text" id="cariKata" class="form-control" placeholder="Cari kata..." oninput="loadTabel()">
+        </div>
+        <div class="col-md-4 col-sm-12 d-flex align-items-end">
+          <button onclick="exportToExcel()" class="btn btn-success tombol-aksi w-100">⬇️ Simpan Excel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tabel isinya tuh data dari firebase -->
+  <div class="container table-wrapper mt-2">
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover" id="dataTable">
+        <thead class="table-success">
+          <tr>
+            <th>Kata</th>
+            <th>Suku Kata</th>
+            <th>Definisi</th>
+            <th>Kelas Kata</th>
+            <th>Contoh Banjar</th>
+            <th>Contoh Indonesia</th>
+            <th>Gambar</th>
+            <th>Suara</th>
+            <th>Turunan</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Firebase & Script -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBvYn9DnN1jUrVHJqoEYUWwBKce3sksUyc",
+      authDomain: "kamusbahasabanjar1.firebaseapp.com",
+      projectId: "kamusbahasabanjar1",
+      storageBucket: "kamusbahasabanjar1.appspot.com",
+      messagingSenderId: "647625175893",
+      appId: "1:647625175893:web:bc56088338616b639275dc",
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+
+    async function loadTabel() {
+      const jenisKamus = document.getElementById("jenisKamus").value;
+      const keyword = document.getElementById("cariKata").value.toLowerCase().trim();
+      const tbody = document.querySelector("#dataTable tbody");
+      tbody.innerHTML = "";
+
+      const snapshot = await db.collection(jenisKamus).get();
+
+      snapshot.forEach(doc => {
+        const data = doc.data();
+        const kataDasar = (data.kata || "").toLowerCase();
+        if (!keyword || kataDasar.includes(keyword)) {
+          const definisi = data.definisi_umum?.[0] || {};
+          const contoh = definisi.contoh?.[0] || {};
+          const gambar = data.gambar ? `<img src="${data.gambar}" alt="gambar">` : "-";
+          const suara = definisi.suara ? `<audio controls src="${definisi.suara}"></audio>` : "-";
+
+          let turunanHTML = "-";
+          if (Array.isArray(data.turunan) && data.turunan.length > 0) {
+            turunanHTML = data.turunan.map(tur =>
+              `• ${tur.kata || ""}: ${tur.arti || ""}${tur.suara ? ` [<audio controls src="${tur.suara}"></audio>]` : ""}`
+            ).join("<br>");
+          }
+
+          const row = `
+            <tr>
+              <td>${data.kata}</td>
+              <td>${data.sukukata || ""}</td>
+              <td>${definisi.definisi || ""}</td>
+              <td>${definisi.kelaskata || ""}</td>
+              <td>${contoh.banjar || ""}</td>
+              <td>${contoh.indonesia || ""}</td>
+              <td>${gambar}</td>
+              <td>${suara}</td>
+              <td>${turunanHTML}</td>
+            </tr>
+          `;
+          tbody.innerHTML += row;
+        }
+      });
+    }
+
+    function exportToExcel() {
+      const wb = XLSX.utils.book_new();
+      const ws = XLSX.utils.table_to_sheet(document.getElementById("dataTable"));
+      XLSX.utils.book_append_sheet(wb, ws, "KamusBaban");
+      XLSX.writeFile(wb, "kamus_baban.xlsx");
+    }
+
+    // Load saat halaman dibuka
+    loadTabel();
+  </script>
+</body>
+</html>

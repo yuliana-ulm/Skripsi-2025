@@ -10,25 +10,31 @@
     .btn-custom { background-color: #28a745; color: white; }
     .btn-custom:hover { background-color: #218838; }
 
-    /* Logo pojok kanan atas */
     .logo-top-right {
       position: fixed;
       top: 10px;
       right: 10px;
-      width: 80px; /* sesuaikan ukuran logo */
+      width: 80px; 
       height: auto;
-      z-index: 1000; /* agar selalu di atas konten lain */
+      z-index: 1000; 
       cursor: pointer;
+    }
+    .judul-halaman {
+      font-family: cursive;
+      font-size: 1.6rem;
+      color: #198754;
+      text-align: center;
+      flex-grow: 1;
     }
   </style>
 </head>
 <body>
 
-  <!-- Logo -->
+  <a href="listkamus.html" class="btn btn-warning btn-sm back-button">⬅ Kembali</a>
   <img src="logo_kamus.png" alt="Logo Kamus Banjar" class="logo-top-right" />
 
   <div class="container">
-    <h2 class="mb-4 text-success">🌿 Form Input Kamus Bahasa By Yuliana</h2>
+    <h2 class="judul-halaman mb-4 text-success">🌿 Form Input Kamus Bahasa By Yuliana</h2>
 
     <div class="mb-3">
       <label class="form-label">Jenis Kamus</label>
