@@ -22,7 +22,7 @@ class Splashscreen : AppCompatActivity() {
 
         // Delay 3 detik lalu pindah ke Dashboard :V gitu ges
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, Dashboard_BanjarIndo::class.java)
+            val intent = Intent(this, KamusActivity::class.java)
             startActivity(intent)
             finish()
         }, 3000)

@@ -3,12 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.CAMERA"
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.CAMERA"
         tools:ignore="PermissionImpliesUnsupportedChromeOsHardware" />
-
 
     <application
         android:allowBackup="true"
@@ -20,6 +20,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BahasaBanjar"
         tools:targetApi="31">
+        <activity
+            android:name=".KamusActivity"
+            android:exported="false" />
         <activity
             android:name=".Splashscreen"
             android:exported="true">
