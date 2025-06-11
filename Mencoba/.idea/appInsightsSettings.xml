@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AppInsightsSettings">
-    <option name="selectedTabId" value="Firebase Crashlytics" />
     <option name="tabSettings">
       <map>
         <entry key="Firebase Crashlytics">
@@ -9,8 +8,8 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="com.yuliana.baban" />
-                  <option name="mobileSdkAppId" value="1:647625175893:android:c96cc0eb438e49659275dc" />
+                  <option name="appId" value="com.yuliana.mencoba" />
+                  <option name="mobileSdkAppId" value="1:647625175893:android:081bad8eb3eacf369275dc" />
                   <option name="projectId" value="kamusbahasabanjar1" />
                   <option name="projectNumber" value="647625175893" />
                 </ConnectionSetting>

@@ -5,10 +5,14 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import java.util.*
+import kotlin.math.min
 
 class KamusAdapter(
-    private val data: List<Kamus>
+    private var fullData: List<Kamus>
 ) : RecyclerView.Adapter<KamusAdapter.ViewHolder>() {
+
+    private var filteredData: List<Kamus> = fullData
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val teksKata: TextView = view.findViewById(R.id.textKata)
@@ -22,10 +26,10 @@ class KamusAdapter(
         return ViewHolder(v)
     }
 
-    override fun getItemCount() = data.size
+    override fun getItemCount() = filteredData.size
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = data[position]
+        val item = filteredData[position]
         holder.teksKata.text = item.kata
         holder.teksSuku.text = "Suku kata: ${item.sukukata}"
 
@@ -40,5 +44,52 @@ class KamusAdapter(
         }
 
         holder.teksTurunan.text = "Turunan:\n$turunanText"
+    }
+
+    // Untuk memperbarui data (jika ada perubahan dari Firebase misalnya)
+    fun updateData(newData: List<Kamus>) {
+        fullData = newData
+        filteredData = newData
+        notifyDataSetChanged()
+    }
+
+    // Filter dengan Levenshtein
+    fun filter(query: String) {
+        if (query.isEmpty()) {
+            filteredData = fullData
+        } else {
+            val lowerQuery = query.lowercase(Locale.getDefault())
+            val maxDistance = 2
+
+            filteredData = fullData.filter { item ->
+                val kataLower = item.kata.lowercase(Locale.getDefault())
+                val distance = levenshteinDistance(lowerQuery, kataLower)
+                distance <= maxDistance || kataLower.contains(lowerQuery)
+            }.sortedBy {
+                levenshteinDistance(lowerQuery, it.kata.lowercase(Locale.getDefault()))
+            }
+        }
+        notifyDataSetChanged()
+    }
+
+    // Algoritma Levenshtein Distance
+    private fun levenshteinDistance(s: String, t: String): Int {
+        val m = s.length
+        val n = t.length
+        val dp = Array(m + 1) { IntArray(n + 1) }
+
+        for (i in 0..m) dp[i][0] = i
+        for (j in 0..n) dp[0][j] = j
+
+        for (i in 1..m) {
+            for (j in 1..n) {
+                val cost = if (s[i - 1] == t[j - 1]) 0 else 1
+                dp[i][j] = min(
+                    min(dp[i - 1][j] + 1, dp[i][j - 1] + 1),
+                    dp[i - 1][j - 1] + cost
+                )
+            }
+        }
+        return dp[m][n]
     }
 }

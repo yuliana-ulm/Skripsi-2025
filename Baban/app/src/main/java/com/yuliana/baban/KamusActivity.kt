@@ -2,10 +2,18 @@ package com.yuliana.baban
 
 import android.content.Context
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
+import android.widget.AutoCompleteTextView
+import android.widget.Button
+import android.widget.Switch
 import android.widget.Toast
+import android.widget.ToggleButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.widget.SwitchCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -19,7 +27,11 @@ class KamusActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: KamusAdapter
+    private lateinit var themeSwitch: SwitchCompat
+    private lateinit var editTextSearch: AutoCompleteTextView
+    private lateinit var toggleButton: Button
     private val dataKamus = mutableListOf<Kamus>()
+    private var isBanjarToIndo = false
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,21 +45,44 @@ class KamusActivity : AppCompatActivity() {
         }
 
         recyclerView = findViewById(R.id.recyclerKamus)
+        themeSwitch = findViewById(R.id.themeSwitch)
+        editTextSearch = findViewById(R.id.editTextSearch)
+        toggleButton = findViewById(R.id.buttonToggleBahasa)
         adapter = KamusAdapter(dataKamus)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
 
-        //ini yang online
-        ambilDataKamus()
-
         //ini yang offline
         loadData()
 
+        //mengubah bahasa
+        val sharedPrefs = getSharedPreferences("KamusPrefs", MODE_PRIVATE)
+        isBanjarToIndo = sharedPrefs.getBoolean("isBanjarToIndo", true)
+        toggleButton.text = if (isBanjarToIndo) "Banjar → Indonesia" else "Indonesia → Banjar"
+
+
+        toggleButton.setOnClickListener {
+            isBanjarToIndo = !isBanjarToIndo
+            toggleButton.text = if (isBanjarToIndo) "Banjar → Indonesia" else "Indonesia → Banjar"
+
+            // Simpan ke SharedPreferences
+            val editor = sharedPrefs.edit()
+            editor.putBoolean("isBanjarToIndo", isBanjarToIndo)
+            editor.apply()
+
+            //data kamus berubah
+            ambilDataKamus()
+        }
+        //ini yang online
+        ambilDataKamus()
     }
+
 
     //yang ini tuh buat ambil data firestore dari online
     private fun ambilDataKamus() {
-        FirebaseFirestore.getInstance().collection("kamus_banjar_indonesia")
+        val koleksi = if (isBanjarToIndo) "kamus_banjar_indonesia" else "kamus_indonesia_banjar"
+
+        FirebaseFirestore.getInstance().collection(koleksi)
             .get()
             .addOnSuccessListener { hasil ->
                 dataKamus.clear()
@@ -278,5 +313,30 @@ class KamusActivity : AppCompatActivity() {
             .addOnFailureListener { e ->
                 onError(e)
             }
+
+        //untuk pencarian
+        editTextSearch.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                val query = s.toString()
+                adapter.filter(query)
+            }
+
+            override fun afterTextChanged(s: Editable?) {}
+        })
+
+
+        // tema gelap atau terang
+        val isNightMode = AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES
+        themeSwitch.isChecked = isNightMode
+
+        themeSwitch.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
+        }
     }
 }
