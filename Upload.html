@@ -1,66 +1,160 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Upload Gambar ke Firebase</title>
+  <title>Upload Gambar ke Kamus Banjar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f0f8f5;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .container {
+      max-width: 500px;
+      margin-top: 60px;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-top: 6px solid #88b04b;
+    }
+    .btn-upload {
+      background-color: #f9d976;
+      color: white;
+    }
+    .btn-upload:disabled {
+      background-color: #ccc;
+    }
+    .btn-upload:hover {
+      background-color: #f7c948;
+      color: white;
+    }  
+    .logo-kanan {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 60px;
+    }
+    h2 {
+      color: #668b3f;
+    }
+    .bg-budaya {
+      background-image: url('Banjar_Sasirangan.png');
+      background-size: cover;
+      background-repeat: repeat;
+      opacity: 0.05;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+    }
+    .btn-lihat {
+      background-color: #88b04b;
+      color: white;
+    }
+    .btn-lihat:hover {
+      background-color: #76a140;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-  <h2>Upload Gambar + Deskripsi</h2>
-  <input type="file" id="fileInput" accept="image/*"><br><br>
-  <input type="text" id="descInput" placeholder="Deskripsi gambar"><br><br>
-  <button onclick="upload()">Upload</button>
+  <div class="bg-budaya"></div>
+  
+  <img src="logo_kamus.png" alt="Logo Kalimantan Selatan" class="logo-kanan" />
 
-  <p id="status"></p>
+  <div class="container">
+    <h2 class="text-center">Upload Gambar Kamus</h2>
+    <div class="mb-3">
+      <label for="fileInput" class="form-label">Pilih Gambar</label>
+      <input type="file" class="form-control" id="fileInput" accept="image/*">
+    </div>
+    <div class="mb-3">
+      <label for="descInput" class="form-label">Deskripsi Gambar</label>
+      <input type="text" class="form-control" id="descInput" placeholder="Deskripsi">
+    </div>
+    <button id="uploadBtn" class="btn btn-upload w-100" onclick="upload()">⬆️ Upload</button>
+    <p id="status" class="mt-3 text-center"></p>
+    <hr>
+    <button onclick="window.location.href='UList_gambar.html'" class="btn btn-lihat w-100">📷 Lihat Gambar Tersimpan</button>
+  </div>
 
   <!-- Firebase SDK -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 
-  <script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-analytics.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore.js";
+
     const firebaseConfig = {
       apiKey: "AIzaSyBvYn9DnN1jUrVHJqoEYUWwBKce3sksUyc",
       authDomain: "kamusbahasabanjar1.firebaseapp.com",
+      databaseURL: "https://kamusbahasabanjar1-default-rtdb.firebaseio.com",
       projectId: "kamusbahasabanjar1",
       storageBucket: "kamusbahasabanjar1.appspot.com",
       messagingSenderId: "647625175893",
-      appId: "1:647625175893:web:bc56088338616b639275dc",
+      appId: "1:647625175893:web:6d4798c0bee8cb139275dc",
+      measurementId: "G-Q1VLP42FY0"
     };
 
-    // Inisialisasi Firebase
-    firebase.initializeApp(firebaseConfig);
-    const storage = firebase.storage();
-    const db = firebase.firestore();
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getFirestore(app);
 
     async function upload() {
-      const file = document.getElementById("fileInput").files[0];
+      const fileInput = document.getElementById("fileInput");
       const deskripsi = document.getElementById("descInput").value.trim();
       const status = document.getElementById("status");
+      const uploadBtn = document.getElementById("uploadBtn");
 
-      if (!file || !deskripsi) {
-        status.textContent = "Pilih gambar dan isi deskripsi terlebih dahulu.";
+      if (!fileInput.files[0] || !deskripsi) {
+        status.textContent = "⚠️ Harap pilih gambar dan isi deskripsi.";
+        status.style.color = "red";
         return;
       }
 
-      const filename = "IMG_" + Date.now() + "_" + file.name;
-      const storageRef = storage.ref("gambar/" + filename);
+      uploadBtn.disabled = true;
+      uploadBtn.textContent = "⏳ Mengunggah...";
 
-      try {
-        // Upload file ke Firebase Storage
-        const snapshot = await storageRef.put(file);
-        const url = await snapshot.ref.getDownloadURL();
+      const file = fileInput.files[0];
+      const reader = new FileReader();
 
-        // Simpan ke Firestore
-        await db.collection("gambar_kamus").add({
-          url: url,
-          deskripsi: deskripsi
-        });
+      reader.onload = async function (e) {
+        const base64Image = e.target.result;
 
-        status.textContent = "Upload berhasil!";
-      } catch (error) {
-        console.error(error);
-        status.textContent = "Gagal upload: " + error.message;
-      }
+        try {
+          const docRef = await db.collection("gambar_kamus").add({
+            deskripsi: deskripsi,
+            imageData: base64Image,
+            filename: deskripsi.replace(/\s+/g, "_").toLowerCase(),
+            timestamp: new Date()
+          });
+
+          status.innerHTML = `✅ Upload berhasil!`;
+          status.style.color = "green";
+
+          // Reset form
+          fileInput.value = "";
+          document.getElementById("descInput").value = "";
+        } catch (error) {
+          console.error(error);
+          status.textContent = "❌ Gagal upload: " + error.message;
+          status.style.color = "red";
+        } finally {
+          uploadBtn.disabled = false;
+          uploadBtn.textContent = "⬆️ Upload";
+        }
+      };
+
+      reader.readAsDataURL(file);
     }
   </script>
 </body>
