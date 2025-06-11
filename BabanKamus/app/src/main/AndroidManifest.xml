@@ -21,11 +21,11 @@
         android:theme="@style/Theme.BabanKamus"
         tools:targetApi="31">
         <activity
-            android:name=".Activity.MainActivity"
+            android:name=".Activity.GambarActivity"
             android:exported="false" />
 
         <activity
-            android:name=".Activity.GambarActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
