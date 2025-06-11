@@ -45,10 +45,6 @@ class GambarActivity : AppCompatActivity() {
 
         recyclerView = findViewById(R.id.recyclerGambar)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        adapter = GambarAdapter(dataList,
-            onEdit = { item -> editData(item) },
-            onDelete = { item -> deleteData(item) }
-        )
         recyclerView.adapter = adapter
 
         pilihButton.setOnClickListener {
@@ -168,3 +164,5 @@ class GambarActivity : AppCompatActivity() {
         dialog.show()
     }
 }
+
+
