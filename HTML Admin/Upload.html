@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Upload Gambar ke Firebase</title>
+</head>
+<body>
+  <h2>Upload Gambar + Deskripsi</h2>
+  <input type="file" id="fileInput" accept="image/*"><br><br>
+  <input type="text" id="descInput" placeholder="Deskripsi gambar"><br><br>
+  <button onclick="upload()">Upload</button>
+
+  <p id="status"></p>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBvYn9DnN1jUrVHJqoEYUWwBKce3sksUyc",
+      authDomain: "kamusbahasabanjar1.firebaseapp.com",
+      projectId: "kamusbahasabanjar1",
+      storageBucket: "kamusbahasabanjar1.appspot.com",
+      messagingSenderId: "647625175893",
+      appId: "1:647625175893:web:bc56088338616b639275dc",
+    };
+
+    // Inisialisasi Firebase
+    firebase.initializeApp(firebaseConfig);
+    const storage = firebase.storage();
+    const db = firebase.firestore();
+
+    async function upload() {
+      const file = document.getElementById("fileInput").files[0];
+      const deskripsi = document.getElementById("descInput").value.trim();
+      const status = document.getElementById("status");
+
+      if (!file || !deskripsi) {
+        status.textContent = "Pilih gambar dan isi deskripsi terlebih dahulu.";
+        return;
+      }
+
+      const filename = "IMG_" + Date.now() + "_" + file.name;
+      const storageRef = storage.ref("gambar/" + filename);
+
+      try {
+        // Upload file ke Firebase Storage
+        const snapshot = await storageRef.put(file);
+        const url = await snapshot.ref.getDownloadURL();
+
+        // Simpan ke Firestore
+        await db.collection("gambar_kamus").add({
+          url: url,
+          deskripsi: deskripsi
+        });
+
+        status.textContent = "Upload berhasil!";
+      } catch (error) {
+        console.error(error);
+        status.textContent = "Gagal upload: " + error.message;
+      }
+    }
+  </script>
+</body>
+</html>
