@@ -1,64 +1,69 @@
-package com.yuliana.babankamus.Activity
+package com.yuliana.babankamus.ActivityAdmin
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.view.View
+import android.widget.ProgressBar
+import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.yuliana.babankamus.R
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
 import com.yuliana.babankamus.Adapter.GambarAdapter
 import com.yuliana.babankamus.Model.GambarItem
+import com.yuliana.babankamus.R
 
 class TampilkanGambar : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: GambarAdapter
-    private val gambarList = mutableListOf<String>()
+    private lateinit var progressBar: ProgressBar
+    private lateinit var textLoading: TextView
+    private val gambarList = ArrayList<GambarItem>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_tampilkan_gambar)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
-
-        val stringList: MutableList<String> = listOf("url1", "url2", "url3").toMutableList()
-
-        val gambarList: List<GambarItem> = stringList.map { url ->
-            GambarItem(url = url)
-        }
 
         recyclerView = findViewById(R.id.recyclerViewGambar)
         recyclerView.layoutManager = LinearLayoutManager(this)
         adapter = GambarAdapter(gambarList)
         recyclerView.adapter = adapter
 
-        ambilGambarDariFirestore()
+        progressBar = findViewById(R.id.progressBar)
+        textLoading = findViewById(R.id.textLoading)
+
+        ambilSemuaGambar()
     }
 
-    private fun ambilGambarDariFirestore() {
+    private fun ambilSemuaGambar() {
+        progressBar.visibility = View.VISIBLE
+        textLoading.visibility = View.VISIBLE
+
         val db = FirebaseFirestore.getInstance()
         db.collection("kamus_gambar")
-            .orderBy("timestamp") 
             .get()
             .addOnSuccessListener { result ->
                 gambarList.clear()
                 for (document in result) {
-                    val base64 = document.getString("gambar_base64")
-                    if (base64 != null) {
-                        gambarList.add(base64)
-                    }
+                    val gambarBase64 = document.getString("gambar_base64") ?: ""
+                    val idDokumen = document.id
+
+                    val gambarItem = GambarItem(
+                        nama = idDokumen,
+                        gambar_base64 = gambarBase64
+                    )
+
+                    gambarList.add(gambarItem)
                 }
                 adapter.notifyDataSetChanged()
             }
             .addOnFailureListener {
-                // isi dengan gagal ambil data
+                Toast.makeText(this, "Gagal ambil data 😭", Toast.LENGTH_SHORT).show()
+            }
+            .addOnCompleteListener {
+                progressBar.visibility = View.GONE
+                textLoading.visibility = View.GONE
             }
     }
 }

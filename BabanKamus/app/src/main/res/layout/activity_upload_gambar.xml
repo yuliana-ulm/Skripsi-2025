@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:orientation="vertical">
+
+    <!-- Tombol Cancel -->
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:layout_gravity="start"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Gambar Preview -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_launcher_background"
+        android:scaleType="centerCrop"
+        android:background="#DDD"
+        android:contentDescription="Gambar Preview" />
+
+    <!-- Input Nama -->
+    <EditText
+        android:id="@+id/editTextNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan nama gambar"
+        android:layout_marginTop="16dp" />
+
+    <!-- Tombol Upload -->
+    <Button
+        android:id="@+id/btnUpload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upload"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/textUploading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tunggu ya sayang, lagi diupload... 😘"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="italic"
+        android:textSize="16sp" />
+
+    <ProgressBar
+        android:id="@+id/progressBarUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp" />
+
+
+</LinearLayout>
