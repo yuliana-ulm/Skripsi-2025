@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:background="#FFF3E0"
+    android:layout_marginTop="8dp">
+
+    <EditText
+        android:id="@+id/editArti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Arti" />
+
+    <EditText
+        android:id="@+id/editDialek"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Dialek" />
+
+    <EditText
+        android:id="@+id/editKelasKata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Kelas Kata" />
+
+    <EditText
+        android:id="@+id/editContohBanjar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contoh Kalimat (Banjar)" />
+
+    <EditText
+        android:id="@+id/editContohIndo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Contoh Kalimat (Indonesia)" />
+
+    <EditText
+        android:id="@+id/editSuara"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="URL Suara (opsional)" />
+
+    <EditText
+        android:id="@+id/editGambar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="URL Gambar (opsional)" />
+</LinearLayout>

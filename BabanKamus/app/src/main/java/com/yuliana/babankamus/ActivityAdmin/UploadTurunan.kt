@@ -4,71 +4,101 @@ import com.yuliana.babankamus.R
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import android.view.LayoutInflater
+import android.view.View
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
 
 class UploadTurunan : AppCompatActivity() {
 
+    private lateinit var layoutDefinisiContainer: LinearLayout
+    private lateinit var btnTambahDefinisi: Button
     private lateinit var editTextKata: EditText
     private lateinit var editTextAbjad: EditText
-    private lateinit var editTextDefinisi: EditText
     private lateinit var editTextSuku: EditText
-    private lateinit var editTextIdGambar: EditText
-    private lateinit var editTextIdSuara: EditText
     private lateinit var btnSimpan: Button
 
-    private val firestore = FirebaseFirestore.getInstance()
+    private val daftarDefinisi = mutableListOf<HashMap<String, String>>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_upload_turunan)
 
+        layoutDefinisiContainer = findViewById(R.id.layoutDefinisiContainer)
+        btnTambahDefinisi = findViewById(R.id.btnTambahDefinisi)
         editTextKata = findViewById(R.id.editTextKata)
         editTextAbjad = findViewById(R.id.editTextAbjad)
-        editTextDefinisi = findViewById(R.id.editTextDefinisi)
         editTextSuku = findViewById(R.id.editTextSuku)
-        editTextIdGambar = findViewById(R.id.editTextIdGambar)
-        editTextIdSuara = findViewById(R.id.editTextIdSuara)
         btnSimpan = findViewById(R.id.btnSimpan)
 
-        btnSimpan.setOnClickListener {
-            val kata = editTextKata.text.toString().trim()
-            val abjad = editTextAbjad.text.toString().trim()
-            val definisiList = editTextDefinisi.text.toString().split(",").map { it.trim() }
-            val suku = editTextSuku.text.toString().trim()
-            val idGambar = editTextIdGambar.text.toString().trim()
-            val idSuara = editTextIdSuara.text.toString().trim()
+        // Kosongkan container dan sembunyikan awalnya
+        layoutDefinisiContainer.visibility = View.GONE
 
-            if (kata.isEmpty() || abjad.isEmpty()) {
-                Toast.makeText(this, "Kata dan abjad tidak boleh kosong", Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
+        btnTambahDefinisi.setOnClickListener {
+            if (layoutDefinisiContainer.visibility == View.GONE) {
+                layoutDefinisiContainer.visibility = View.VISIBLE
+            } else {
+                tambahFormDefinisi()
             }
+        }
 
-            val refGambar: DocumentReference? = if (idGambar.isNotEmpty()) {
-                firestore.collection("kamus_gambar").document(idGambar)
-            } else null
+        btnSimpan.setOnClickListener {
+            simpanData()
+        }
+    }
 
-            val refSuara: DocumentReference? = if (idSuara.isNotEmpty()) {
-                firestore.collection("kamus_suara").document(idSuara)
-            } else null
+    private fun tambahFormDefinisi() {
+        val inflater = LayoutInflater.from(this)
+        val definisiView = inflater.inflate(R.layout.item_definisi, null)
+        layoutDefinisiContainer.addView(definisiView)
+    }
 
-            val data = mutableMapOf<String, Any>(
-                "abjad" to abjad,
-                "definisi" to definisiList,
-                "suku" to suku
+    private fun simpanData() {
+        val kata = editTextKata.text.toString().trim()
+        val abjad = editTextAbjad.text.toString().trim()
+        val suku = editTextSuku.text.toString().trim()
+
+        for (i in 0 until layoutDefinisiContainer.childCount) {
+            val view = layoutDefinisiContainer.getChildAt(i)
+
+            val arti = view.findViewById<EditText>(R.id.editArti).text.toString()
+            val dialek = view.findViewById<EditText>(R.id.editDialek).text.toString()
+            val kelas = view.findViewById<EditText>(R.id.editKelasKata).text.toString()
+            val contohBanjar = view.findViewById<EditText>(R.id.editContohBanjar).text.toString()
+            val contohIndo = view.findViewById<EditText>(R.id.editContohIndo).text.toString()
+            val suara = view.findViewById<EditText>(R.id.editSuara).text.toString()
+            val gambar = view.findViewById<EditText>(R.id.editGambar).text.toString()
+
+            val definisi = hashMapOf(
+                "arti" to arti,
+                "dialek" to dialek,
+                "kelas_kata" to kelas,
+                "contoh_banjar" to contohBanjar,
+                "contoh_indonesia" to contohIndo,
+                "suara" to suara,
+                "gambar" to gambar
             )
 
-            refGambar?.let { data["definisi"] = definisiList + listOf(it) }
-            refSuara?.let { data["definisi"] = (data["definisi"] as List<Any>) + listOf(it) }
-
-            firestore.collection("kamus").document(kata)
-                .set(data)
-                .addOnSuccessListener {
-                    Toast.makeText(this, "Berhasil disimpan", Toast.LENGTH_SHORT).show()
-                }
-                .addOnFailureListener {
-                    Toast.makeText(this, "Gagal: ${it.message}", Toast.LENGTH_SHORT).show()
-                }
+            daftarDefinisi.add(definisi)
         }
+
+        val dataKata = hashMapOf(
+            "kata" to kata,
+            "abjad" to abjad,
+            "suku" to suku,
+            "definisi_umum" to daftarDefinisi
+        )
+
+        // Kirim ke Firebase Firestore (contoh)
+        val db = FirebaseFirestore.getInstance()
+        db.collection("kamus")
+            .add(dataKata)
+            .addOnSuccessListener {
+                Toast.makeText(this, "Data berhasil disimpan", Toast.LENGTH_SHORT).show()
+                finish()
+            }
+            .addOnFailureListener { e ->
+                Toast.makeText(this, "Gagal menyimpan: ${e.message}", Toast.LENGTH_SHORT).show()
+            }
     }
 }
