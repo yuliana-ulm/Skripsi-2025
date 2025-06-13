@@ -19,7 +19,7 @@
         android:id="@+id/textLoading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tunggu sebentar ya sayang... 😘"
+        android:text="Tunggu sebentar ...."
         android:visibility="gone"
         android:textSize="16sp"
         android:textStyle="italic"

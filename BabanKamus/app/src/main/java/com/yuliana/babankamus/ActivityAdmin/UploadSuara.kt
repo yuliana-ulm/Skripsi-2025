@@ -45,6 +45,12 @@ class UploadSuara : AppCompatActivity() {
             pilihsuara()
         }
 
+        val btnKeUploadGambar = findViewById<Button>(R.id.btnKeUploadGambar)
+        btnKeUploadGambar.setOnClickListener {
+            val intent = Intent(this, UploadGambar::class.java)
+            startActivity(intent)
+        }
+
         btnCancel.setOnClickListener {
             soundView.text.clear()
             textFileTerpilih.text = "Belum ada file yang dipilih"

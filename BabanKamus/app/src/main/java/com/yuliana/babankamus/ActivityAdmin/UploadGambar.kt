@@ -39,6 +39,12 @@ class UploadGambar : AppCompatActivity() {
             pilihGambarDariGaleri()
         }
 
+        val btnKeUploadSuara = findViewById<Button>(R.id.btnKeUploadSuara)
+        btnKeUploadSuara.setOnClickListener {
+            val intent = Intent(this, UploadSuara::class.java)
+            startActivity(intent)
+        }
+
         btnUpload.setOnClickListener {
             val namaInput = editTextNama.text.toString().trim()
 

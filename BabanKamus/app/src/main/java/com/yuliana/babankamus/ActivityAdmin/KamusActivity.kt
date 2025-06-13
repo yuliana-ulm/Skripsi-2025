@@ -1,6 +1,7 @@
-package com.yuliana.baban
+package com.yuliana.babankamus.ActivityAdmin
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -20,6 +21,12 @@ import com.google.firebase.crashlytics.buildtools.reloc.com.google.common.reflec
 import com.google.firebase.firestore.FirebaseFirestore
 import java.io.IOException
 import com.google.gson.Gson
+import com.yuliana.babankamus.Adapter.KamusAdapter
+import com.yuliana.babankamus.Model.Contoh
+import com.yuliana.babankamus.Model.Definisi
+import com.yuliana.babankamus.Model.Kamus
+import com.yuliana.babankamus.Model.Turunan
+import com.yuliana.babankamus.R
 
 class KamusActivity : AppCompatActivity() {
 
@@ -71,6 +78,21 @@ class KamusActivity : AppCompatActivity() {
             //data kamus berubah
             ambilDataKamus()
         }
+
+        // Tombol Upload Gambar
+        val buttonUploadGambar = findViewById<Button>(R.id.buttonUploadGambar)
+        buttonUploadGambar.setOnClickListener {
+            val intent = Intent(this, UploadGambar::class.java)
+            startActivity(intent)
+        }
+
+        // Tombol Upload Suara
+        val buttonUploadSuara = findViewById<Button>(R.id.buttonUploadSuara)
+        buttonUploadSuara.setOnClickListener {
+            val intent = Intent(this, UploadSuara::class.java)
+            startActivity(intent)
+        }
+
         //ini yang online
         ambilDataKamus()
     }

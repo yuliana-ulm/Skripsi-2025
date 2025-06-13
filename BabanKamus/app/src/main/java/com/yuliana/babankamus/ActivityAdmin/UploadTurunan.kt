@@ -58,28 +58,35 @@ class UploadTurunan : AppCompatActivity() {
         val abjad = editTextAbjad.text.toString().trim()
         val suku = editTextSuku.text.toString().trim()
 
+        val daftarDefinisi = mutableListOf<Map<String, String>>()
+
         for (i in 0 until layoutDefinisiContainer.childCount) {
             val view = layoutDefinisiContainer.getChildAt(i)
 
-            val arti = view.findViewById<EditText>(R.id.editArti).text.toString()
-            val dialek = view.findViewById<EditText>(R.id.editDialek).text.toString()
-            val kelas = view.findViewById<EditText>(R.id.editKelasKata).text.toString()
-            val contohBanjar = view.findViewById<EditText>(R.id.editContohBanjar).text.toString()
-            val contohIndo = view.findViewById<EditText>(R.id.editContohIndo).text.toString()
-            val suara = view.findViewById<EditText>(R.id.editSuara).text.toString()
-            val gambar = view.findViewById<EditText>(R.id.editGambar).text.toString()
+            val arti = view.findViewById<EditText>(R.id.editArti)?.text?.toString()?.trim() ?: ""
+            val dialek = view.findViewById<EditText>(R.id.editDialek)?.text?.toString()?.trim() ?: ""
+            val kelas = view.findViewById<EditText>(R.id.editKelasKata)?.text?.toString()?.trim() ?: ""
+            val contohBanjar = view.findViewById<EditText>(R.id.editContohBanjar)?.text?.toString()?.trim() ?: ""
+            val contohIndo = view.findViewById<EditText>(R.id.editContohIndo)?.text?.toString()?.trim() ?: ""
+            val suara = view.findViewById<EditText>(R.id.editSuara)?.text?.toString()?.trim() ?: ""
+            val gambar = view.findViewById<EditText>(R.id.editGambar)?.text?.toString()?.trim() ?: ""
 
-            val definisi = hashMapOf(
-                "arti" to arti,
-                "dialek" to dialek,
-                "kelas_kata" to kelas,
-                "contoh_banjar" to contohBanjar,
-                "contoh_indonesia" to contohIndo,
-                "suara" to suara,
-                "gambar" to gambar
-            )
-
-            daftarDefinisi.add(definisi)
+            // Tambahkan ke list jika minimal satu dari semua field ada isinya
+            if (arti.isNotEmpty() || dialek.isNotEmpty() || kelas.isNotEmpty() ||
+                contohBanjar.isNotEmpty() || contohIndo.isNotEmpty() ||
+                suara.isNotEmpty() || gambar.isNotEmpty()
+            ) {
+                val definisi = hashMapOf(
+                    "arti" to arti,
+                    "dialek" to dialek,
+                    "kelas_kata" to kelas,
+                    "contoh_banjar" to contohBanjar,
+                    "contoh_indonesia" to contohIndo,
+                    "suara" to suara,
+                    "gambar" to gambar
+                )
+                daftarDefinisi.add(definisi)
+            }
         }
 
         val dataKata = hashMapOf(
@@ -89,16 +96,16 @@ class UploadTurunan : AppCompatActivity() {
             "definisi_umum" to daftarDefinisi
         )
 
-        // Kirim ke Firebase Firestore (contoh)
         val db = FirebaseFirestore.getInstance()
         db.collection("kamus")
-            .add(dataKata)
+            .add(kata)
             .addOnSuccessListener {
-                Toast.makeText(this, "Data berhasil disimpan", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Data berhasil disimpan ke Firestore 💾", Toast.LENGTH_SHORT).show()
                 finish()
             }
             .addOnFailureListener { e ->
-                Toast.makeText(this, "Gagal menyimpan: ${e.message}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Gagal menyimpan: ${e.message}", Toast.LENGTH_LONG).show()
             }
     }
+
 }

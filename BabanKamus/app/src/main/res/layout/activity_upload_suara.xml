@@ -11,9 +11,17 @@
         android:id="@+id/btnCancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cancel"
+        android:text="Daftar Suara"
         android:layout_gravity="start"
         android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/btnKeUploadGambar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ke Upload Gambar"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="right"/>
 
     <!-- Input Nama Suara -->
     <EditText
@@ -51,7 +59,7 @@
         android:id="@+id/textUploading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tunggu ya sayang, lagi diupload... 🎵"
+        android:text="Tunggu lagi diupload..."
         android:visibility="gone"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"

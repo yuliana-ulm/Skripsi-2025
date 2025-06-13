@@ -22,13 +22,19 @@
         android:theme="@style/Theme.BabanKamus"
         tools:targetApi="31">
         <activity
-            android:name=".ActivityAdmin.UploadGambar"
+            android:name=".ActivityAdmin.KamusActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityAdmin.UploadSuara"
             android:exported="false" />
         <activity
             android:name=".ActivityAdmin.TampilkanGambar"
             android:exported="false" />
         <activity
-            android:name=".ActivityAdmin.UploadSuara"
+            android:name=".ActivityAdmin.UploadKata"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityAdmin.UploadGambar"
             android:exported="false" />
         <activity
             android:name=".ActivityAdmin.TampilkanSuara"
@@ -37,13 +43,10 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".ActivityAdmin.UploadKata"
-            android:exported="false" />
-<!--        <activity-->
-<!--            android:name=""-->
-<!--            android:exported="false" />-->
-        <activity
             android:name=".ActivityAdmin.UploadTurunan"
+            android:exported="false" />
+        <activity
+            android:name=".Splashscreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
