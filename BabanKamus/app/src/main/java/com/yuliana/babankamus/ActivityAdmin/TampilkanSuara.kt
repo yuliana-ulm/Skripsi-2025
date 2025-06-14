@@ -1,19 +1,25 @@
 package com.yuliana.babankamus.ActivityAdmin
 
 import android.os.Bundle
+import android.util.Base64
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
-import com.yuliana.babankamus.Adapter.SuaraAdapter
+import com.yuliana.babankamus.Adapter.KamusAdapter
+import com.yuliana.babankamus.Model.GambarItem
+import com.yuliana.babankamus.Model.Kamus
 import com.yuliana.babankamus.Model.SuaraItem
 import com.yuliana.babankamus.R
 
 class TampilkanSuara : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: KamusAdapter
     private val listSuara = mutableListOf<SuaraItem>()
+    private val dataKamus = mutableListOf<Kamus>()
+    private val gambarList = ArrayList<GambarItem>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +28,8 @@ class TampilkanSuara : AppCompatActivity() {
         recyclerView = findViewById(R.id.recyclerViewSuara)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val adapter = SuaraAdapter(listSuara)
+        val adapter = KamusAdapter(dataKamus, listSuara, gambarList)
+
         recyclerView.adapter = adapter
 
         val db = FirebaseFirestore.getInstance()
@@ -42,3 +49,4 @@ class TampilkanSuara : AppCompatActivity() {
             }
     }
 }
+

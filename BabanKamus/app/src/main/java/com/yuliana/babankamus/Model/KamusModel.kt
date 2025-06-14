@@ -26,3 +26,16 @@ data class Turunan(
     val gambar: String = "",
     val definisi_umum: List<Definisi> = emptyList()
 )
+
+data class SuaraItem(
+    val nama: String = "",
+    val suara_base64: String = ""
+)
+
+data class GambarItem(
+    val nama: String = "",
+    val gambar_base64: String = ""
+)
+
+
+

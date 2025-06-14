@@ -2,12 +2,17 @@ package com.yuliana.babankamus.ActivityAdmin
 
 import android.content.Context
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import android.view.View
 import android.widget.AutoCompleteTextView
 import android.widget.Button
+import android.widget.ImageButton
+import android.widget.ProgressBar
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -24,7 +29,9 @@ import com.google.gson.Gson
 import com.yuliana.babankamus.Adapter.KamusAdapter
 import com.yuliana.babankamus.Model.Contoh
 import com.yuliana.babankamus.Model.Definisi
+import com.yuliana.babankamus.Model.GambarItem
 import com.yuliana.babankamus.Model.Kamus
+import com.yuliana.babankamus.Model.SuaraItem
 import com.yuliana.babankamus.Model.Turunan
 import com.yuliana.babankamus.R
 
@@ -32,11 +39,17 @@ class KamusActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: KamusAdapter
+    private lateinit var progressBar: ProgressBar
+    private lateinit var textLoading: TextView
     private lateinit var themeSwitch: SwitchCompat
     private lateinit var editTextSearch: AutoCompleteTextView
     private lateinit var toggleButton: Button
+    private val listSuara = mutableListOf<SuaraItem>()
+    private val gambarList = ArrayList<GambarItem>()
+    private val suaraMap = mutableMapOf<String, String>()
+    private val gambarMap = mutableMapOf<String, String>()
     private val dataKamus = mutableListOf<Kamus>()
-    private var isBanjarToIndo = false
+    private var isBanjarToIndo = true
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,18 +66,18 @@ class KamusActivity : AppCompatActivity() {
         themeSwitch = findViewById(R.id.themeSwitch)
         editTextSearch = findViewById(R.id.editTextSearch)
         toggleButton = findViewById(R.id.buttonToggleBahasa)
-        adapter = KamusAdapter(dataKamus)
+        adapter = KamusAdapter(dataKamus, listSuara, gambarList)
+
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
 
-        //ini yang offline
-        loadData()
+        progressBar = findViewById(R.id.progressBar)
+        textLoading = findViewById(R.id.textLoading)
 
         //mengubah bahasa
         val sharedPrefs = getSharedPreferences("KamusPrefs", MODE_PRIVATE)
         isBanjarToIndo = sharedPrefs.getBoolean("isBanjarToIndo", true)
         toggleButton.text = if (isBanjarToIndo) "Banjar → Indonesia" else "Indonesia → Banjar"
-
 
         toggleButton.setOnClickListener {
             isBanjarToIndo = !isBanjarToIndo
@@ -93,15 +106,97 @@ class KamusActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        //ini yang online
-        ambilDataKamus()
+        //untuk pencarian
+        editTextSearch.addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                val query = s.toString()
+                adapter.filter(query)
+            }
+
+            override fun afterTextChanged(s: Editable?) {}
+        })
+
+
+        // tema gelap atau terang
+        val isNightMode = AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES
+        themeSwitch.isChecked = isNightMode
+
+        themeSwitch.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
+        }
+
     }
 
-
-    //yang ini tuh buat ambil data firestore dari online
+    //yang ini tuh buat ambil data firestore dari online khusus suara aja sih :V
     private fun ambilDataKamus() {
+        //menyesuaikan pindah bahasa
         val koleksi = if (isBanjarToIndo) "kamus_banjar_indonesia" else "kamus_indonesia_banjar"
 
+        // Ambil dulu data suara
+        FirebaseFirestore.getInstance().collection("kamus_suara")
+            .get()
+            .addOnSuccessListener { result ->
+                listSuara.clear()
+                suaraMap.clear()
+                for (doc in result) {
+                    val nama = doc.getString("nama") ?: ""
+                    val suara = doc.getString("suara_base64") ?: ""
+                    suaraMap[nama] = suara
+                    listSuara.add(SuaraItem(nama, suara))
+                }
+
+                recyclerView.adapter = adapter
+
+                // Setelah data suara siap, ambil data kamus
+                ambilDataKamusDariFirestore(koleksi)
+            }
+            .addOnFailureListener {
+                Toast.makeText(this, "Gagal memuat data suara", Toast.LENGTH_SHORT).show()
+            }
+
+        //ambil juga data gambar dulu
+        progressBar.visibility = View.VISIBLE
+        textLoading.visibility = View.VISIBLE
+
+        FirebaseFirestore.getInstance().collection("kamus_gambar")
+            .get()
+            .addOnSuccessListener { result ->
+                gambarList.clear()
+                suaraMap.clear()
+                for (document in result) {
+                    val gambarBase64 = document.getString("gambar_base64") ?: ""
+                    val idDokumen = document.id
+
+                    val gambarItem = GambarItem(
+                        nama = idDokumen,
+                        gambar_base64 = gambarBase64
+                    )
+                    gambarMap[idDokumen] = gambarBase64
+                    gambarList.add(gambarItem)
+                }
+
+                recyclerView.adapter = adapter
+
+                // Setelah data gambarnya siap, ambil data kamus
+                ambilDataKamusDariFirestore(koleksi)
+            }
+            .addOnFailureListener {
+                Toast.makeText(this, "Gagal ambil data 😭", Toast.LENGTH_SHORT).show()
+            }
+            .addOnCompleteListener {
+                progressBar.visibility = View.GONE
+                textLoading.visibility = View.GONE
+            }
+
+    }
+    //yang ini tuh buat ambil data firestore dari online
+    private fun ambilDataKamusDariFirestore(koleksi: String) {
         FirebaseFirestore.getInstance().collection(koleksi)
             .get()
             .addOnSuccessListener { hasil ->
@@ -109,7 +204,9 @@ class KamusActivity : AppCompatActivity() {
                 for (doc in hasil) {
                     val kata = doc.getString("kata") ?: ""
                     val sukukata = doc.getString("sukukata") ?: ""
-                    val gambar = doc.getString("gambar") ?: ""
+                    val gambar = gambarMap[kata] ?: "" //ambil gambar yg sesuai
+
+                    val suaraBase64 = suaraMap[kata] ?: "" // ambil suara yang cocok
 
                     val definisiList = (doc["definisi_umum"] as? List<*>)?.mapNotNull { item ->
                         if (item is Map<*, *>) {
@@ -123,7 +220,7 @@ class KamusActivity : AppCompatActivity() {
                             Definisi(
                                 definisi = item["definisi"] as? String ?: "",
                                 kelaskata = item["kelaskata"] as? String ?: "",
-                                suara = item["suara"] as? String ?: "",
+                                suara = suaraBase64, // pakai suara dari map
                                 contoh = contohList
                             )
                         } else null
@@ -143,7 +240,7 @@ class KamusActivity : AppCompatActivity() {
                                     Definisi(
                                         definisi = d["definisi"] as? String ?: "",
                                         kelaskata = d["kelaskata"] as? String ?: "",
-                                        suara = d["suara"] as? String ?: "",
+                                        suara = "",
                                         contoh = contohList
                                     )
                                 } else null
@@ -152,7 +249,7 @@ class KamusActivity : AppCompatActivity() {
                             Turunan(
                                 kata = t["kata"] as? String ?: "",
                                 sukukata = t["sukukata"] as? String ?: "",
-                                gambar = t["gambar"] as? String ?: "",
+                                gambar = "",
                                 definisi_umum = definisiTurunan
                             )
                         } else null
@@ -165,6 +262,7 @@ class KamusActivity : AppCompatActivity() {
             }
             .addOnFailureListener {
                 Toast.makeText(this, "Gagal ambil data", Toast.LENGTH_SHORT).show()
+                loadData()
             }
     }
 
@@ -185,7 +283,9 @@ class KamusActivity : AppCompatActivity() {
         }
 
         // Lalu, coba fetch data terbaru dari Firestore (online)
-        fetchDataFromFirestore(this,
+        fetchDataFromFirestore(
+            context = this,
+            isBanjarToIndo = isBanjarToIndo,
             onComplete = { kamusList ->
                 runOnUiThread {
                     setupAdapter(kamusList)
@@ -198,9 +298,10 @@ class KamusActivity : AppCompatActivity() {
     }
 
     private fun setupAdapter(data: List<Kamus>) {
-        adapter = KamusAdapter(data)
+        adapter = KamusAdapter(data, listSuara, gambarList)
         recyclerView.adapter = adapter
     }
+
 
     fun loadJsonFromAssets(context: Context, fileName: String): String? {
         return try {
@@ -237,9 +338,15 @@ class KamusActivity : AppCompatActivity() {
         return gson.fromJson(jsonString, kamusType)
     }
 
-    fun fetchDataFromFirestore(context: Context, onComplete: (List<Kamus>) -> Unit, onError: (Exception) -> Unit) {
-        val db = FirebaseFirestore.getInstance()
-        db.collection("kamus_banjar_indonesia")
+    fun fetchDataFromFirestore(
+        context: Context,
+        isBanjarToIndo: Boolean,
+        onComplete: (List<Kamus>) -> Unit,
+        onError: (Exception) -> Unit
+    ) {
+        val koleksinya = if (isBanjarToIndo) "kamus_banjar_indonesia" else "kamus_indonesia_banjar"
+
+        FirebaseFirestore.getInstance().collection(koleksinya)
             .get()
             .addOnSuccessListener { result ->
                 val kamusList = mutableListOf<Kamus>()
@@ -333,30 +440,5 @@ class KamusActivity : AppCompatActivity() {
             .addOnFailureListener { e ->
                 onError(e)
             }
-
-        //untuk pencarian
-        editTextSearch.addTextChangedListener(object : TextWatcher {
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                val query = s.toString()
-                adapter.filter(query)
-            }
-
-            override fun afterTextChanged(s: Editable?) {}
-        })
-
-
-        // tema gelap atau terang
-        val isNightMode = AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES
-        themeSwitch.isChecked = isNightMode
-
-        themeSwitch.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-            } else {
-                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-            }
-        }
     }
 }

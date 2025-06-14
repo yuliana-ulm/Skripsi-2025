@@ -9,17 +9,21 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
-import com.yuliana.babankamus.Adapter.GambarAdapter
+import com.yuliana.babankamus.Adapter.KamusAdapter
+import com.yuliana.babankamus.Model.Kamus
 import com.yuliana.babankamus.Model.GambarItem
+import com.yuliana.babankamus.Model.SuaraItem
 import com.yuliana.babankamus.R
 
 class TampilkanGambar : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: GambarAdapter
+    private lateinit var adapter: KamusAdapter
     private lateinit var progressBar: ProgressBar
     private lateinit var textLoading: TextView
     private val gambarList = ArrayList<GambarItem>()
+    private val listSuara = mutableListOf<SuaraItem>()
+    private val dataKamus = mutableListOf<Kamus>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +31,7 @@ class TampilkanGambar : AppCompatActivity() {
 
         recyclerView = findViewById(R.id.recyclerViewGambar)
         recyclerView.layoutManager = LinearLayoutManager(this)
-        adapter = GambarAdapter(gambarList)
+        adapter = KamusAdapter(dataKamus, listSuara, gambarList)
         recyclerView.adapter = adapter
 
         progressBar = findViewById(R.id.progressBar)

@@ -107,6 +107,32 @@
         </LinearLayout>
     </com.google.android.material.textfield.TextInputLayout>
 
+    <!-- Loading Text -->
+    <TextView
+        android:id="@+id/textLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tunggu sebentar ...."
+        android:visibility="gone"
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/searchView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/textLoading"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <!-- RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerKamus"
