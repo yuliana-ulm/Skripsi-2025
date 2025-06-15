@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:background="#EFEFEF"
+    android:layout_marginBottom="8dp">
+
+    <TextView
+        android:id="@+id/textNamaSuara"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama suara"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnPutarSuara"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Putar Suara 🎵"
+        android:layout_marginTop="6dp" />
+</LinearLayout>

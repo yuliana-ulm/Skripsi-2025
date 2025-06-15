@@ -6,23 +6,14 @@ import android.net.Uri
 import android.os.Bundle
 import android.util.Base64
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.ProgressBar
-import android.widget.TextView
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.firestore.FirebaseFirestore
 import com.yuliana.babankamus.R
 import java.io.InputStream
 
-class CRUD_Kamus : AppCompatActivity() {
+class UploadSuara : AppCompatActivity() {
 
-    //untuk upload suara
     private lateinit var soundView: EditText
     private lateinit var textFileTerpilih: TextView
     private lateinit var textUploading: TextView
@@ -38,21 +29,10 @@ class CRUD_Kamus : AppCompatActivity() {
         const val REQUEST_CODE_AUDIO = 123
     }
 
-    // untuk upload gambar
-    private lateinit var imageView: ImageView
-    private lateinit var editTextNama: EditText
-    private lateinit var btnUpload: Button
-    private lateinit var btnCancelgambar: Button
-    private lateinit var textUploadinggambar: TextView
-    private lateinit var progressBarUploadgambar: ProgressBar
-    private var base64Image: String = ""
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_crud_kamus)
+        setContentView(R.layout.activity_upload_suara)
 
-        //untuk suara ya ges ya
         btnCancel = findViewById(R.id.btnCancel)
         btnPilihSuara = findViewById(R.id.btnPilihSuara)
         soundView = findViewById(R.id.editTextNamaSuara)
@@ -64,39 +44,22 @@ class CRUD_Kamus : AppCompatActivity() {
             pilihsuara()
         }
 
-        //untuk gambyar huhu
-        imageView = findViewById(R.id.imageView)
-        editTextNama = findViewById(R.id.editTextNama)
-        btnUpload = findViewById(R.id.btnUpload)
-        btnCancelgambar = findViewById(R.id.btnCancel)
-        textUploading = findViewById(R.id.textUploading)
-        progressBarUpload = findViewById(R.id.progressBarUpload)
-
-        imageView.setOnClickListener {
-            pilihGambarDariGaleri()
-        }
-
         btnCancel.setOnClickListener {
             soundView.text.clear()
             textFileTerpilih.text = "Belum ada file yang dipilih"
             base64Suara = ""
 
-
-
             // Kembali ke MainActivity
-//            val intent = Intent(this, TampilkanSuara::class.java)
-//            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
-//            startActivity(intent)
-//            finish()
+            val intent = Intent(this, DashAdmin::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+            startActivity(intent)
+            finish()
         }
 
         btnPilihSuara.setOnClickListener {
             val intent = Intent(Intent.ACTION_GET_CONTENT)
             intent.type = "audio/*"
-            startActivityForResult(
-                Intent.createChooser(intent, "Pilih file suara"),
-                CRUD_Kamus.REQUEST_CODE_AUDIO
-            )
+            startActivityForResult(Intent.createChooser(intent, "Pilih file suara"), REQUEST_CODE_AUDIO)
         }
 
         btnUploadSuara.setOnClickListener {
@@ -109,19 +72,6 @@ class CRUD_Kamus : AppCompatActivity() {
                 uploadToFirestore(namaInput, base64Suara)
             }
         }
-
-        btnUpload.setOnClickListener {
-            val namaInput = editTextNama.text.toString().trim()
-
-            if (namaInput.isEmpty()) {
-                Toast.makeText(this, "Masukkan nama gambar dulu yaa 😘", Toast.LENGTH_SHORT).show()
-            } else if (base64Image.isEmpty()) {
-                Toast.makeText(this, "Pilih gambar dulu yaa sayang 💕", Toast.LENGTH_SHORT).show()
-            } else {
-                uploadToFirestore(namaInput, base64Image)
-            }
-        }
-
     }
 
     private fun pilihsuara() {
@@ -133,7 +83,7 @@ class CRUD_Kamus : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode == CRUD_Kamus.REQUEST_CODE_AUDIO && resultCode == Activity.RESULT_OK && data != null) {
+        if (requestCode == REQUEST_CODE_AUDIO && resultCode == Activity.RESULT_OK && data != null) {
             val audioUri: Uri? = data.data
             audioUri?.let {
                 val inputStream: InputStream? = contentResolver.openInputStream(it)
@@ -166,7 +116,7 @@ class CRUD_Kamus : AppCompatActivity() {
                 // Reset isian
                 soundView.setText("")
                 textFileTerpilih.text = "Belum ada file yang dipilih"
-                this@CRUD_Kamus.base64Suara = ""
+                this@UploadSuara.base64Suara = ""
             }
             .addOnFailureListener { e ->
                 Toast.makeText(this, "Gagal upload: ${e.message}", Toast.LENGTH_SHORT).show()
