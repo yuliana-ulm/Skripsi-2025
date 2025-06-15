@@ -43,14 +43,11 @@ class KamusActivity : AppCompatActivity() {
     private lateinit var textLoading: TextView
     private lateinit var themeSwitch: SwitchCompat
     private lateinit var editTextSearch: AutoCompleteTextView
-    private lateinit var toggleButton: Button
     private val listSuara = mutableListOf<SuaraItem>()
     private val gambarList = ArrayList<GambarItem>()
     private val suaraMap = mutableMapOf<String, String>()
     private val gambarMap = mutableMapOf<String, String>()
     private val dataKamus = mutableListOf<Kamus>()
-    private var isBanjarToIndo = true
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -65,7 +62,6 @@ class KamusActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.recyclerKamus)
         themeSwitch = findViewById(R.id.themeSwitch)
         editTextSearch = findViewById(R.id.editTextSearch)
-        toggleButton = findViewById(R.id.buttonToggleBahasa)
         adapter = KamusAdapter(dataKamus, listSuara, gambarList)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -74,37 +70,22 @@ class KamusActivity : AppCompatActivity() {
         progressBar = findViewById(R.id.progressBar)
         textLoading = findViewById(R.id.textLoading)
 
-        //mengubah bahasa
-        val sharedPrefs = getSharedPreferences("KamusPrefs", MODE_PRIVATE)
-        isBanjarToIndo = sharedPrefs.getBoolean("isBanjarToIndo", true)
-        toggleButton.text = if (isBanjarToIndo) "Banjar → Indonesia" else "Indonesia → Banjar"
-
-        toggleButton.setOnClickListener {
-            isBanjarToIndo = !isBanjarToIndo
-            toggleButton.text = if (isBanjarToIndo) "Banjar → Indonesia" else "Indonesia → Banjar"
-
-            // Simpan ke SharedPreferences
-            val editor = sharedPrefs.edit()
-            editor.putBoolean("isBanjarToIndo", isBanjarToIndo)
-            editor.apply()
-
-            //data kamus berubah
-            ambilDataKamus()
-        }
-
         // Tombol Upload Gambar
         val buttonUploadGambar = findViewById<Button>(R.id.buttonUploadGambar)
         buttonUploadGambar.setOnClickListener {
-            val intent = Intent(this, UploadGambar::class.java)
+            val intent = Intent(this, CRUD_Kamus::class.java)
             startActivity(intent)
         }
 
         // Tombol Upload Suara
         val buttonUploadSuara = findViewById<Button>(R.id.buttonUploadSuara)
         buttonUploadSuara.setOnClickListener {
-            val intent = Intent(this, UploadSuara::class.java)
+            val intent = Intent(this, CRUD_Kamus::class.java)
             startActivity(intent)
         }
+
+        //menampilkan database kamus diawal membuka aplikasi
+        ambilDataKamus()
 
         //untuk pencarian
         editTextSearch.addTextChangedListener(object : TextWatcher {
@@ -135,8 +116,6 @@ class KamusActivity : AppCompatActivity() {
 
     //yang ini tuh buat ambil data firestore dari online khusus suara aja sih :V
     private fun ambilDataKamus() {
-        //menyesuaikan pindah bahasa
-        val koleksi = if (isBanjarToIndo) "kamus_banjar_indonesia" else "kamus_indonesia_banjar"
 
         // Ambil dulu data suara
         FirebaseFirestore.getInstance().collection("kamus_suara")
@@ -154,7 +133,7 @@ class KamusActivity : AppCompatActivity() {
                 recyclerView.adapter = adapter
 
                 // Setelah data suara siap, ambil data kamus
-                ambilDataKamusDariFirestore(koleksi)
+                ambilDataKamusDariFirestore()
             }
             .addOnFailureListener {
                 Toast.makeText(this, "Gagal memuat data suara", Toast.LENGTH_SHORT).show()
@@ -184,7 +163,7 @@ class KamusActivity : AppCompatActivity() {
                 recyclerView.adapter = adapter
 
                 // Setelah data gambarnya siap, ambil data kamus
-                ambilDataKamusDariFirestore(koleksi)
+                ambilDataKamusDariFirestore()
             }
             .addOnFailureListener {
                 Toast.makeText(this, "Gagal ambil data 😭", Toast.LENGTH_SHORT).show()
@@ -196,17 +175,17 @@ class KamusActivity : AppCompatActivity() {
 
     }
     //yang ini tuh buat ambil data firestore dari online
-    private fun ambilDataKamusDariFirestore(koleksi: String) {
-        FirebaseFirestore.getInstance().collection(koleksi)
+    private fun ambilDataKamusDariFirestore() {
+        FirebaseFirestore.getInstance().collection("kamus_banjar_indonesia")
             .get()
             .addOnSuccessListener { hasil ->
                 dataKamus.clear()
                 for (doc in hasil) {
                     val kata = doc.getString("kata") ?: ""
                     val sukukata = doc.getString("sukukata") ?: ""
-                    val gambar = gambarMap[kata] ?: "" //ambil gambar yg sesuai
+                    val gambar = gambarMap[kata] ?: ""
 
-                    val suaraBase64 = suaraMap[kata] ?: "" // ambil suara yang cocok
+                    val suaraBase64 = suaraMap[kata] ?: ""
 
                     val definisiList = (doc["definisi_umum"] as? List<*>)?.mapNotNull { item ->
                         if (item is Map<*, *>) {
@@ -285,7 +264,6 @@ class KamusActivity : AppCompatActivity() {
         // Lalu, coba fetch data terbaru dari Firestore (online)
         fetchDataFromFirestore(
             context = this,
-            isBanjarToIndo = isBanjarToIndo,
             onComplete = { kamusList ->
                 runOnUiThread {
                     setupAdapter(kamusList)
@@ -340,13 +318,10 @@ class KamusActivity : AppCompatActivity() {
 
     fun fetchDataFromFirestore(
         context: Context,
-        isBanjarToIndo: Boolean,
         onComplete: (List<Kamus>) -> Unit,
         onError: (Exception) -> Unit
     ) {
-        val koleksinya = if (isBanjarToIndo) "kamus_banjar_indonesia" else "kamus_indonesia_banjar"
-
-        FirebaseFirestore.getInstance().collection(koleksinya)
+        FirebaseFirestore.getInstance().collection("kamus_banjar_indonesia")
             .get()
             .addOnSuccessListener { result ->
                 val kamusList = mutableListOf<Kamus>()

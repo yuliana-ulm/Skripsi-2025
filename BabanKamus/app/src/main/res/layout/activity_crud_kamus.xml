@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Tombol Cancel -->
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kembali"
+        android:layout_gravity="start"
+        android:layout_marginBottom="16dp" />
+
+    <!--untuk upload suara-->
+    <!-- Teks File Terpilih -->
+    <TextView
+        android:id="@+id/infopilihsuara"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Silahkan masukkan suara"
+        android:layout_marginTop="8dp" />
+
+    <!-- Tombol Pilih File -->
+    <Button
+        android:id="@+id/btnPilihSuara"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pilih File Suara"
+        android:layout_marginTop="16dp" />
+
+    <!-- Teks File Terpilih -->
+    <TextView
+        android:id="@+id/textFileTerpilih"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*Belum ada file yang dipilih"
+        android:layout_marginTop="8dp" />
+
+    <!-- Input Nama Suara -->
+    <EditText
+        android:id="@+id/editTextNamaSuara"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Masukkan nama suara"
+        android:layout_marginTop="10dp" />
+
+
+
+    <!--untuk upload gambar-->
+    <!-- Teks File Terpilih -->
+    <TextView
+        android:id="@+id/infopilihgambar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Silahkan masukkan gambar"
+        android:layout_marginTop="8dp" />
+
+    <!-- Gambar Preview -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#DDD"
+        android:contentDescription="Gambar Preview"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Input Nama -->
+    <EditText
+        android:id="@+id/editTextNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Masukkan nama gambar" />
+
+    <!-- Tombol Upload -->
+    <Button
+        android:id="@+id/btnUpload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Upload" />
+
+    <TextView
+        android:id="@+id/textUploading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:text="Tunggu ..."
+        android:textSize="16sp"
+        android:textStyle="italic"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressBarUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4dp"
+        android:visibility="gone" />
+
+</LinearLayout>
