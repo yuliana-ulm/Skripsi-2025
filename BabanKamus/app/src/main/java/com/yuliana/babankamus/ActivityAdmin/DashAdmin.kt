@@ -1,6 +1,7 @@
 package com.yuliana.babankamus.ActivityAdmin
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
@@ -20,18 +21,28 @@ class DashAdmin : AppCompatActivity() {
             insets
         }
 
-        // Tombol masuk menu admin
+        //upload gambar
         val uploadGambar = findViewById<Button>(R.id.buttonUploadGambar)
         uploadGambar.setOnClickListener {
             val intent = Intent(this, UploadGambar::class.java)
             startActivity(intent)
         }
 
-        // Tombol masuk menu admin
+        //upload suara
         val uploadSuara = findViewById<Button>(R.id.buttonUploadSuara)
         uploadSuara.setOnClickListener {
             val intent = Intent(this, UploadSuara::class.java)
             startActivity(intent)
         }
+
+        //upload kata
+        val uploadKata = findViewById<Button>(R.id.buttonUploadKata)
+        uploadKata.setOnClickListener {
+            val url = "https://684805e93ff8647e78888e38--musical-basbousa-5e279f.netlify.app/adminbaban.html"
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(url)
+            startActivity(intent)
+        }
+
     }
 }
