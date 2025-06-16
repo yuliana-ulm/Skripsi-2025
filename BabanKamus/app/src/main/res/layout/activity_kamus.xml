@@ -75,7 +75,7 @@
                 android:layout_height="24dp"
                 android:layout_marginStart="12dp"
                 android:contentDescription="Rekam suara"
-                android:src="@android:drawable/ic_btn_speak_now" />
+                android:src="@android:drawable/ic_menu_search" />
         </LinearLayout>
     </com.google.android.material.textfield.TextInputLayout>
 
