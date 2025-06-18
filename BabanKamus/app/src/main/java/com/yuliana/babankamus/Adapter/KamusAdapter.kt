@@ -157,8 +157,9 @@ class KamusAdapter(
             for (j in 1..n) {
                 val cost = if (s[i - 1] == t[j - 1]) 0 else 1
                 dp[i][j] = min(
-                    min(dp[i - 1][j] + 1, dp[i][j - 1] + 1),
-                    dp[i - 1][j - 1] + cost
+                    min(dp[i - 1][j] + 1,
+                        dp[i][j - 1] + 1),
+                        dp[i - 1][j - 1] + cost
                 )
             }
         }

@@ -61,5 +61,6 @@
         android:layout_height="100dp"
         android:scaleType="centerCrop"
         android:layout_marginStart="8dp"
-        android:background="#CCCCCC"/>
+        android:background="#DDD"
+        android:src="@drawable/gambar_belumada"/>
 </LinearLayout>
