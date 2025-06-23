@@ -1,0 +1,11 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:padding="16dp"
+    android:layout_marginTop="25dp">
+
+    <EditText android:id="@+id/inputDefinisi" android:hint="Definisi" style="@style/EditStyle"/>
+    <EditText android:id="@+id/inputKelas" android:hint="Kelas Kata" style="@style/EditStyle"/>
+    <EditText android:id="@+id/inputBanjar" android:hint="Contoh Banjar" style="@style/EditStyle"/>
+    <EditText android:id="@+id/inputIndonesia" android:hint="Contoh Indonesia" style="@style/EditStyle"/>
+
+</LinearLayout>

@@ -54,7 +54,7 @@ class KamusActivity : AppCompatActivity() {
         recyclerView = findViewById(R.id.recyclerKamus)
         themeSwitch = findViewById(R.id.themeSwitch)
         editTextSearch = findViewById(R.id.editTextSearch)
-        loginadmin = findViewById<Button>(R.id.buttonAdmin)
+        loginadmin = findViewById(R.id.buttonAdmin)
         adapter = KamusAdapter(dataKamus)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -78,7 +78,6 @@ class KamusActivity : AppCompatActivity() {
                 Toast.makeText(this, "Silakan login dulu untuk mengakses Admin", Toast.LENGTH_SHORT).show()
             }
         }
-
 
         editTextSearch.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}

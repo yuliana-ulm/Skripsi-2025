@@ -92,3 +92,4 @@ class KamusAdapter(
         notifyDataSetChanged()
     }
 }
+
