@@ -5,24 +5,4 @@
     android:orientation="vertical"
     android:padding="24dp">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:scaleType="centerCrop"
-        android:background="#E0E0E0" />
-
-    <Button
-        android:id="@+id/btnSelect"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Pilih Gambar"
-        android:layout_marginTop="16dp" />
-
-    <Button
-        android:id="@+id/btnUpload"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Simpan ke Firestore"
-        android:layout_marginTop="8dp" />
 </LinearLayout>

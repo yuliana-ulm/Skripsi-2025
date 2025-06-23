@@ -1,66 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:padding="12dp"
-    android:orientation="horizontal"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#f5f5f5"
-    android:layout_marginBottom="8dp">
+    android:layout_margin="8dp"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="4dp"
+    card_view:cardBackgroundColor="#DBF0D0">
 
-    <!-- Kiri: Semua Teks -->
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="wrap_content">
+        android:padding="16dp">
 
+        <!-- Kata -->
         <TextView
             android:id="@+id/textKata"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:text="Kata"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="Kata"
+            android:textStyle="bold"
+            android:textColor="#11A415"
+            android:textSize="20sp" />
 
+        <!-- Suku Kata -->
         <TextView
             android:id="@+id/textSukuKata"
-            android:text="Suku kata"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="Suku kata"
+            android:textColor="#096805"
+            android:textSize="14sp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="6dp"/>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#6DE067"
+            android:layout_marginVertical="4dp"/>
+
+        <!-- Definisi -->
         <TextView
             android:id="@+id/textDefinisi"
-            android:text="Definisi"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="Definisi"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            android:layout_marginBottom="4dp"/>
 
+        <!-- Contoh -->
+        <TextView
+            android:id="@+id/textContoh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contoh"
+            android:textColor="#5D4037"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- Turunan -->
         <TextView
             android:id="@+id/textTurunan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Turunan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:textColor="#333333"
+            android:textSize="15sp"
+            android:layout_marginTop="4dp" />
 
-        <TextView
-            android:id="@+id/textNamaSuara"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="invisible"/>
-
-        <Button
-            android:id="@+id/btnPutarSuara"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Putar Suara 🎵"
-            android:layout_marginTop="6dp"/>
     </LinearLayout>
-
-    <!-- Kanan: Gambar kecil -->
-    <ImageView
-        android:id="@+id/imageItemGambar"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:scaleType="centerCrop"
-        android:layout_marginStart="8dp"
-        android:background="#DDD"
-        android:src="@drawable/gambar_belumada"/>
-</LinearLayout>
+</androidx.cardview.widget.CardView>

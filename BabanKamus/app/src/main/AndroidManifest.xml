@@ -22,31 +22,31 @@
         android:theme="@style/Theme.BabanKamus"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityAdmin.KelolaPenggunaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityAdmin.HapusKataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityAdmin.EditKataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityAdmin.TambahKataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".ActivityAdmin.DashAdmin"
             android:exported="false" />
         <activity
-            android:name=".ActivityAdmin.KamusActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ActivityAdmin.UploadSuara"
-            android:exported="false" />
-        <activity
-            android:name=".ActivityAdmin.TampilkanGambar"
+            android:name=".KamusActivity"
             android:exported="false" />
         <activity
             android:name=".ActivityAdmin.UploadKata"
             android:exported="false" />
         <activity
-            android:name=".ActivityAdmin.UploadGambar"
-            android:exported="false" />
-        <activity
-            android:name=".ActivityAdmin.TampilkanSuara"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ActivityAdmin.UploadTurunan"
             android:exported="false" />
         <activity
             android:name=".Splashscreen"
