@@ -1,10 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityAdmin.HapusKataActivity">
+    android:layout_marginTop="19dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="40dp"
+        android:paddingBottom="40dp" >
+
+        <ImageButton
+            android:id="@+id/buttonKembali"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_close"
+            android:contentDescription="Tutup"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_gravity="start"
+            android:padding="8dp" />
+
+        <EditText
+            android:id="@+id/inputKata"
+            android:hint="Masukkan Kata"
+            style="@style/EditStyle" />
+
+        <Button
+            android:id="@+id/buttonCariKata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cari Kata"
+            style="@style/ButtonStyle"
+            android:layout_marginTop="12dp" />
+
+        <EditText android:id="@+id/inputSukuKata" android:hint="Suku Kata" android:enabled="false" style="@style/EditStyle"/>
+        <EditText android:id="@+id/inputDefinisi" android:hint="Definisi" android:enabled="false" style="@style/EditStyle"/>
+        <EditText android:id="@+id/inputKelasKata" android:hint="Kelas Kata" android:enabled="false" style="@style/EditStyle"/>
+        <EditText android:id="@+id/inputContohBanjar" android:hint="Contoh Banjar" android:enabled="false" style="@style/EditStyle"/>
+        <EditText android:id="@+id/inputContohIndo" android:hint="Contoh Indonesia" android:enabled="false" style="@style/EditStyle"/>
+
+        <TextView android:id="@+id/teksviewturunan" android:text="Turunan Kata" android:textStyle="bold" android:visibility="gone" style="@style/EditStyle"/>
+        <EditText android:id="@+id/inputTurunanKata" android:hint="Turunan Kata" android:enabled="false" style="@style/EditStyle"/>
+        <EditText android:id="@+id/inputDefTurunan" android:hint="Definisi Turunan" android:enabled="false" style="@style/EditStyle"/>
+        <EditText android:id="@+id/inputKelasTurunan" android:hint="Kelas Kata Turunan" android:enabled="false" style="@style/EditStyle"/>
+        <EditText android:id="@+id/inputContohTurunanBanjar" android:hint="Contoh Banjar Turunan" android:enabled="false" style="@style/EditStyle"/>
+        <EditText android:id="@+id/inputContohTurunanIndo" android:hint="Contoh Indo Turunan" android:enabled="false" style="@style/EditStyle"/>
+
+        <Button
+            android:id="@+id/buttonHapusKata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hapus Kata"
+            android:layout_marginTop="24dp"
+            android:visibility="gone"
+            android:backgroundTint="#D1EB2B1D" />
+    </LinearLayout>
+</ScrollView>
