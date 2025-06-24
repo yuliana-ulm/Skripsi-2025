@@ -50,6 +50,15 @@ class TambahKataActivity : AppCompatActivity() {
         }
 
         inputKata = findViewById(R.id.inputKata)
+        inputKata.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                val kataInput = inputKata.text.toString().trim().lowercase()
+                if (kataInput.isNotEmpty()) {
+                    cekKataSudahAda(kataInput)
+                }
+            }
+        }
+
         inputSukuKata = findViewById(R.id.inputSukuKata)
         inputDefinisi = findViewById(R.id.inputDefinisi)
         inputKelasKata = findViewById(R.id.inputKelasKata)
@@ -201,5 +210,19 @@ class TambahKataActivity : AppCompatActivity() {
         }
 
         editTexts.forEach { it.filters = arrayOf(hurufOnlyFilter) }
+    }
+
+    private fun cekKataSudahAda(kata: String) {
+        val db = FirebaseFirestore.getInstance()
+        db.collection("kamus_banjar_indonesia")
+            .document(kata)
+            .get()
+            .addOnSuccessListener { document ->
+                if (document.exists()) {
+                    Toast.makeText(this, "⚠️ Kata sudah ada dalam database!", Toast.LENGTH_SHORT).show()
+                    inputKata.setText("")
+                    inputKata.requestFocus()
+                }
+            }
     }
 }
